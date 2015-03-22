@@ -1,0 +1,532 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ DynamicModuleBox[{},
+  DynamicBox[ToBoxes[
+    Row[{
+      Hyperlink[
+       Rotate[
+        Image[CompressedData["
+1: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
+8HNj6MP6+kHXXrZh2WqFOO/GUJ9xIl7MKqwrjBG/h+KHFW7Ol+KMbYhLMUDd
+40zeB4h60usq4VEO33u0cu8zta8EnkcV8am+HTPcJ7aFuhcB1b/U/WH0dfC+
+5SozI2PyTMSH5rbjepvswZUz0+hTjr7ZuC4R95B8dc00pq9N5XtbvMh0zt+z
+sTme+dp/26n8PAbYOqmb21cU/rHvXIyEbVN0Ozm30eT2RJsFh386Ff5y8QR4
+adV0vp8G7mOB68ZlWfCzWFuTeXZ5Q2a33aruY+GaJxoERia19omb+o2WjuoH
+xnUcSjpq3xqSH4Z+2iP6v8qULtNzYxX2SVT7KFV21V9b9nt9b97Aa3gM5U8o
+13fUFZG3rE9buQ/13WJaIxjIh16Jr7eFl25FcSYm2pTvSecTF6yCrV4tJzWH
+KuuqQ60H8R3FFZWHUjdOEt85+G4V9ixz6PiGPpqWbWY5z/LWr2V6NuLab1lD
+PdlKPryflJORGOT+FrjeeU/jUl4XjEEVB5bXpdV9vuV+ZMhI1PFwDIzrBHu/
+X4l8jGn7kmdIRsqzEhWWcvv1LeM7cI9znPfEsX1m3WTHHmhYBr430bL67Asr
+ZnP9hZW1G/exuFPbx0INxdaP6Ns6H/NtaXpOfJ6BhE8anW266H6WVD8l2Wp4
+btTvVB2Gel6kr43KqrRPefzsxfo1Mloetk+ZTGLiY9j5Ukov9IpPtXnG0ngn
+4lLcoyRuqKusVlddSjmo90nacvvb+70Xs1TZRXzq2TD2QcvJ6HiANFmrsB++
+bz8ZAkb2qPtbPLmoOYb7/3AmMTbpeza+ftYUJyOvH53QdUhxXiLJSOg5uUPn
+KcvDlvuOIyNxbI36onpdvkckntPQ1oD7FNXiPhYPEvtYqKGY+gnYho4+Y3hm
+HH3UI17Q54X3HZ9+7eibSlxq/E4yxTL7mnhyiIiTCFE/niyyzPq1Lj16uZQ8
+Qq3PMzyfYeOrz7x+T6mg8S3vd6e+j1uQ/qun8Su7vu96zAq2X32CqCcvO2Ke
+j0p8334yBIzsknOSuxgjn11qcRbx8xo0PiKncF7Qwch/r0zqzOPlphi59XQY
+2HyirTO176aqpM7IV9i4Wj+PQeEk7GtarO5jQc4TFclIP/ZIsemnhXwGjHGt
+cDoSKOn0vUmL6dPkuj2P5yxr6PfGMVHA+pGSMaWz3Htk6un8bGFh50vDxjc9
++2mLYKvH/aT0+BbNd0xr8t9Khq0nQ18iyy7ixz3aw3UPRFoqnesdZ9Hvd0c/
+GQJG5ve32NO0RPCRYBPTKXE/Mp2RfTdXOeww/bfWdKFvY98PqmBgS13Of/yJ
+VXBkYy30XjM652P5w7FOXfKWatAZibYj6twaWZYnW2xyHws1FMnImOU8E8kk
+fr7ktnjO4j7xgl7P1vkhnku5bjkh+p5Jj4op8VBiAcqVCJh3BVFWv/pxld0r
+vpImrpUr0Dobop79xgGh4itp1LL5cVuPb3vEtZV4XQHqtyNkWfT28PWJFeXv
+0soV80sn0tYGbUetzeP67+VmJAbkDI5Zn146z6y7sbE32k10RvJ1MJJ1P63h
+DFT36Xn/6lPg7S/m1oKjr6PcR6jvJ1WF88JYHhQj+V66Yk5U12nxu3ut1a59
+LMpZd5FEEsnfvhgYmbqzYS3JITG2zbywYlbPqxoje781Chycu2E06Ps9Ynyc
+W3TtR3n9aOi/raBL9l47ysVItLHjGdqFuVEnv3c0L3XtYxExMpJIIilFDIxM
+iPNWXbZkxqgUkwrGq4TOyL7vVxYY990xuT15tH3DpR8P2nrk+YpyX3OeXjAW
+0xOM5POM/BwJceaOqufiGeGs7EZ7yHDXdSSRRHL0CRXustZ2PNvewJnz69Ym
+eGzhYtjT3MLP0drTuDTFJE4yckNuLwzc3/HwlRX5vR3l+TPoUyl5hmfk4Doe
+9XwcXN/Y96Nx+T00KEbiORJMknvtFj5funfhIvhVywLY39bI8925cInRZ224
+6zqSSCI5+sQUxJqbDI5db5n5KW7DQX+grXM6YOe8ZfDUYhtURr53yVjBthp6
+j/A1UxgXZzrmNV/unM7XD6J+md/r/F/ZeH1jTpc8dNloByPTbXO4PxL6QeL5
+ZPfUr4VbZ50n5yCzqP/qa7QjRkYSSSSliF/QWYlrcH7RsBq2MU4d7CjYtQ99
+vSrHtSsqybNmXlw50+E/JG0/yNk31k7mHJRzlIeuyumSmKfKyEebWrl/j4GN
+nna9iJGRRBJJMRI0CFamBZf4edy7FyzOM/Jwdw3fk4w6s5CNkbMHlte5GIlz
+ii+smJXFNYV4Fg2Ox+Uc5UfXVfM8JSP3L53LdVnkdFg2RoyMJJJIipWwAf1q
+5LkOKM+smsUZeeTGGs42ZJw8+xp9g3AtNZ5Di37eFCMPLKvvwHnGl9i4G3VF
+OUeJ++T23jSeM/L1dZPh9oazJBszgteB2RgxMpJIIilWig2Slfc1roS3L4nB
+u13jONuQcbgPD/qXP7PMyu5fMj+G8U2MZN/b+Hu6bU76QHtd/jxG1EP/einj
+7mXjYU/rgjwbiy5wxMhIIomkCCk1ICsPnjetZ09rM9/X9hfzOvl6F9wTA8/q
+3t3YlsX9JkyMfGJhczfunYF2ILQH4VznvXNWAZ6tg2x8/pzazF1zziyJjTIM
+d11HEkkkR58MVhD7qiXlGBzX6SAr0f68fW47/KZlvouRz7ZZ3EaOe1EgG3GO
+U6YX4/lAZwIEDcNd15FEEsnRJ4MdKFbino7b5q1wMXJ38xITG+1BL9iIiJGR
+RBJJeClXUFiJ9mfuq7NrQWuekU8tbYSfzT5nSNgow3DXdSSRRHL0SbkD2p+F
+j052I9Mpcf0OMnLTnPwePUlqP9xyhOGu60giieTok6EKkpUPzF+R3deyQLIx
+NmQFGBExMpJIIgkvQx2Qldub22JDfuERESMjiSSS8PJ/YOJzPg==
+         "], "Byte",
+         ColorSpace -> "RGB", Interleaving -> True], Pi/2],
+       "http://mathematica.stackexchange.com/"],
+      Column[{
+        Tooltip[
+         Button["Upload to SE",
+          SEUploader`Private`uploadButton[], Appearance -> "Palette"],
+         "Upload the selected expression as an image to StackExchange",
+         TooltipDelay -> Automatic],
+        If[
+         Or[$OperatingSystem === "Windows",
+          And[$OperatingSystem === "MacOSX", $VersionNumber >= 9]],
+         Tooltip[
+          Button["Upload to SE (pp)",
+           SEUploader`Private`uploadPPButton[], Appearance -> "Palette"],
+          "Upload the selected expression as an image to StackExchange\n\
+(pixel-perfect rasterization)", TooltipDelay -> Automatic],
+         Unevaluated[
+          Sequence[]]],
+        Tooltip[
+         Button["History...",
+          SEUploader`Private`historyButton[], Appearance -> "Palette"],
+         "See previously uploaded images and copy their URLs", TooltipDelay ->
+         Automatic]}]}], StandardForm],
+   ImageSizeCache->{129., {39., 44.}}],
+  DynamicModuleValues:>{},
+  Initialization:>(Block[{$ContextPath},
+     Needs["JLink`"]]; JLink`InstallJava[];
+   SEUploader`Private`pnb = EvaluationNotebook[];
+   SEUploader`Private`closeButton[] := DefaultButton["Close",
+      DialogReturn[], ImageSize -> CurrentValue["DefaultButtonSize"],
+      ImageMargins -> {{2, 2}, {10, 10}}]; SEUploader`Private`version = 123;
+   SEUploader`Private`versionURL =
+    "https://raw.github.com/szhorvat/SEUploader/master/version";
+   SEUploader`Private`paletteURL =
+    "https://raw.github.com/szhorvat/SEUploader/master/SEUploaderLatest.nb";
+   SEUploader`Private`checkOnlineVersion[] :=
+    Module[{SEUploader`Private`onlineVersion}, Quiet[
+        Check[
+        SEUploader`Private`onlineVersion =
+         Import[SEUploader`Private`versionURL, "Text"],
+         Return[$Failed]]];
+      CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderLastUpdateCheck"}] =
+       AbsoluteTime[];
+      CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}] =
+       SEUploader`Private`onlineVersion];
+   If[AbsoluteTime[] >
+     3 3600 24 +
+      CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderLastUpdateCheck"}, 0],
+     TimeConstrained[
+      SEUploader`Private`checkOnlineVersion[], 6]];
+   SEUploader`Private`onlineUpdate[] :=
+    Module[{SEUploader`Private`paletteSource,
+       SEUploader`Private`paletteExpression,
+       SEUploader`Private`paletteFileName,
+       SEUploader`Private`paletteDirectory},
+      SEUploader`Private`paletteSource =
+       Import[SEUploader`Private`paletteURL, "String"];
+      If[SEUploader`Private`paletteSource === $Failed, Beep[]; Return[]];
+      Quiet[
+        Check[
+        SEUploader`Private`paletteExpression =
+         ImportString[
+          SEUploader`Private`paletteSource, {"Package", "HeldExpressions"}],
+         Beep[]; Return[]]];
+      If[Extract[SEUploader`Private`paletteExpression, {1, 1, 0}] =!=
+        Notebook, Beep[]; Return[]];
+      SEUploader`Private`paletteFileName =
+       NotebookFileName[SEUploader`Private`pnb];
+      SEUploader`Private`paletteDirectory =
+       NotebookDirectory[SEUploader`Private`pnb];
+      NotebookClose[SEUploader`Private`pnb];
+      Export[SEUploader`Private`paletteFileName,
+        SEUploader`Private`paletteSource, "String"]; FrontEndExecute[
+        FrontEnd`ResetMenusPacket[{Automatic, Automatic}]];
+      FrontEndTokenExecute["OpenFromPalettesMenu",
+        FileNameTake[SEUploader`Private`paletteFileName]]; Null];
+   SEUploader`Private`updateButton[] :=
+    Module[{SEUploader`Private`res},
+      SEUploader`Private`res = SEUploader`Private`checkOnlineVersion[];
+      CreateDialog[
+        Column[{
+          StringForm["`1`\nInstalled version: `2`\n\n`3`",
+           If[SEUploader`Private`res =!= $Failed,
+            StringJoin["Online version: ",
+             ToString[
+              CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}]]],
+            "Update check failed.  Please check your internet connection."],
+           SEUploader`Private`version,
+           Row[{
+             Hyperlink[
+             "Open home page",
+              "http://meta.mathematica.stackexchange.com/a/32/12"], " | ",
+             Hyperlink[
+             "History of changes",
+              "https://github.com/szhorvat/SEUploader/commits/master"]}]],
+          Pane[
+           If[
+            And[
+            SEUploader`Private`res =!= $Failed,
+             CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"},
+               SEUploader`Private`version] =!= SEUploader`Private`version,
+             FileNameSplit[
+               NotebookDirectory[SEUploader`Private`pnb]] === Join[
+               FileNameSplit[$UserBaseDirectory], {
+               "SystemFiles", "FrontEnd", "Palettes"}]],
+
+            ChoiceButtons[{"Update to new version"}, {
+             SEUploader`Private`onlineUpdate[]; DialogReturn[]}],
+            SEUploader`Private`closeButton[]], ImageSize -> 340, Alignment ->
+           Right]}], WindowTitle -> "Version information"]];
+   MessageName[SEUploader`Private`stackImage, "httperr"] =
+    "Server returned respose code: `1`";
+   MessageName[SEUploader`Private`stackImage, "err"] =
+    "Server returner error: `1`";
+   MessageName[SEUploader`Private`stackImage, "parseErr"] =
+    "Could not parse the answer of the server."; SEUploader`Private`stackImage[
+      Pattern[SEUploader`Private`g,
+       Blank[]]] :=
+    Module[{SEUploader`Private`url, SEUploader`Private`client,
+       SEUploader`Private`method, SEUploader`Private`data,
+       SEUploader`Private`partSource, SEUploader`Private`part,
+       SEUploader`Private`entity, SEUploader`Private`code,
+       SEUploader`Private`response, SEUploader`Private`error,
+       SEUploader`Private`result, SEUploader`Private`parseXMLOutput},
+      SEUploader`Private`parseXMLOutput[
+         Pattern[SEUploader`Private`str,
+          Blank[String]]] :=
+       Block[{SEUploader`Private`xml =
+          ImportString[SEUploader`Private`str, {"HTML", "XMLObject"}],
+          SEUploader`Private`result}, SEUploader`Private`result = ReplaceAll[
+            Cases[SEUploader`Private`xml, XMLElement["script",
+               Blank[],
+               Pattern[SEUploader`Private`res,
+                Blank[]]] :> StringTrim[SEUploader`Private`res],
+             Infinity], {{
+               Pattern[SEUploader`Private`s,
+                Blank[String]]}} :> SEUploader`Private`s]; If[
+           And[SEUploader`Private`result =!= {},
+            StringMatchQ[SEUploader`Private`result,
+             StringExpression["window.parent",
+              BlankSequence[]]]],
+           Flatten[
+            StringCases[
+            SEUploader`Private`result, StringExpression["window.parent.",
+               Pattern[SEUploader`Private`func,
+                BlankSequence[]], "(",
+               Pattern[SEUploader`Private`arg,
+                BlankSequence[]], ");"] :> {
+               StringMatchQ[SEUploader`Private`func, "closeDialog"],
+               StringTrim[SEUploader`Private`arg, "\""]}]], $Failed]];
+      SEUploader`Private`parseXMLOutput[
+         BlankNullSequence[]] := $Failed;
+      SEUploader`Private`data = ExportString[SEUploader`Private`g, "PNG"];
+      JLink`JavaBlock[
+       JLink`LoadJavaClass[
+         "de.halirutan.uploader.SEUploader",
+          SEUploader`Private`StaticsVisible -> True];
+        SEUploader`Private`response = Check[
+           SEUploader`sendImage[
+            ToCharacterCode[SEUploader`Private`data]],
+           Return[$Failed]]]; If[SEUploader`Private`response === $Failed,
+        Return[$Failed]];
+      SEUploader`Private`result =
+       SEUploader`Private`parseXMLOutput[SEUploader`Private`response];
+      If[SEUploader`Private`result =!= $Failed,
+        If[
+         TrueQ[
+          First[SEUploader`Private`result]],
+         Last[SEUploader`Private`result], Message[
+           MessageName[SEUploader`Private`stackImage, "err"],
+           Last[SEUploader`Private`result]]; $Failed], Message[
+          MessageName[SEUploader`Private`stackImage, "parseErr"]]; $Failed]];
+   SEUploader`Private`copyToClipboard[
+      Pattern[SEUploader`Private`text,
+       Blank[]]] :=
+    Module[{SEUploader`Private`nb},
+      SEUploader`Private`nb = NotebookCreate[Visible -> False];
+      NotebookWrite[SEUploader`Private`nb,
+        Cell[SEUploader`Private`text, "Text"]];
+      SelectionMove[SEUploader`Private`nb, All, Notebook];
+      FrontEndTokenExecute[SEUploader`Private`nb, "Copy"];
+      NotebookClose[SEUploader`Private`nb]; Null];
+   SEUploader`Private`historyButton[] := CreateDialog[
+      Column[{
+        Style["Click a thumbnail to copy its URL.", Bold],
+        Dynamic[
+         Grid[
+          Partition[
+           PadRight[
+            Apply[Tooltip[
+
+              Button[#, SEUploader`Private`copyToClipboard[#2];
+               DialogReturn[], Appearance -> "Palette"], #2, TooltipDelay ->
+              Automatic]& ,
+             CurrentValue[
+             SEUploader`Private`pnb, {
+              TaggingRules, "ImageUploadHistory"}, {}], {1}], 9, ""], 3]]],
+        Item[
+         Row[{
+           Spacer[200],
+           Button[
+           "Clear all",
+            CurrentValue[
+             SEUploader`Private`pnb, {
+              TaggingRules, "ImageUploadHistory"}] = {}, ImageSize ->
+            CurrentValue["DefaultButtonSize"]],
+           Spacer[10],
+           SEUploader`Private`closeButton[]}], Alignment -> Right]}],
+      WindowTitle -> "History"];
+   SEUploader`Private`uploadButton[] :=
+    With[{SEUploader`Private`img = SEUploader`Private`rasterizeSelection1[]},
+
+      If[SEUploader`Private`img === $Failed,
+       Beep[],
+       SEUploader`Private`uploadWithPreview[SEUploader`Private`img]]];
+   SEUploader`Private`uploadPPButton[] :=
+    With[{SEUploader`Private`img = SEUploader`Private`rasterizeSelection2[]},
+
+      If[SEUploader`Private`img === $Failed,
+       Beep[],
+       SEUploader`Private`uploadWithPreview[SEUploader`Private`img]]];
+   SEUploader`Private`uploadButtonAction[
+      Pattern[SEUploader`Private`img,
+       Blank[]]] :=
+    SEUploader`Private`uploadButtonAction[
+     SEUploader`Private`img, "![Mathematica graphics](", ")"];
+   SEUploader`Private`uploadButtonAction[
+      Pattern[SEUploader`Private`img,
+       Blank[]],
+      Pattern[SEUploader`Private`wrapStart,
+       Blank[String]],
+      Pattern[SEUploader`Private`wrapEnd,
+       Blank[String]]] :=
+    Module[{SEUploader`Private`url, SEUploader`Private`markdown},
+      Check[SEUploader`Private`url =
+        SEUploader`Private`stackImage[SEUploader`Private`img],
+        Return[]];
+      SEUploader`Private`markdown =
+       StringJoin[
+        SEUploader`Private`wrapStart, SEUploader`Private`url,
+         SEUploader`Private`wrapEnd];
+      SEUploader`Private`copyToClipboard[SEUploader`Private`markdown];
+      PrependTo[
+        CurrentValue[
+        SEUploader`Private`pnb, {TaggingRules, "ImageUploadHistory"}], {
+         Thumbnail[
+          Image[SEUploader`Private`img]], SEUploader`Private`url}];
+      If[Length[
+          CurrentValue[
+          SEUploader`Private`pnb, {TaggingRules, "ImageUploadHistory"}]] > 9,
+        CurrentValue[
+         SEUploader`Private`pnb, {TaggingRules, "ImageUploadHistory"}] =
+        Most[
+          CurrentValue[
+          SEUploader`Private`pnb, {TaggingRules, "ImageUploadHistory"}]]];
+      Null]; SEUploader`Private`screenHeight[] := -Apply[Subtract,
+       Part[
+        ReplaceAll[ScreenRectangle,
+         Options[$FrontEnd, ScreenRectangle]], 2]];
+   SEUploader`Private`uploadWithPreview[
+      Pattern[SEUploader`Private`img,
+       Blank[Image]]] := CreateDialog[
+      Column[{
+        Style[
+        "Upload image to StackExchange network?\nThe URL/MarkDown will be \
+copied to the clipboard.", Bold],
+        Pane[
+         Image[SEUploader`Private`img, Magnification -> 1], {Automatic,
+          Min[SEUploader`Private`screenHeight[] - 140, 1 + Part[
+             ImageDimensions[SEUploader`Private`img], 2]]}, Scrollbars ->
+         Automatic, AppearanceElements -> {}, ImageMargins -> 0],
+        Item[
+         ChoiceButtons[{"Upload for site", "Upload for chat", "Close"}, {
+          SEUploader`Private`uploadButtonAction[SEUploader`Private`img];
+           DialogReturn[],
+           SEUploader`Private`uploadButtonAction[
+            SEUploader`Private`img, "", ""]; DialogReturn[],
+           DialogReturn[]}], Alignment -> Right]}], WindowTitle ->
+      "Upload image to StackExchange?"];
+   SEUploader`Private`rasterizeSelection1[
+      Optional[
+       Pattern[SEUploader`Private`maxWidth,
+        Blank[]], 650]] :=
+    Module[{SEUploader`Private`target, SEUploader`Private`selection,
+       SEUploader`Private`image},
+      SEUploader`Private`selection = NotebookRead[
+         SelectedNotebook[]]; If[
+        MemberQ[
+         Hold[{}, $Failed,
+          NotebookRead[$Failed]], SEUploader`Private`selection], $Failed,
+        SEUploader`Private`target =
+         CreateDocument[{}, WindowSelected -> False, Visible -> False,
+           WindowSize -> SEUploader`Private`maxWidth];
+        NotebookWrite[
+         SEUploader`Private`target, SEUploader`Private`selection];
+        SEUploader`Private`image =
+         Rasterize[SEUploader`Private`target, "Image"];
+        NotebookClose[SEUploader`Private`target]; SEUploader`Private`image]];
+   SEUploader`Private`rasterizeSelection2[] := If[
+      MemberQ[
+       Hold[{}, $Failed,
+        NotebookRead[$Failed]],
+       NotebookRead[
+        SelectedNotebook[]]], $Failed,
+      Module[{SEUploader`Private`tag}, FrontEndExecute[
+         FrontEndToken[
+          FrontEnd`SelectedNotebook[], "CopySpecial",
+          If[$OperatingSystem === "Windows", "MGF", "TIFF"]]];
+       Catch[ReplaceAll[
+           NotebookGet[
+            ClipboardNotebook[]], Pattern[SEUploader`Private`r,
+             Blank[RasterBox]] :> Block[{},
+             Condition[
+              Throw[
+               Image[
+                First[SEUploader`Private`r], "Byte", ColorSpace -> "RGB"],
+               SEUploader`Private`tag], True]]]; $Failed,
+         SEUploader`Private`tag]]]; Null)]]]
+},
+WindowSize->All,
+WindowElements->{},
+WindowTitle->"SE Uploader",
+TaggingRules -> {"ImageUploadHistory" -> {}},
+StyleDefinitions->"Palette.nb"
+]
+(* End of Notebook Content *)
+
+(* End of internal cache information *)
