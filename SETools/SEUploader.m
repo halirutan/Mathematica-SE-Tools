@@ -41,7 +41,7 @@ With[{
         ],
 
         Tooltip[
-          Button[ "Upload Expression" , uploadButton[], Appearance -> "Palette"],
+          Button[ "Upload Expression" , uploadExpression[], Appearance -> "Palette"],
           "Upload the selected expression as an image to StackExchange" ,
           TooltipDelay -> Automatic
         ],
@@ -65,7 +65,7 @@ With[{
   (* init start *)
     Initialization :>
       (
-        Block[{$ContextPath}, Needs[ "JLink`" ]];
+        Block[{$ContextPath}, Needs /@ {"JLink`", "SETools`SEImageExpressionEncode`"}];
         JLink`InstallJava[];
 
         (* always refers to the palette notebook *)
@@ -247,6 +247,16 @@ With[{
           With[{img = rasterizeSelection2[]},
             If[img === $Failed, Beep[], uploadWithPreview[img]]];
 
+        uploadExpression[] := With[{img = encodeSelection[]},
+          If[Head[img] =!= Image,
+            MessageDialog["Invalid selection." <> ToString[img]],
+            If[ByteCount[img] / 2.0^20 > 1.0,
+              MessageDialog["Expressions bigger then 1 MB are not allowed."],
+              ProgressIndicator[uploadButtonAction[img]]
+            ]
+          ]
+        ];
+
 
         (* button from the upload dialog *)
         uploadButtonAction[img_] := uploadButtonAction[img, "![Mathematica graphics](" , ")" ];
@@ -338,14 +348,11 @@ With[{
             ]
           ];
 
-        (* Encode Selected Expression as Image *)
-        (* To not mess with the uploader preview, we will make the image a square by padding with zeroes. *)
-        (* Due to the PNG compression it should not matter much *)
-        SetAttributes[encodeExpressionAsImage, {HoldFirst}];
-        encodeExpressionAsImage[expr_] := Module[{dim, pixel = ToCharacterCode[Compress[Unevaluated[expr]]]},
-          dim = Ceiling[Sqrt[Length[pixel]]];
-          Image[ArrayPad[pixel, {0, dim^2 - Length[pixel]}] ~ Partition ~ dim, "Byte"]
-        ];
+        encodeSelection[] := With[{expr = NotebookRead[SelectedNotebook[]]},
+          If[MemberQ[Hold[{}, $Failed, NotebookRead[$Failed]], expr] || Not[Head[expr] === Cell || MatchQ[expr, {_Cell..}]],
+            $Failed, (* there was nothing selected that we want to encode as image *)
+            SETools`SEImageExpressionEncode`SEEncodeExpression[expr]
+          ]];
 
       )
   (* init end *)
@@ -357,9 +364,6 @@ With[{
 
 ];
 
-End[]; (* End Private Context *)
-
+End[];
 EndPackage[];
 
-(* TestImage *)
-(*Image[Partition[Append[Tuples[{0, 255}, 3], {0, 0, 0}], 3]] *)

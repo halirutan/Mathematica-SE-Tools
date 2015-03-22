@@ -11,11 +11,16 @@
 (* :Keywords:                  *)
 (* :Discussion:                *)
 
-BeginPackage["SEImageExpressionDecode`"];
+BeginPackage["SETools`SEImageExpressionDecode`"];
 
+SEDecodeImageAndPrint::usage = "SEDecodeImageAndPrint[url] decodes the image in url without evaluating it. If the expression is a Cell or a list of cells, then it is printed. Otherwise the held form is returned.";
 SEDecodeImage::usage = "SEDecodeImage[url] imports the expression encoded in the the image. Optionally, url can be a Mathematica image.";
 
-Begin["`Private`"]; (* Begin Private Context *)
+Begin["`Private`"];
+
+SEDecodeImageAndPrint[url_String] := SEDecodeImageAndPrint[SEDecodeImage[url]];
+SEDecodeImageAndPrint[expr : HoldComplete[_Cell | {_Cell..}]] := CellPrint @@ expr;
+SEDecodeImageAndPrint[expr: HoldComplete[__]] := expr;
 
 SEDecodeImage::imp = "Import of `` as png image failed.";
 SEDecodeImage::hash = "The security hash indicates that the data is corrupted.";
@@ -25,7 +30,7 @@ SEDecodeImage[url_String] := Module[{img},
     Message[SEDecodeImage::imp, url];
     Abort[]
   ];
-
+  decodeExpression[img]
 ];
 SEDecodeImage[img_Image] := decodeExpression[img];
 
@@ -48,4 +53,4 @@ decodeExpression[img_Image] := Module[
 End[];
 EndPackage[];
 
-SEDecodeImage
+SEDecodeImageAndPrint

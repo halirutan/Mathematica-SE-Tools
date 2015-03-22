@@ -12,7 +12,7 @@
 (* :Keywords:                  *)
 (* :Discussion:                *)
 
-BeginPackage["SEImageExpressionEncode`"];
+BeginPackage["SETools`SEImageExpressionEncode`"];
 
 SEEncodeExpression::usage = "SEEncodeExpression[] returns a button that can be used to encode the selected cell into an image. SEEncodeExpression[expr] can be used to directly encode expressions. Note, that arguments are evaluated! Therefore SEEncodeExpression[1+1] will encode 2.";
 
