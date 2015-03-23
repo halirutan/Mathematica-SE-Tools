@@ -7,15 +7,17 @@ If[$VersionNumber < 9,
 
   Block[{url,
     zipFile = FileNameJoin[{$TemporaryDirectory, "master.zip" }],
-    extractedDir = FileNameJoin[{$TemporaryDirectory, "SEUploaderApplication-master" }]},
+    extractedDir = FileNameJoin[{$TemporaryDirectory, "SETools-master" }],
+    file
+  },
 
     url = "https://github.com/halirutan/Mathematica-SE-Tools/archive/master.zip";
-    If[FileExistsQ[zipFile] || DirectoryQ[extractedDir] || DirectoryQ[FileNameJoin[{$UserAddOnsDirectory, "Applications" , "SEUploader" }]],
+    If[FileExistsQ[zipFile] || DirectoryQ[extractedDir] || FileNames["SETools", $Path] =!= {} || FileNames["SEUploader", $Path] =!= {},
       Print[ "Error, the following file/directory already exists. Please remove it and restart:" ];
       If[FileExistsQ[zipFile], Print[zipFile]];
       If[DirectoryQ[extractedDir], Print[extractedDir]];
-      If[DirectoryQ[FileNameJoin[{$UserAddOnsDirectory, "Applications" , "SEUploader" }]],
-        Print[FileNameJoin[{$UserAddOnsDirectory, "Applications" , "SEUploader" }]]];
+      If[FileNames["SETools", $Path] =!= {}, Print[FileNames["SETools", $Path]]];
+      If[FileNames["SEUploader", $Path] =!= {}, Print[FileNames["SEUploader", $Path]]];
       Abort[];
     ];
 
@@ -25,9 +27,9 @@ If[$VersionNumber < 9,
       Abort[];
     ];
     ExtractArchive[file, $TemporaryDirectory];
-    CopyDirectory[FileNameJoin[{$TemporaryDirectory, "SEUploaderApplication-master" , "SEUploader" }],
-      FileNameJoin[{$UserAddOnsDirectory, "Applications" , "SEUploader" }]];
-    DeleteDirectory[FileNameJoin[{$TemporaryDirectory, "SEUploaderApplication-master" }], DeleteContents -> True];
+    CopyDirectory[FileNameJoin[{$TemporaryDirectory, "SETools-master" , "SETools" }],
+      FileNameJoin[{$UserAddOnsDirectory, "Applications" , "SETools" }]];
+    DeleteDirectory[FileNameJoin[{$TemporaryDirectory, "SETools-master" }], DeleteContents -> True];
     DeleteFile[file];
     Print[ "Please restart Mathematica to see the palette in the Palette menu" ]
   ]
