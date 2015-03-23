@@ -20,6 +20,7 @@ Begin["`Private`"];
 
 SEDecodeImageAndPrint[url_String] := SEDecodeImageAndPrint[SEDecodeImage[url]];
 SEDecodeImageAndPrint[expr : HoldComplete[_Cell | {_Cell..}]] := CellPrint @@ expr;
+SEDecodeImageAndPrint[expr: HoldComplete[_Notebook]] := NotebookPut@@expr;
 SEDecodeImageAndPrint[expr: HoldComplete[__]] := expr;
 
 SEDecodeImage::imp = "Import of `` as png image failed.";

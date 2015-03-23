@@ -9,7 +9,7 @@ If[$VersionNumber < 9,
     zipFile = FileNameJoin[{$TemporaryDirectory, "master.zip" }],
     extractedDir = FileNameJoin[{$TemporaryDirectory, "SEUploaderApplication-master" }]},
 
-    url = "https://github.com/halirutan/SEUploaderApplication/archive/master.zip";
+    url = "https://github.com/halirutan/Mathematica-SE-Tools/archive/master.zip";
     If[FileExistsQ[zipFile] || DirectoryQ[extractedDir] || DirectoryQ[FileNameJoin[{$UserAddOnsDirectory, "Applications" , "SEUploader" }]],
       Print[ "Error, the following file/directory already exists. Please remove it and restart:" ];
       If[FileExistsQ[zipFile], Print[zipFile]];

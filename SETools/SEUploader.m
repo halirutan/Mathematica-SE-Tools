@@ -2,6 +2,7 @@
 (* :Context: SEUploader` *)
 (* :Author: Szabolcs Horvat, changed by Patrick Scheibe *)
 (* :Date: 6/27/13 *)
+(* :Notes: The palette buttons are *wrapped* with Tooltip because in V8 a Button did not have the option Tooltip! *)
 
 BeginPackage["SEUploader`"];
 
@@ -15,53 +16,72 @@ SEUploaderPalette[] := CreateWindow[palette];
 
 
 With[{
-  lversion = Get["SETools`Version`"],
-  logo = Import[ "http://cdn.sstatic.net/mathematica/img/logo.png" ]
+  version = Get["SETools`Version`"],
+  logo = Import["SETools/Resources/banner.png"],
+  mathematicaSE = "http://mathematica.stackexchange.com/",
+  versionURL = "https://raw.githubusercontent.com/halirutan/Mathematica-SE-Tools/master/SETools/Version.m",
+
+  tagLastCheck = "SEUploaderLastUpdateCheck",
+  tagHistory = "ImageUploadHistory",
+
+  buttonOpts = Sequence[ImageSize -> {140, Automatic}]
 },
 
   palette = PaletteNotebook[DynamicModule[{},
-    Dynamic@Row[{
-      Hyperlink[Rotate[logo, Pi / 2], "http://mathematica.stackexchange.com/" ],
-      Column[{
-        Tooltip[
-          Button[ "Upload Image" , uploadButton[], Appearance -> "Palette"],
-          "Upload the selected expression as an image to StackExchange" ,
-          TooltipDelay -> Automatic
-        ],
+    Dynamic@Column[{
+      logo,
+      OpenerView[{Style["Uploading", "Text"],
 
-        If[$OperatingSystem === "Windows" || ($OperatingSystem === "MacOSX" && $VersionNumber >= 9),
+        Column[{
 
           Tooltip[
-            Button[ "Upload Image (pp)" ,
-              uploadPPButton[],
-              Appearance -> "Palette"],
-            "Upload the selected expression as an image to StackExchange\n(pixel-perfect rasterization)" , TooltipDelay -> Automatic],
+            Button["Image", uploadButton[], buttonOpts],
+            "Upload the selected expression as an image to StackExchange",
+            TooltipDelay -> Automatic],
 
-          Unevaluated@Sequence[]
-        ],
+          If[True,
+            Tooltip[Button["Image (pp)", uploadPPButton[], buttonOpts, Enabled -> ($OperatingSystem === "Windows" || ($OperatingSystem === "MacOSX" && $VersionNumber >= 9))],
+              "Upload the selected expression as an image to StackExchange (pixel-perfect rasterization)", TooltipDelay -> Automatic],
+            Unevaluated@Sequence[]],
 
-        Tooltip[
-          Button[ "Upload Expression" , uploadExpression[], Appearance -> "Palette"],
-          "Upload the selected expression as an image to StackExchange" ,
-          TooltipDelay -> Automatic
-        ],
 
-        Tooltip[
-          Button[ "History..." , historyButton[], Appearance -> "Palette"],
-          "See previously uploaded images and copy their URLs" , TooltipDelay -> Automatic]
-      (**)
-      (*,*)
+          Tooltip[
+            Button["Selected Cell", uploadExpression[encodeSelection[]], buttonOpts],
+            "Encode the selected cell(s) into an image to share code",
+            TooltipDelay -> Automatic],
 
-      (*Tooltip[*)
-      (*Button["Update...", updateButton[],*)
-      (*Appearance -> "Palette",*)
-      (*Background -> Dynamic@If[CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, version]  =!= version,*)
-      (*LightMagenta,*)
-      (*Automatic]*)
-      (*],*)
-      (*"Check for newer versions of the uploader palette", TooltipDelay -> Automatic]*)
-      }]
-    }],
+          Tooltip[
+            Button["Selected Notebook", uploadExpression[encodeCurrentNotebook[]], buttonOpts],
+            "Encode the selected notebook into an image to share code",
+            TooltipDelay -> Automatic]
+
+        }]
+      }, True],
+
+      OpenerView[{Style["Miscellaneous", "Text"],
+        Column[{
+
+          Tooltip[
+            Button["History", historyButton[], buttonOpts], "See previously uploaded images and copy their URLs",
+            TooltipDelay -> Automatic],
+
+
+          Tooltip[
+            Button["Update", updateButton[], buttonOpts, Background -> Dynamic@If[CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, version] =!= version, RGBColor[0.8588235294117647, 0.00784313725490196, 0.00784313725490196] , Automatic]],
+            "Check for newer versions of the uploader palette",
+            TooltipDelay -> Automatic],
+
+          Tooltip[
+            Button["About", updateButton[], buttonOpts],
+            "Check for newer versions of the uploader palette",
+            TooltipDelay -> Automatic]
+
+        }]
+      }, True]
+
+
+
+    }, Dividers -> {None, {False, True}}, Spacings -> {Automatic, 1}],
   (* init start *)
     Initialization :>
       (
@@ -78,52 +98,25 @@ With[{
 
         (* VERSION CHECK CODE *)
 
-        (* the palette version number, stored as a string *)
-        version = lversion;
-
         (* Update URLs *)
-        versionURL = "https://raw.githubusercontent.com/halirutan/SEUploaderApplication/master/Version";
-        paletteURL = "https://raw.github.com/szhorvat/SEUploader/master/SEUploaderLatest.nb";
+
 
         (* check the latest version on GitHub *)
         checkOnlineVersion[] :=
           Module[{onlineVersion},
             Quiet@Check[
-              onlineVersion = Import[versionURL, "Text" ],
+              onlineVersion = Import[versionURL],
               Return[$Failed]
             ];
-            CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderLastUpdateCheck" }] = AbsoluteTime[];
+            CurrentValue[$FrontEnd, {TaggingRules, tagLastCheck }] = AbsoluteTime[];
             CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion" }] = onlineVersion
           ];
 
         (* Check for updates on initialization if last check was > 3 days ago.
         The check will time out after 6 seconds. *)
-        If[AbsoluteTime[] > 3 * 3600 * 24 + CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderLastUpdateCheck" }, 0],
+        If[AbsoluteTime[] > 3 * 3600 * 24 + CurrentValue[$FrontEnd, {TaggingRules, tagLastCheck }, 0],
           TimeConstrained[checkOnlineVersion[], 6]
         ];
-
-        onlineUpdate[] :=
-          Module[{paletteSource, paletteExpression, paletteFileName, paletteDirectory},
-            paletteSource = Import[paletteURL, "String" ];
-            If[paletteSource === $Failed, Beep[]; Return[]];
-
-            (* Validate notebook. If GitHub is down, we shouldn't replace a working palette
-                  with the contents of an error page. *)
-            Quiet@Check[paletteExpression = ImportString[paletteSource, { "Package" , "HeldExpressions" }], Beep[]; Return[]];
-            If[Extract[paletteExpression, {1, 1, 0}] =!= Notebook, Beep[]; Return[]];
-
-            paletteFileName = NotebookFileName[pnb];
-            paletteDirectory = NotebookDirectory[pnb];
-            NotebookClose[pnb];
-            Export[paletteFileName, paletteSource, "String" ];
-            FrontEndExecute[FrontEnd`ResetMenusPacket[{Automatic, Automatic}]];
-
-            (* Note: FileNameTake is necessary to preserve the "PalettesMenuSettings",
-                   which are tied to the file name as a string.  If using the full path,
-                   the Front End will think we're opening a different palette and
-                   will not apply the "PalettesMenuSettings" *)
-            FrontEndTokenExecute[ "OpenFromPalettesMenu" , FileNameTake[paletteFileName]];
-          ];
 
         updateButton[] :=
           Module[{res},
@@ -190,7 +183,7 @@ With[{
             data = ExportString[g, "PNG" ];
 
             JLink`JavaBlock[
-              JLink`LoadJavaClass[ "de.halirutan.uploader.SEUploader" , StaticsVisible -> True];
+              JLink`LoadJavaClass[ "de.halirutan.se.tools.SEUploader" , StaticsVisible -> True];
               response = Check[SEUploader`sendImage[ToCharacterCode[data]],
                 Return[$Failed]]
             ];
@@ -214,7 +207,7 @@ With[{
         copyToClipboard[text_] :=
           Module[{nb},
             nb = NotebookCreate[Visible -> False];
-            NotebookWrite[nb, Cell[text, "Text" ]];
+            NotebookWrite[nb, Cell[text, "Input" ]];
             SelectionMove[nb, All, Notebook];
             FrontEndTokenExecute[nb, "Copy" ];
             NotebookClose[nb];
@@ -228,11 +221,11 @@ With[{
                 Tooltip[
                   Button[#1, copyToClipboard[#2]; DialogReturn[], Appearance -> "Palette"],
                   #2, TooltipDelay -> Automatic] & @@@
-                  CurrentValue[pnb, {TaggingRules, "ImageUploadHistory" }, {}],
+                  CurrentValue[pnb, {TaggingRules, tagHistory }, {}],
                 9, "" ], 3],
               Item[Row[{
                 Spacer[200],
-                Button[ "Clear all" , CurrentValue[pnb, {TaggingRules, "ImageUploadHistory" }] = {}, ImageSize -> CurrentValue[ "DefaultButtonSize" ]],
+                Button[ "Clear all" , CurrentValue[pnb, {TaggingRules, tagHistory }] = {}, ImageSize -> CurrentValue[ "DefaultButtonSize" ]],
                 Spacer[10],
                 closeButton[]}
               ], Alignment -> Right]
@@ -247,13 +240,11 @@ With[{
           With[{img = rasterizeSelection2[]},
             If[img === $Failed, Beep[], uploadWithPreview[img]]];
 
-        uploadExpression[] := With[{img = encodeSelection[]},
-          If[Head[img] =!= Image,
-            MessageDialog["Invalid selection." <> ToString[img]],
-            If[ByteCount[img] / 2.0^20 > 1.0,
-              MessageDialog["Expressions bigger then 1 MB are not allowed."],
-              ProgressIndicator[uploadButtonAction[img]]
-            ]
+        uploadExpression[img_] := If[Head[img] =!= Image,
+          MessageDialog["Invalid selection." <> ToString[img]],
+          If[ByteCount[img] / 2.0^20 > 1.0,
+            MessageDialog["Expressions bigger then 1 MB are not allowed."],
+            uploadButtonAction[img, "Get[\"http://goo.gl/NaH6rM\"][\"", "\"]"]
           ]
         ];
 
@@ -269,11 +260,11 @@ With[{
             ];
             markdown = wrapStart <> url <> wrapEnd;
             copyToClipboard[markdown];
-            PrependTo[CurrentValue[pnb, {TaggingRules, "ImageUploadHistory" }],
+            PrependTo[CurrentValue[pnb, {TaggingRules, tagHistory }],
               {Thumbnail@Image[img], url}];
-            If[Length[CurrentValue[pnb, {TaggingRules, "ImageUploadHistory" }]] > 9,
-              CurrentValue[pnb, {TaggingRules, "ImageUploadHistory" }] =
-                Most@CurrentValue[pnb, {TaggingRules, "ImageUploadHistory" }]];
+            If[Length[CurrentValue[pnb, {TaggingRules, tagHistory }]] > 9,
+              CurrentValue[pnb, {TaggingRules, tagHistory }] =
+                Most@CurrentValue[pnb, {TaggingRules, tagHistory }]];
           ];
 
         (* returns available vertical screen space,
@@ -354,11 +345,18 @@ With[{
             SETools`SEImageExpressionEncode`SEEncodeExpression[expr]
           ]];
 
+        encodeCurrentNotebook[] := With[{nb = NotebookGet[EvaluationNotebook[]]},
+          If[Head[nb] =!= Notebook,
+            $Failed,
+            SETools`SEImageExpressionEncode`SEEncodeExpression[nb]
+          ]
+        ]
+
       )
   (* init end *)
   ],
 
-    TaggingRules -> {"ImageUploadHistory" -> {}},
+    TaggingRules -> {tagHistory -> {}},
     WindowTitle -> "SE Uploader"
   ]
 
