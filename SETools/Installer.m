@@ -4,7 +4,7 @@
 
 If[$VersionNumber < 9,
   Print[ "This works only in Mathematica version 9" ],
-  With[{repoName = "Mathematica-SE-Tools-master"}
+  With[{repoName = "Mathematica-SE-Tools-master"},
     Block[{url,
       zipFile = FileNameJoin[{$TemporaryDirectory, "master.zip" }],
       extractedDir = FileNameJoin[{$TemporaryDirectory, repoName }],
