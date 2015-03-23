@@ -31,7 +31,8 @@ If[$VersionNumber < 9,
         FileNameJoin[{$UserAddOnsDirectory, "Applications" , "SETools" }]];
       DeleteDirectory[FileNameJoin[{$TemporaryDirectory, repoName }], DeleteContents -> True];
       DeleteFile[file];
-      Print[ "Please restart Mathematica to see the palette in the Palette menu" ]
+      FrontEndExecute[FrontEnd`ResetMenusPacket[{Automatic, Automatic}]]
+      (*Print[ "Please restart Mathematica to see the palette in the Palette menu" ]*)
     ]
   ]
 ]
