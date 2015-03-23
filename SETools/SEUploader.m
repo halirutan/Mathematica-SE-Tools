@@ -4,7 +4,7 @@
 (* :Date: 6/27/13 *)
 (* :Notes: The palette buttons are *wrapped* with Tooltip because in V8 a Button did not have the option Tooltip! *)
 
-BeginPackage["SEUploader`"];
+BeginPackage["SETools`SEUploader`"];
 
 SEUploaderPalette::usage = "SEUploaderPalette[] shows the uploader palette.";
 
@@ -15,17 +15,29 @@ Begin[ "`Private`" ]; (* Begin Private Context *)
 SEUploaderPalette[] := CreateWindow[palette];
 
 
-With[{
-  version = Get["SETools`Version`"],
-  logo = Import["SETools/Resources/banner.png"],
-  mathematicaSE = "http://mathematica.stackexchange.com/",
-  versionURL = "https://raw.githubusercontent.com/halirutan/Mathematica-SE-Tools/master/SETools/Version.m",
+With[
+  {
+    version = Get["SETools`Version`"],
+    logo = Import["SETools/Resources/banner.png"],
+    mathematicaSE = "http://mathematica.stackexchange.com/",
+    versionURL = "https://raw.githubusercontent.com/halirutan/Mathematica-SE-Tools/master/SETools/Version.m",
 
-  tagLastCheck = "SEUploaderLastUpdateCheck",
-  tagHistory = "ImageUploadHistory",
+    tagLastCheck = "SEUploaderLastUpdateCheck",
+    tagHistory = "ImageUploadHistory",
 
-  buttonOpts = Sequence[ImageSize -> {140, Automatic}]
-},
+    buttonOpts = Sequence[ImageSize -> {140, Automatic}],
+
+    $aboutDialog = Function[st, Column[
+      {
+        Import["SETools/Resources/banner.png"],
+        st["This palette was developed to ease the uploading of Mathematica content to its dedicated stackexchange site. You can upload images of graphics, expressions and cells. To share code, it is possible to encode cells or whole notebooks into an image."],
+        st["For more information, you can visit the following places:"],
+        Hyperlink[st["\[FilledCircle] The official post at stackexchange"], "http://meta.mathematica.stackexchange.com/q/5/187"],
+        Hyperlink[st["\[FilledCircle] The GitHub repository of this project"], "https://github.com/halirutan/Mathematica-SE-Tools"],
+        st["\[Copyright] 2012\[Dash]2015 The StackExchange Community"]
+      }, Dividers -> {False, {False, True}}, Spacings -> 1]][(Style[#, "Label", LineIndent -> 0, TextJustification -> 1.])&]
+
+  },
 
   palette = PaletteNotebook[DynamicModule[{},
     Dynamic@Column[{
@@ -67,12 +79,12 @@ With[{
 
 
           Tooltip[
-            Button["Update", updateButton[], buttonOpts, Background -> Dynamic@If[CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, version] =!= version, RGBColor[0.8588235294117647, 0.00784313725490196, 0.00784313725490196] , Automatic]],
+            Button[Dynamic@Style["Update", If[CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, version] =!= version, RGBColor[0.8588235294117647, 0.00784313725490196, 0.00784313725490196] , Black]], updateButton[], buttonOpts],
             "Check for newer versions of the uploader palette",
             TooltipDelay -> Automatic],
 
           Tooltip[
-            Button["About", updateButton[], buttonOpts],
+            Button["About", MessageDialog[$aboutDialog], buttonOpts],
             "Check for newer versions of the uploader palette",
             TooltipDelay -> Automatic]
 
@@ -130,18 +142,16 @@ With[{
                   ],
                   version,
                   Row[{
-                    Hyperlink[ "Open home page" , "http://meta.mathematica.stackexchange.com/a/32/12" ],
+                    Hyperlink[ "Open home page" , "https://github.com/halirutan/Mathematica-SE-Tools" ],
                     " | " ,
-                    Hyperlink[ "History of changes" , "https://github.com/szhorvat/SEUploader/commits/master" ]
+                    Hyperlink[ "History of changes" , "https://github.com/halirutan/Mathematica-SE-Tools/commits/master" ]
                   }]
                 ],
 
                 Pane[
-                  If[res =!= $Failed
-                    && CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion" }, version] =!= version
-                    && FileNameSplit@NotebookDirectory[pnb] === Join[FileNameSplit[$UserBaseDirectory], { "SystemFiles" , "FrontEnd" , "Palettes" }],
+                  If[res =!= $Failed && CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion" }, version] =!= version,
 
-                    ChoiceButtons[{ "Update to new version" }, {onlineUpdate[]; DialogReturn[]}],
+                    ChoiceButtons[{ "Go to update page" }, {SystemOpen["https://github.com/halirutan/Mathematica-SE-Tools"]; DialogReturn[]}],
 
                     closeButton[]
                   ],
@@ -345,7 +355,7 @@ With[{
             SETools`SEImageExpressionEncode`SEEncodeExpression[expr]
           ]];
 
-        encodeCurrentNotebook[] := With[{nb = NotebookGet[EvaluationNotebook[]]},
+        encodeCurrentNotebook[] := With[{nb = NotebookGet[SelectedNotebook[]]},
           If[Head[nb] =!= Notebook,
             $Failed,
             SETools`SEImageExpressionEncode`SEEncodeExpression[nb]
