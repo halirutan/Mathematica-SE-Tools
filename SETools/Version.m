@@ -1,1 +1,1 @@
-120
+{"Version" -> 121, "Changes" -> {"Mouseposition is used when placing a newly opened palette", "Progress indicator when uploading cells or notebooks"}}

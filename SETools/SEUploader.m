@@ -39,7 +39,7 @@ With[
 
   },
 
-  palette = PaletteNotebook[DynamicModule[{},
+  palette = PaletteNotebook[DynamicModule[{progress = False},
     Dynamic@Column[{
       logo,
       OpenerView[{Style["Uploading", "Text"],
@@ -51,23 +51,26 @@ With[
             "Upload the selected expression as an image to StackExchange",
             TooltipDelay -> Automatic],
 
-          If[True,
-            Tooltip[Button["Image (pp)", uploadPPButton[], buttonOpts, Enabled -> ($OperatingSystem === "Windows" || ($OperatingSystem === "MacOSX" && $VersionNumber >= 9))],
-              "Upload the selected expression as an image to StackExchange (pixel-perfect rasterization)", TooltipDelay -> Automatic],
-            Unevaluated@Sequence[]],
+
+          Tooltip[Button["Image (pp)", uploadPPButton[], buttonOpts, Enabled -> ($OperatingSystem === "Windows" || ($OperatingSystem === "MacOSX" && $VersionNumber >= 9))],
+            "Upload the selected expression as an image to StackExchange (pixel-perfect rasterization)", TooltipDelay -> Automatic],
 
 
           Tooltip[
-            Button["Selected Cell", uploadExpression[encodeSelection[]], buttonOpts],
+            Button["Selected Cell", progress = True;uploadExpression[encodeSelection[]]progress = False;, buttonOpts, Method -> "Queued"],
             "Encode the selected cell(s) into an image to share code",
             TooltipDelay -> Automatic],
 
           Tooltip[
-            Button["Selected Notebook", uploadExpression[encodeCurrentNotebook[]], buttonOpts],
+            Button["Selected Notebook", progress = True;uploadExpression[encodeCurrentNotebook[]];progress = False, buttonOpts, Method -> "Queued"],
             "Encode the selected notebook into an image to share code",
-            TooltipDelay -> Automatic]
+            TooltipDelay -> Automatic],
 
-        }]
+          Dynamic@If[progress,
+            ProgressIndicator[ Appearance -> "Percolate"],
+            Invisible[ProgressIndicator[ Appearance -> "Percolate"]]
+          ]
+        }, Center]
       }, True],
 
       OpenerView[{Style["Miscellaneous", "Text"],
@@ -88,12 +91,12 @@ With[
             "Check for newer versions of the uploader palette",
             TooltipDelay -> Automatic]
 
-        }]
+        }, Center]
       }, True]
 
 
 
-    }, Dividers -> {None, {False, True}}, Spacings -> {Automatic, 1}],
+    }, Dividers -> {None, {False, True}}, Spacings -> {Automatic, {0,2,0,0}}],
   (* init start *)
     Initialization :>
       (
@@ -131,16 +134,22 @@ With[
         ];
 
         updateButton[] :=
-          Module[{res},
+          Module[{res, newVersionQ, newVersionInformation},
             res = checkOnlineVersion[];
+            newVersionInformation = CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion" }, version];
+            newVersionQ = res =!= $Failed && newVersionInformation =!= version;
+
             CreateDialog[
               Column[{
                 StringForm[ "`1`\nInstalled version: `2`\n\n`3`" ,
                   If[res =!= $Failed,
-                    "Online version: " <> ToString@CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion" }],
+                    "Online version: " <> ToString@("Version" /. newVersionInformation),
                     "Update check failed.  Please check your internet connection."
                   ],
-                  version,
+                  "Version" /. version,
+                  If[newVersionQ,
+                    Column["Changes" /. newVersionInformation]
+                  ]
                   Row[{
                     Hyperlink[ "Open home page" , "https://github.com/halirutan/Mathematica-SE-Tools" ],
                     " | " ,
@@ -149,7 +158,7 @@ With[
                 ],
 
                 Pane[
-                  If[res =!= $Failed && CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion" }, version] =!= version,
+                  If[newVersionQ,
 
                     ChoiceButtons[{ "Go to update page" }, {SystemOpen["https://github.com/halirutan/Mathematica-SE-Tools"]; DialogReturn[]}],
 
@@ -360,14 +369,16 @@ With[
             $Failed,
             SETools`SEImageExpressionEncode`SEEncodeExpression[nb]
           ]
-        ]
+        ];
 
       )
   (* init end *)
   ],
 
     TaggingRules -> {tagHistory -> {}},
-    WindowTitle -> "SE Uploader"
+    WindowTitle -> "SE Uploader",
+    (* Position the opening palette directly at mouse position *)
+    WindowMargins -> Dynamic[Transpose[{CurrentValue[$FrontEnd, "MousePosition"], {Automatic, Automatic}}]]
   ]
 
 ];
