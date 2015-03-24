@@ -1,1 +1,1 @@
-{"Version" -> 121, "Changes" -> {"Mouseposition is used when placing a newly opened palette", "Progress indicator when uploading cells or notebooks", "For testing purpose, we need a very long change to see if and how the lines are broken.", "Maybe we should add another one", "And one more"}}
+{"Version" -> 121, "Changes" -> {"Mouseposition is used when placing a newly opened palette", "Progress indicator when uploading cells or notebooks"}}

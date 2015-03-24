@@ -1,6 +1,6 @@
 Notebook[{
 Cell[BoxData[
- DynamicModuleBox[{}, 
+ DynamicModuleBox[{SETools`SEUploader`Private`progress$$ = False}, 
   DynamicBox[ToBoxes[
     Column[{
       Image[CompressedData["
@@ -36,31 +36,38 @@ YP/qkwX+jZrqB/tXnyD/xkz2g/2rT1z/bpnuB/u3fPkLmaii+g==
             Sequence[ImageSize -> {140, Automatic}]], 
            "Upload the selected expression as an image to StackExchange", 
            TooltipDelay -> Automatic], 
-          If[True, 
-           Tooltip[
-            Button["Image (pp)", 
-             SETools`SEUploader`Private`uploadPPButton[], 
-             Sequence[ImageSize -> {140, Automatic}], Enabled -> 
-             Or[$OperatingSystem === "Windows", 
-               And[$OperatingSystem === "MacOSX", $VersionNumber >= 9]]], 
-            "Upload the selected expression as an image to StackExchange \
-(pixel-perfect rasterization)", TooltipDelay -> Automatic], 
-           Unevaluated[
-            Sequence[]]], 
           Tooltip[
-           Button["Selected Cell", 
+           Button["Image (pp)", 
+            SETools`SEUploader`Private`uploadPPButton[], 
+            Sequence[ImageSize -> {140, Automatic}], Enabled -> 
+            Or[$OperatingSystem === "Windows", 
+              And[$OperatingSystem === "MacOSX", $VersionNumber >= 9]]], 
+           "Upload the selected expression as an image to StackExchange \
+(pixel-perfect rasterization)", TooltipDelay -> Automatic], 
+          Tooltip[
+           Button[
+           "Selected Cell", SETools`SEUploader`Private`progress$$ = True; 
             SETools`SEUploader`Private`uploadExpression[
-             SETools`SEUploader`Private`encodeSelection[]], 
-            Sequence[ImageSize -> {140, Automatic}]], 
+                SETools`SEUploader`Private`encodeSelection[]] 
+              SETools`SEUploader`Private`progress$$ = False; Null, 
+            Sequence[ImageSize -> {140, Automatic}], Method -> "Queued"], 
            "Encode the selected cell(s) into an image to share code", 
            TooltipDelay -> Automatic], 
           Tooltip[
-           Button["Selected Notebook", 
+           Button[
+           "Selected Notebook", SETools`SEUploader`Private`progress$$ = True; 
             SETools`SEUploader`Private`uploadExpression[
-             SETools`SEUploader`Private`encodeCurrentNotebook[]], 
-            Sequence[ImageSize -> {140, Automatic}]], 
+              SETools`SEUploader`Private`encodeCurrentNotebook[]]; 
+            SETools`SEUploader`Private`progress$$ = False, 
+            Sequence[ImageSize -> {140, Automatic}], Method -> "Queued"], 
            "Encode the selected notebook into an image to share code", 
-           TooltipDelay -> Automatic]}]}, True], 
+           TooltipDelay -> Automatic], 
+          Dynamic[
+           If[SETools`SEUploader`Private`progress$$, 
+            ProgressIndicator[Appearance -> "Percolate"], 
+            Invisible[
+             ProgressIndicator[Appearance -> "Percolate"]]]]}, Center]}, 
+       True], 
       OpenerView[{
         Style["Miscellaneous", "Text"], 
         Column[{
@@ -75,8 +82,16 @@ YP/qkwX+jZrqB/tXnyD/xkz2g/2rT1z/bpnuB/u3fPkLmaii+g==
             Dynamic[
              Style["Update", 
               If[
-              CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, 
-                 120] =!= 120, 
+              CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
+                 "Version" -> 121, 
+                  "Changes" -> {
+                   "Mouseposition is used when placing a newly opened \
+palette", "Progress indicator when uploading cells or notebooks"}}] =!= {
+                "Version" -> 121, 
+                 "Changes" -> {
+                  "Mouseposition is used when placing a newly opened palette",
+                    "Progress indicator when uploading cells or notebooks"}}, 
+               
                RGBColor[
                0.8588235294117647, 0.00784313725490196, 0.00784313725490196], 
                Black]]], 
@@ -137,9 +152,9 @@ encode cells or whole notebooks into an image.", "Label", LineIndent -> 0,
               Dividers -> {False, {False, True}}, Spacings -> 1]], 
             Sequence[ImageSize -> {140, Automatic}]], 
            "Check for newer versions of the uploader palette", TooltipDelay -> 
-           Automatic]}]}, True]}, Dividers -> {None, {False, True}}, 
-     Spacings -> {Automatic, 1}], StandardForm],
-   ImageSizeCache->{160., {136., 141.}}],
+           Automatic]}, Center]}, True]}, Dividers -> {None, {False, True}}, 
+     Spacings -> {Automatic, {0, 2, 0, 0}}], StandardForm],
+   ImageSizeCache->{160., {145., 150.}}],
   DynamicModuleValues:>{},
   Initialization:>(Block[{$ContextPath}, 
      Map[Needs, {"JLink`", "SETools`SEImageExpressionEncode`"}]]; 
@@ -164,37 +179,77 @@ Tools/master/SETools/Version.m"],
      TimeConstrained[
       SETools`SEUploader`Private`checkOnlineVersion[], 6]]; 
    SETools`SEUploader`Private`updateButton[] := 
-    Module[{SETools`SEUploader`Private`res$}, 
-      SETools`SEUploader`Private`res$ = 
-       SETools`SEUploader`Private`checkOnlineVersion[]; CreateDialog[
-        Column[{
-          StringForm["`1`\nInstalled version: `2`\n\n`3`", 
+    Module[{SETools`SEUploader`Private`res$, 
+       SETools`SEUploader`Private`newVersionQ$, 
+       SETools`SEUploader`Private`newVersionInformation$, 
+       SETools`SEUploader`Private`st$ = Style[
+         SlotSequence[1], "Label", LineIndent -> 0, TextJustification -> 
+         1.]& }, SETools`SEUploader`Private`res$ = 
+       SETools`SEUploader`Private`checkOnlineVersion[]; 
+      SETools`SEUploader`Private`newVersionInformation$ = 
+       CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
+         "Version" -> 121, 
+          "Changes" -> {
+           "Mouseposition is used when placing a newly opened palette", 
+            "Progress indicator when uploading cells or notebooks"}}]; 
+      SETools`SEUploader`Private`newVersionQ$ = 
+       And[SETools`SEUploader`Private`res$ =!= $Failed, 
+         SETools`SEUploader`Private`newVersionInformation$ =!= {
+          "Version" -> 121, 
+           "Changes" -> {
+            "Mouseposition is used when placing a newly opened palette", 
+             "Progress indicator when uploading cells or notebooks"}}]; 
+      CreateDialog[
+        Pane[
+         Column[{
+           SETools`SEUploader`Private`st$["Update information", 14], 
+           SETools`SEUploader`Private`st$[
+            StringTemplate["Installed version: ``"][
+             ReplaceAll[
+             "Version", {
+              "Version" -> 121, 
+               "Changes" -> {
+                "Mouseposition is used when placing a newly opened palette", 
+                 "Progress indicator when uploading cells or notebooks"}}]]], 
+           
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
-            StringJoin["Online version: ", 
-             ToString[
-              CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}]]], 
-            "Update check failed.  Please check your internet connection."], 
-           120, 
+            SETools`SEUploader`Private`st$[
+             StringTemplate["Online version: ``"][
+              ReplaceAll[
+              "Version", SETools`SEUploader`Private`newVersionInformation$]]], 
+            SETools`SEUploader`Private`st$[
+            "Update check failed.  Please check your internet connection."]], 
+           
+           If[SETools`SEUploader`Private`newVersionQ$, 
+            Column[
+             Join[{
+               SETools`SEUploader`Private`st$[
+               "Changes in the new version:", Bold]}, 
+              Map[SETools`SEUploader`Private`st$[
+                StringJoin["\[FilledCircle] ", #]]& , 
+               ReplaceAll[
+               "Changes", 
+                SETools`SEUploader`Private`newVersionInformation$]]]], 
+            Unevaluated[
+             Sequence[]]], 
            Row[{
              Hyperlink[
-             "Open home page", 
+              SETools`SEUploader`Private`st$["Open home page"], 
               "https://github.com/halirutan/Mathematica-SE-Tools"], " | ", 
              Hyperlink[
-             "History of changes", 
+              SETools`SEUploader`Private`st$["History of changes"], 
               "https://github.com/halirutan/Mathematica-SE-Tools/commits/\
-master"]}]], 
-          Pane[
-           If[
-            And[
-            SETools`SEUploader`Private`res$ =!= $Failed, 
-             CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, 
-               120] =!= 120], 
-            
-            ChoiceButtons[{"Go to update page"}, {
-             SystemOpen["https://github.com/halirutan/Mathematica-SE-Tools"]; 
-              DialogReturn[]}], 
-            SETools`SEUploader`Private`closeButton[]], ImageSize -> 340, 
-           Alignment -> Right]}], WindowTitle -> "Version information"]]; 
+master"]}], 
+           Pane[
+            If[SETools`SEUploader`Private`newVersionQ$, 
+             
+             ChoiceButtons[{"Go to update page"}, {
+              SystemOpen["https://github.com/halirutan/Mathematica-SE-Tools"]; 
+               DialogReturn[]}], 
+             SETools`SEUploader`Private`closeButton[]], ImageSize -> 400, 
+            Alignment -> Right]}, Dividers -> {None, {False, True, False}}, 
+          Spacings -> {0, {Automatic, 2, Automatic, 1}}], ImageSize -> 400], 
+        WindowTitle -> "Update information"]]; 
    MessageName[SETools`SEUploader`Private`stackImage, "httperr"] = 
     "Server returned respose code: `1`"; 
    MessageName[SETools`SEUploader`Private`stackImage, "err"] = 
@@ -455,10 +510,9 @@ copied to the clipboard.", Bold],
          SelectedNotebook[]]}, 
       If[Head[SETools`SEUploader`Private`nb] =!= Notebook, $Failed, 
        SETools`SEImageExpressionEncode`SEEncodeExpression[
-       SETools`SEUploader`Private`nb]]])]]]
+       SETools`SEUploader`Private`nb]]]; Null)]]]
 },
 WindowSize->All,
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 WindowElements->{},
 WindowTitle->"SE Uploader",
 TaggingRules->{"ImageUploadHistory" -> {}},

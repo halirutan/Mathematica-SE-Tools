@@ -96,7 +96,7 @@ With[
 
 
 
-    }, Dividers -> {None, {False, True}}, Spacings -> {Automatic, {0,2,0,0}}],
+    }, Dividers -> {None, {False, True}}, Spacings -> {Automatic, {0, 2, 0, 0}}],
   (* init start *)
     Initialization :>
       (
@@ -134,42 +134,52 @@ With[
         ];
 
         updateButton[] :=
-          Module[{res, newVersionQ, newVersionInformation},
+          Module[
+            {
+              res, newVersionQ, newVersionInformation,
+              st = (Style[##, "Label", LineIndent -> 0, TextJustification -> 1.]) &
+            },
             res = checkOnlineVersion[];
             newVersionInformation = CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion" }, version];
             newVersionQ = res =!= $Failed && newVersionInformation =!= version;
 
             CreateDialog[
-              Column[{
-                StringForm[ "`1`\nInstalled version: `2`\n\n`3`" ,
-                  If[res =!= $Failed,
-                    "Online version: " <> ToString@("Version" /. newVersionInformation),
-                    "Update check failed.  Please check your internet connection."
-                  ],
-                  "Version" /. version,
-                  If[newVersionQ,
-                    Column["Changes" /. newVersionInformation],
-                    Unevaluated@Sequence[]
-                  ],
-                  Row[{
-                    Hyperlink[ "Open home page" , "https://github.com/halirutan/Mathematica-SE-Tools" ],
-                    " | " ,
-                    Hyperlink[ "History of changes" , "https://github.com/halirutan/Mathematica-SE-Tools/commits/master" ]
-                  }]
+              Pane[Column[{
+                st["Update information", 14],
+                st@StringTemplate["Installed version: ``"]["Version" /. version],
+
+                If[res =!= $Failed,
+                  st@StringTemplate["Online version: ``"]["Version" /. newVersionInformation],
+                  st@"Update check failed.  Please check your internet connection."
                 ],
 
-                Pane[
-                  If[newVersionQ,
-
-                    ChoiceButtons[{ "Go to update page" }, {SystemOpen["https://github.com/halirutan/Mathematica-SE-Tools"]; DialogReturn[]}],
-
-                    closeButton[]
+                If[newVersionQ,
+                  Column[
+                    Join[{st["Changes in the new version:", Bold]}, st["\[FilledCircle] " <> #] & /@ ("Changes" /. newVersionInformation)]
                   ],
-                  ImageSize -> 340,
-                  Alignment -> Right]
-              }],
+                  Unevaluated@Sequence[]
+                ],
 
-              WindowTitle -> "Version information"]
+                Row[{
+                  Hyperlink[st@"Open home page", "https://github.com/halirutan/Mathematica-SE-Tools"],
+                  " | ",
+                  Hyperlink[st@"History of changes", "https://github.com/halirutan/Mathematica-SE-Tools/commits/master"]
+                }],
+
+                Pane[If[newVersionQ,
+                  ChoiceButtons[
+                    {"Go to update page"},
+                    { SystemOpen["https://github.com/halirutan/Mathematica-SE-Tools"]; DialogReturn[]}
+                  ],
+                  closeButton[]],
+                  ImageSize -> 400,
+                  Alignment -> Right
+                ]},
+                Dividers -> {None, {False, True, False}},
+                Spacings -> {0, {Automatic, 2, Automatic, 1}
+                }], ImageSize -> 400],
+
+              WindowTitle -> "Update information"]
           ];
 
 
@@ -378,7 +388,7 @@ With[
 
     TaggingRules -> {tagHistory -> {}},
     WindowTitle -> "SE Uploader",
-    (* Position the opening palette directly at mouse position *)
+  (* Position the opening palette directly at mouse position *)
     WindowMargins -> Dynamic[Transpose[{CurrentValue[$FrontEnd, "MousePosition"], {Automatic, Automatic}}]]
   ]
 
