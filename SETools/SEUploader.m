@@ -148,8 +148,9 @@ With[
                   ],
                   "Version" /. version,
                   If[newVersionQ,
-                    Column["Changes" /. newVersionInformation]
-                  ]
+                    Column["Changes" /. newVersionInformation],
+                    Unevaluated@Sequence[]
+                  ],
                   Row[{
                     Hyperlink[ "Open home page" , "https://github.com/halirutan/Mathematica-SE-Tools" ],
                     " | " ,
