@@ -48,8 +48,8 @@ YP/qkwX+jZrqB/tXnyD/xkz2g/2rT1z/bpnuB/u3fPkLmaii+g==
            Button[
            "Selected Cell", SETools`SEUploader`Private`progress$$ = True; 
             SETools`SEUploader`Private`uploadExpression[
-                SETools`SEUploader`Private`encodeSelection[]] 
-              SETools`SEUploader`Private`progress$$ = False; Null, 
+              SETools`SEUploader`Private`encodeSelection[]]; 
+            SETools`SEUploader`Private`progress$$ = False; Null, 
             Sequence[ImageSize -> {140, Automatic}], Method -> "Queued"], 
            "Encode the selected cell(s) into an image to share code", 
            TooltipDelay -> Automatic], 
@@ -374,9 +374,7 @@ master"]}],
    SETools`SEUploader`Private`uploadExpression[
       Pattern[SETools`SEUploader`Private`img, 
        Blank[]]] := If[Head[SETools`SEUploader`Private`img] =!= Image, 
-      MessageDialog[
-       StringJoin["Invalid selection.", 
-        ToString[SETools`SEUploader`Private`img]]], 
+      MessageDialog["Invalid selection."], 
       If[ByteCount[SETools`SEUploader`Private`img]/2.^20 > 1., 
        MessageDialog["Expressions bigger then 1 MB are not allowed."], 
        SETools`SEUploader`Private`uploadButtonAction[

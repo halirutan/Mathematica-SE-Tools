@@ -57,7 +57,7 @@ With[
 
 
           Tooltip[
-            Button["Selected Cell", progress = True;uploadExpression[encodeSelection[]]progress = False;, buttonOpts, Method -> "Queued"],
+            Button["Selected Cell", progress = True;uploadExpression[encodeSelection[]];progress = False;, buttonOpts, Method -> "Queued"],
             "Encode the selected cell(s) into an image to share code",
             TooltipDelay -> Automatic],
 
@@ -271,7 +271,7 @@ With[
             If[img === $Failed, Beep[], uploadWithPreview[img]]];
 
         uploadExpression[img_] := If[Head[img] =!= Image,
-          MessageDialog["Invalid selection." <> ToString[img]],
+          MessageDialog["Invalid selection."],
           If[ByteCount[img] / 2.0^20 > 1.0,
             MessageDialog["Expressions bigger then 1 MB are not allowed."],
             uploadButtonAction[img, "Get[\"http://goo.gl/NaH6rM\"][\"", "\"]"]
