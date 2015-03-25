@@ -1,1 +1,1 @@
-{"Version" -> 121, "Changes" -> {"Mouseposition is used when placing a newly opened palette", "Progress indicator when uploading cells or notebooks"}}
+{"Version" -> 122, "Changes" -> {"Replaced \"Get\" with \"Import\" in the markdown code that is created for uploading cells/notbooks", "Linked the banner image to the repository home"}}

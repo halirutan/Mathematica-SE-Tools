@@ -3,7 +3,8 @@ Cell[BoxData[
  DynamicModuleBox[{SETools`SEUploader`Private`progress$$ = False}, 
   DynamicBox[ToBoxes[
     Column[{
-      Image[CompressedData["
+      Hyperlink[
+       Image[CompressedData["
 1:eJztm01oE0EUgJekYhTFHARXodIKiqIi/tCCFEUPoihSItLopabSYq1VSQsl
 1GIOPfYoeNCSHIqgtP705E1BLwp6EI8VVCqIBwV7kaLEt8kuPtqZeWu6O7NN
 3sBX0tl5b2d2v+zvpLnrWqonZlnWQAL+pDJDR7LZTO5MA/xzNDfY3RWHD01A
@@ -25,8 +26,9 @@ X9LzP2d/o7oCET8h8S/I53/nif3gcTIA//o0+PfC53foJhqDiKIkbknvPyx6
 +w28Bg747YdVuebKK2gn/PtMxAvnv0DpIOJECK8JrfDnv2AWbVuLnv+C6ZD0
 gZr/4pFDMcL5L//pYQxoBJp8Minwbshdpu03O9Y//17qWidjHnCsuMC9YRP9
 YP/qkwX+jZrqB/tXnyD/xkz2g/2rT1z/bpnuB/u3fPkLmaii+g==
-       "], "Byte", 
-       ColorSpace -> "RGB", Interleaving -> True], 
+        "], "Byte", 
+        ColorSpace -> "RGB", Interleaving -> True], 
+       "https://github.com/halirutan/Mathematica-SE-Tools"], 
       OpenerView[{
         Style["Uploading", "Text"], 
         Column[{
@@ -83,15 +85,16 @@ YP/qkwX+jZrqB/tXnyD/xkz2g/2rT1z/bpnuB/u3fPkLmaii+g==
              Style["Update", 
               If[
               CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-                 "Version" -> 121, 
+                 "Version" -> 122, 
                   "Changes" -> {
-                   "Mouseposition is used when placing a newly opened \
-palette", "Progress indicator when uploading cells or notebooks"}}] =!= {
-                "Version" -> 121, 
+                   "Replaced \"Get\" with \"Import\" in the markdown code \
+that is created for uploading cells/notbooks", 
+                    "Linked the banner image to the repository home"}}] =!= {
+                "Version" -> 122, 
                  "Changes" -> {
-                  "Mouseposition is used when placing a newly opened palette",
-                    "Progress indicator when uploading cells or notebooks"}}, 
-               
+                  "Replaced \"Get\" with \"Import\" in the markdown code that \
+is created for uploading cells/notbooks", 
+                   "Linked the banner image to the repository home"}}, 
                RGBColor[
                0.8588235294117647, 0.00784313725490196, 0.00784313725490196], 
                Black]]], 
@@ -188,18 +191,19 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 121, 
+         "Version" -> 122, 
           "Changes" -> {
-           "Mouseposition is used when placing a newly opened palette", 
-            "Progress indicator when uploading cells or notebooks"}}]; 
+           "Replaced \"Get\" with \"Import\" in the markdown code that is \
+created for uploading cells/notbooks", 
+            "Linked the banner image to the repository home"}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
        And[SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 121, 
+          "Version" -> 122, 
            "Changes" -> {
-            "Mouseposition is used when placing a newly opened palette", 
-             "Progress indicator when uploading cells or notebooks"}}]; 
-      CreateDialog[
+            "Replaced \"Get\" with \"Import\" in the markdown code that is \
+created for uploading cells/notbooks", 
+             "Linked the banner image to the repository home"}}]; CreateDialog[
         Pane[
          Column[{
            SETools`SEUploader`Private`st$["Update information", 14], 
@@ -207,11 +211,11 @@ Tools/master/SETools/Version.m"],
             StringTemplate["Installed version: ``"][
              ReplaceAll[
              "Version", {
-              "Version" -> 121, 
+              "Version" -> 122, 
                "Changes" -> {
-                "Mouseposition is used when placing a newly opened palette", 
-                 "Progress indicator when uploading cells or notebooks"}}]]], 
-           
+                "Replaced \"Get\" with \"Import\" in the markdown code that \
+is created for uploading cells/notbooks", 
+                 "Linked the banner image to the repository home"}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
             SETools`SEUploader`Private`st$[
              StringTemplate["Online version: ``"][
@@ -378,7 +382,7 @@ master"]}],
       If[ByteCount[SETools`SEUploader`Private`img]/2.^20 > 1., 
        MessageDialog["Expressions bigger then 1 MB are not allowed."], 
        SETools`SEUploader`Private`uploadButtonAction[
-       SETools`SEUploader`Private`img, "Get[\"http://goo.gl/NaH6rM\"][\"", 
+       SETools`SEUploader`Private`img, "Import[\"http://goo.gl/NaH6rM\"][\"", 
         "\"]"]]]; SETools`SEUploader`Private`uploadButtonAction[
       Pattern[SETools`SEUploader`Private`img, 
        Blank[]]] := 

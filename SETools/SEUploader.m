@@ -41,7 +41,7 @@ With[
 
   palette = PaletteNotebook[DynamicModule[{progress = False},
     Dynamic@Column[{
-      logo,
+      Hyperlink[logo, "https://github.com/halirutan/Mathematica-SE-Tools"],
       OpenerView[{Style["Uploading", "Text"],
 
         Column[{
@@ -274,7 +274,7 @@ With[
           MessageDialog["Invalid selection."],
           If[ByteCount[img] / 2.0^20 > 1.0,
             MessageDialog["Expressions bigger then 1 MB are not allowed."],
-            uploadButtonAction[img, "Get[\"http://goo.gl/NaH6rM\"][\"", "\"]"]
+            uploadButtonAction[img, "Import[\"http://goo.gl/NaH6rM\"][\"", "\"]"]
           ]
         ];
 
