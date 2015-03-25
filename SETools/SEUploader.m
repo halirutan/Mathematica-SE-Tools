@@ -66,10 +66,10 @@ With[
             "Encode the selected notebook into an image to share code",
             TooltipDelay -> Automatic],
 
-          Dynamic@If[progress,
+          Dynamic[If[progress,
             ProgressIndicator[ Appearance -> "Percolate"],
             Invisible[ProgressIndicator[ Appearance -> "Percolate"]]
-          ]
+          ], TrackedSymbols :> {progress}]
         }, Center]
       }, True],
 
@@ -96,7 +96,7 @@ With[
 
 
 
-    }, Dividers -> {None, {False, True}}, Spacings -> {Automatic, {0, 2, 0, 0}}],
+    }, Dividers -> {None, {False, True}}, Spacings -> {Automatic, {0, 2, Automatic}}],
   (* init start *)
     Initialization :>
       (
