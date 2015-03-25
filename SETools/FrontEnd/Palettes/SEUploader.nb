@@ -1,163 +1,546 @@
+
 Notebook[{
 Cell[BoxData[
  DynamicModuleBox[{SETools`SEUploader`Private`progress$$ = False}, 
-  DynamicBox[ToBoxes[
-    Column[{
-      Hyperlink[
-       Image[CompressedData["
-1:eJztm01oE0EUgJekYhTFHARXodIKiqIi/tCCFEUPoihSItLopabSYq1VSQsl
-1GIOPfYoeNCSHIqgtP705E1BLwp6EI8VVCqIBwV7kaLEt8kuPtqZeWu6O7NN
-3sBX0tl5b2d2v+zvpLnrWqonZlnWQAL+pDJDR7LZTO5MA/xzNDfY3RWHD01A
-EXAqS6VSGTt1Ow7sBs4C6QA4BKz18jOMDPBkJ/AOKAXMHJAxPT4muoAf64DZ
-ENzDnDI9TiaagBs3QnbP4b3pcTLRBNyY0uDfHyBheqxM9AAvnmvwz8E2PVYm
-eoAXbUC7BlaK1g9lBWC7rFH1FUoCtQ3seAolifKKWG16PwUJGlfSdF/Ai83A
-dg3EJdui1XkM5JIntlsnapsOcH88QnlFXDe9nwIc6yo0roem+2P6/Mv+sX/s
-nzUCPF3AK/aP/dPhn2Rdh9k/9o/9Y/+i7h+UnBPrg2zY/kE5R/ShhYhvJeKV
-3zso64n4Uco/ZzsRORoFMbvQ8j2oflCVy66B+18oc6hexawG/6aJPvQT8VeJ
-+CdE/A6f20Ll3xci7qAgJo2Wd6L6r6pctvnnf+xffftXC+dfz79vwCUFzn3u
-Y5e+oPyDcgLlHSP6UEBtNwpybQHaFfSj+OMo7o5bN02sf1jkH5QrKO8IkWPK
-bXdP4t8blCutGk+N+TdDxO9H8XcD9O8yattNtH2A2m71e1xF8adRfC+q/+TW
-fSfimyX+jaP6fUSOD267nxL/MBtUudg/9o/9Y//Q8otW5ZpJxg8N/vlF5p9z
-Deu9Y46xf8vKP+r+AxNV/zpVfYgS7F+5Lo6OF/j+wJR/zn2c6hjsMYPiq/IP
-jksXgLwGhHOr2L9y3TZUN2lV5pnJwOsKy79NVRxHqvXvmabzr/A6lP1b5N99
-Ir6nxvyb0ODeL1v+/sPZ9t6zorylfvY1gNq2Cfyr6vkflBbBuvB5cFyw/BiK
-X9LzP2d/o7oCET8h8S/I53/nif3gcTIA//o0+PfC53foJhqDiKIkbknvPyx6
-/p+Ij5JcYb//wPQK4nW8//BY8v0HuNEAvA3RvXlgL/vH/ikcTAIFu/J78aC8
-+w28Bg747YdVuebKK2gn/PtMxAvnv0DpIOJECK8JrfDnv2AWbVuLnv+C6ZD0
-gZr/4pFDMcL5L//pYQxoBJp8Minwbshdpu03O9Y//17qWidjHnCsuMC9YRP9
-YP/qkwX+jZrqB/tXnyD/xkz2g/2rT1z/bpnuB/u3fPkLmaii+g==
-        "], "Byte", 
-        ColorSpace -> "RGB", Interleaving -> True], 
-       "https://github.com/halirutan/Mathematica-SE-Tools"], 
-      OpenerView[{
-        Style["Uploading", "Text"], 
-        Column[{
-          Tooltip[
-           Button["Image", 
-            SETools`SEUploader`Private`uploadButton[], 
-            Sequence[ImageSize -> {140, Automatic}]], 
-           "Upload the selected expression as an image to StackExchange", 
-           TooltipDelay -> Automatic], 
-          Tooltip[
-           Button["Image (pp)", 
-            SETools`SEUploader`Private`uploadPPButton[], 
-            Sequence[ImageSize -> {140, Automatic}], Enabled -> 
-            Or[$OperatingSystem === "Windows", 
-              And[$OperatingSystem === "MacOSX", $VersionNumber >= 9]]], 
-           "Upload the selected expression as an image to StackExchange \
+  TagBox[GridBox[{
+     {
+      TagBox[
+       ButtonBox[
+        PaneSelectorBox[{False->
+         GraphicsBox[
+          TagBox[RasterBox[CompressedData["
+1:eJztm71u1EAQx1dAQXmPYN7gCj/AQUtzCjWSEwlKOAUklG4rKop7BNdU5g3c
+0KektMQLuKUyu7nxZTKenV1f7Ls9x5H+Ue72w7MzP89+2Hl19fni4zOl1JeX
+5tfF5bfX19eXN+9emA9vbr5+uHpu/kiMciP7ZdM0s2adXD/+/FsbVUbNQLJ9
+bU49riGUfvq5NSpByantGWA8OqbxAHtDcUelQ2wwPyvQMtRuW7dtN3K8bJwa
+0KjXOhJ/UY1n4LxHVQey14DKHvyVqN1ofowtXlMbz4js3WnmLy7FNp6Zv/OK
+1zyeYTXzd1zFNp73v/7qMTXzF5diG49hpBlTp+LP/KyNtNEGfbeE488SaWO0
+GCJepjwzytH5RquNkfMaqP0C+ihIe/t5HcjXAq6H227as5Y+4zE/mVFB/JX7
+7nfwu9Xa4Xf9BPjD5QujLfpMdetiMCReEPMC1eNUSfGGc0apfQO2SPfK0ujW
+0bYGtr3jAX8Vgr8azBDTfh9PiG9N2z8x/m4Z3joMHsIfxLx2sMJ938ljtl+G
+1TZ/UZ5ygT16vdrxnXM8kKswL3Wbsxi/bT38VRx7T5C/vb/aPOfIidkB/FUk
+titSTnNSTXMY4q90XEMThhKPnTXm3P7tyIs+v5V0XmDyWccWxu9161vge78m
+MoyUYyoi/jpsQb1Cur7EH8xnOJ7s8xuYnzGnmqnTiaPAObUjIXZw99GCYfBB
+PyQWNWUP1dOoXhHAXyc+sehI/DmfRavdPgX7iuYmiT+85ss9/OD1HTvXe9rn
+Lr7S3f5iP3cLfdD7gPKH5wN2boV6iRQz4k8tjevt99/lmIqEv0654C/KmMSf
+uJYidR+s8Q7gD8/BmpRhNp3c+MZzqM/6lDH8NWPqTPirDuTPO/e66gt18PmL
+ax9M+StdZT35Y/cKPk2IP+/7CiHMHMCfs24ofyE2S7wCd9x+uS9/2SP4682e
+jcOE+AuKI+Orx/I3ev6DtRfLa7rbn9LzFw1MrkB4jpX40x47QvnbqPv34iR1
+9ihnxt/CxxLTZukbY0/+8PVpXgrlT7yGtP4j18gd7aX1H94HHWX9F+rPAP70
+mAq0F+cf1v+kPt6nsXtJFb7/zSR/efjzcoPq4v1vKXDseg4j8YfLKsEG3/4X
+n0WJHA/FXwxS3XPglVB3SeqyjKvw8z9cr3OW5eEPn//ZtVsixB2v7TJSLs7j
+affsjvJHz/9C+uD4w/ei8/xvSP6IPYMr0N5EdfdeWqGzdaijSZ3K5SOGvwd9
+qvt/xRK5l/iDct/zjxVhr/L0UZCyJSln13hp9/nHitgQ+vyjIv7tsKx2a6YM
+8iXXx1nxx9x7Iao53zj4o2xXTH+5wz8+/ujeYT/HpvyzVy430edrtl7hYMbF
+H2dHzfSBP3Ps0PP41l8lkjj/9OQvdM8/Kn8oJ3F5i6qU2GP4W3v67fgwlD+U
+X2iO4ngMfc+LyjKD53rWXmDQFc879gnr7HjUbo3DvaPB5YDH5j967w0pNqcE
+cLhW3ff0rLbceAP4W6Eci99ny339Qdw1SOKnfe+Ovrtnz02yEJvT+3OWtq3d
+s6xR/60dznsv3a0Fc2LD3nbEoFXi8SH1Vyut4N0+RzutyLuXnnGHvHvWmz0p
+XmOL42/WdDRUrhtLM3/TVszsWc38TVsxs2c18zdtxcye1czftBUze1bq/v/f
+rE62D5o1a1ac+g+gcmvt
+            "], {{0, 32}, {160, 0}}, {0, 255},
+            ColorFunction->RGBColor],
+           BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+           Selectable->False],
+          BaseStyle->"ImageGraphics",
+          ImageSizeRaw->{160, 32},
+          PlotRange->{{0, 160}, {0, 32}}]}, False,
+         BaseStyle->{None},
+         FrameMargins->0,
+         ImageSize->Automatic],
+        BaseStyle->"Hyperlink",
+        ButtonData->{
+          URL["https://github.com/halirutan/Mathematica-SE-Tools"], None},
+        ButtonNote->"https://github.com/halirutan/Mathematica-SE-Tools"],
+       Annotation[#, "https://github.com/halirutan/Mathematica-SE-Tools", 
+        "Hyperlink"]& ]},
+     {
+      TagBox[
+       DynamicModuleBox[{Typeset`var$$ = True}, 
+        InterpretationBox[
+         StyleBox[
+          PaneSelectorBox[{False->GridBox[{
+             {
+              OpenerBox[Dynamic[Typeset`var$$],
+               Appearance->Automatic,
+               AutoAction->False,
+               ContinuousAction->False,
+               Enabled->Automatic], 
+              StyleBox["\<\"Uploading\"\>", "Text",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 1},
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], True->
+           GridBox[{
+             {
+              OpenerBox[Dynamic[Typeset`var$$],
+               Appearance->Automatic,
+               AutoAction->False,
+               ContinuousAction->False,
+               Enabled->Automatic], 
+              StyleBox["\<\"Uploading\"\>", "Text",
+               StripOnInput->False]},
+             {"", 
+              PaneBox[
+               TagBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    ButtonBox["\<\"Image\"\>",
+                    Appearance->Automatic,
+                    ButtonFunction:>SETools`SEUploader`Private`uploadButton[],
+                    
+                    Evaluator->Automatic,
+                    ImageSize->{140, Automatic},
+                    Method->"Preemptive"],
+                    
+                    "\"Upload the selected expression as an image to \
+StackExchange\"",
+                    TooltipDelay->Automatic,
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, 
+                    "Upload the selected expression as an image to \
+StackExchange", "Tooltip"]& ]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    ButtonBox["\<\"Image (pp)\"\>",
+                    Appearance->Automatic,
+                    
+                    ButtonFunction:>
+                    SETools`SEUploader`Private`uploadPPButton[],
+                    Enabled->True,
+                    Evaluator->Automatic,
+                    ImageSize->{140, Automatic},
+                    Method->"Preemptive"],
+                    
+                    "\"Upload the selected expression as an image to \
+StackExchange (pixel-perfect rasterization)\"",
+                    TooltipDelay->Automatic,
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, 
+                    "Upload the selected expression as an image to \
+StackExchange (pixel-perfect rasterization)", "Tooltip"]& ]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    ButtonBox["\<\"Selected Cell\"\>",
+                    Appearance->Automatic,
+                    
+                    ButtonFunction:>(
+                    SETools`SEUploader`Private`progress$$ = True; 
+                    SETools`SEUploader`Private`uploadExpression[
+                    SETools`SEUploader`Private`encodeSelection[]]; 
+                    SETools`SEUploader`Private`progress$$ = False; Null),
+                    Evaluator->Automatic,
+                    ImageSize->{140, Automatic},
+                    Method->"Queued"],
+                    
+                    "\"Encode the selected cell(s) into an image to share \
+code\"",
+                    TooltipDelay->Automatic,
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, 
+                    "Encode the selected cell(s) into an image to share code",
+                     "Tooltip"]& ]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    ButtonBox["\<\"Selected Notebook\"\>",
+                    Appearance->Automatic,
+                    
+                    ButtonFunction:>(
+                    SETools`SEUploader`Private`progress$$ = True; 
+                    SETools`SEUploader`Private`uploadExpression[
+                    SETools`SEUploader`Private`encodeCurrentNotebook[]]; 
+                    SETools`SEUploader`Private`progress$$ = False),
+                    Evaluator->Automatic,
+                    ImageSize->{140, Automatic},
+                    Method->"Queued"],
+                    
+                    "\"Encode the selected notebook into an image to share \
+code\"",
+                    TooltipDelay->Automatic,
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, 
+                    "Encode the selected notebook into an image to share \
+code", "Tooltip"]& ]},
+                  {
+                   DynamicBox[ToBoxes[
+                    If[SETools`SEUploader`Private`progress$$, 
+                    ProgressIndicator[Appearance -> "Percolate"], 
+                    Invisible[
+                    ProgressIndicator[Appearance -> "Percolate"]]], 
+                    StandardForm],
+                    ImageSizeCache->{50., {3., 9.}}]}
+                 },
+                 DefaultBaseStyle->"Column",
+                 GridBoxAlignment->{"Columns" -> {{Center}}},
+                 GridBoxItemSize->{
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                "Column"],
+               ImageMargins->0]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 1},
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
+           Dynamic[Typeset`var$$],
+           Alignment->Automatic,
+           BaselinePosition->Baseline,
+           DefaultBaseStyle->"OpenerView",
+           ImageMargins->0,
+           ImageSize->Automatic],
+          Deployed->False,
+          StripOnInput->False],
+         OpenerView[{
+           Style["Uploading", "Text"], 
+           Column[{
+             Tooltip[
+              Button["Image", 
+               SETools`SEUploader`Private`uploadButton[], 
+               ImageSize -> {140, Automatic}], 
+              "Upload the selected expression as an image to StackExchange", 
+              TooltipDelay -> Automatic], 
+             Tooltip[
+              Button["Image (pp)", 
+               SETools`SEUploader`Private`uploadPPButton[], 
+               ImageSize -> {140, Automatic}, Enabled -> True], 
+              "Upload the selected expression as an image to StackExchange \
 (pixel-perfect rasterization)", TooltipDelay -> Automatic], 
-          Tooltip[
-           Button[
-           "Selected Cell", SETools`SEUploader`Private`progress$$ = True; 
-            SETools`SEUploader`Private`uploadExpression[
-              SETools`SEUploader`Private`encodeSelection[]]; 
-            SETools`SEUploader`Private`progress$$ = False; Null, 
-            Sequence[ImageSize -> {140, Automatic}], Method -> "Queued"], 
-           "Encode the selected cell(s) into an image to share code", 
-           TooltipDelay -> Automatic], 
-          Tooltip[
-           Button[
-           "Selected Notebook", SETools`SEUploader`Private`progress$$ = True; 
-            SETools`SEUploader`Private`uploadExpression[
-              SETools`SEUploader`Private`encodeCurrentNotebook[]]; 
-            SETools`SEUploader`Private`progress$$ = False, 
-            Sequence[ImageSize -> {140, Automatic}], Method -> "Queued"], 
-           "Encode the selected notebook into an image to share code", 
-           TooltipDelay -> Automatic], 
-          Dynamic[
-           If[SETools`SEUploader`Private`progress$$, 
-            ProgressIndicator[Appearance -> "Percolate"], 
-            Invisible[
-             ProgressIndicator[Appearance -> "Percolate"]]]]}, Center]}, 
-       True], 
-      OpenerView[{
-        Style["Miscellaneous", "Text"], 
-        Column[{
-          Tooltip[
-           Button["History", 
-            SETools`SEUploader`Private`historyButton[], 
-            Sequence[ImageSize -> {140, Automatic}]], 
-           "See previously uploaded images and copy their URLs", TooltipDelay -> 
-           Automatic], 
-          Tooltip[
-           Button[
-            Dynamic[
-             Style["Update", 
-              If[
-              CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-                 "Version" -> 122, 
-                  "Changes" -> {
-                   "Replaced \"Get\" with \"Import\" in the markdown code \
+             Tooltip[
+              Button[
+              "Selected Cell", SETools`SEUploader`Private`progress$$ = True; 
+               SETools`SEUploader`Private`uploadExpression[
+                 SETools`SEUploader`Private`encodeSelection[]]; 
+               SETools`SEUploader`Private`progress$$ = False; Null, 
+               ImageSize -> {140, Automatic}, Method -> "Queued"], 
+              "Encode the selected cell(s) into an image to share code", 
+              TooltipDelay -> Automatic], 
+             Tooltip[
+              Button[
+              "Selected Notebook", 
+               SETools`SEUploader`Private`progress$$ = True; 
+               SETools`SEUploader`Private`uploadExpression[
+                 SETools`SEUploader`Private`encodeCurrentNotebook[]]; 
+               SETools`SEUploader`Private`progress$$ = False, 
+               ImageSize -> {140, Automatic}, Method -> "Queued"], 
+              "Encode the selected notebook into an image to share code", 
+              TooltipDelay -> Automatic], 
+             Dynamic[
+              If[SETools`SEUploader`Private`progress$$, 
+               ProgressIndicator[Appearance -> "Percolate"], 
+               Invisible[
+                ProgressIndicator[Appearance -> "Percolate"]]]]}, Center]}, 
+          True]],
+        DynamicModuleValues:>{}],
+       Setting[#, {0}]& ]},
+     {
+      TagBox[
+       DynamicModuleBox[{Typeset`var$$ = True}, 
+        InterpretationBox[
+         StyleBox[
+          PaneSelectorBox[{False->GridBox[{
+             {
+              OpenerBox[Dynamic[Typeset`var$$],
+               Appearance->Automatic,
+               AutoAction->False,
+               ContinuousAction->False,
+               Enabled->Automatic], 
+              StyleBox["\<\"Miscellaneous\"\>", "Text",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 1},
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], True->
+           GridBox[{
+             {
+              OpenerBox[Dynamic[Typeset`var$$],
+               Appearance->Automatic,
+               AutoAction->False,
+               ContinuousAction->False,
+               Enabled->Automatic], 
+              StyleBox["\<\"Miscellaneous\"\>", "Text",
+               StripOnInput->False]},
+             {"", 
+              PaneBox[
+               TagBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    ButtonBox["\<\"History\"\>",
+                    Appearance->Automatic,
+                    ButtonFunction:>SETools`SEUploader`Private`historyButton[],
+                    Evaluator->Automatic,
+                    ImageSize->{140, Automatic},
+                    Method->"Preemptive"],
+                    "\"See previously uploaded images and copy their URLs\"",
+                    TooltipDelay->Automatic,
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, 
+                    "See previously uploaded images and copy their URLs", 
+                    "Tooltip"]& ]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    ButtonBox[
+                    DynamicBox[ToBoxes[
+                    Style["Update", 
+                    If[
+                    CurrentValue[$FrontEnd, {
+                    TaggingRules, "SEUploaderVersion"}, {
+                    "Version" -> 123, 
+                    "Changes" -> {
+                    "Introduced new logo", 
+                    "Replaced \"Get\" with \"Import\" in the markdown code \
 that is created for uploading cells/notbooks", 
                     "Linked the banner image to the repository home"}}] =!= {
-                "Version" -> 122, 
-                 "Changes" -> {
-                  "Replaced \"Get\" with \"Import\" in the markdown code that \
-is created for uploading cells/notbooks", 
-                   "Linked the banner image to the repository home"}}, 
-               RGBColor[
-               0.8588235294117647, 0.00784313725490196, 0.00784313725490196], 
-               Black]]], 
-            SETools`SEUploader`Private`updateButton[], 
-            Sequence[ImageSize -> {140, Automatic}]], 
-           "Check for newer versions of the uploader palette", TooltipDelay -> 
-           Automatic], 
-          Tooltip[
-           Button["About", 
-            MessageDialog[
-             Column[{
-               Image[CompressedData["
-1:eJztm01oE0EUgJekYhTFHARXodIKiqIi/tCCFEUPoihSItLopabSYq1VSQsl
-1GIOPfYoeNCSHIqgtP705E1BLwp6EI8VVCqIBwV7kaLEt8kuPtqZeWu6O7NN
-3sBX0tl5b2d2v+zvpLnrWqonZlnWQAL+pDJDR7LZTO5MA/xzNDfY3RWHD01A
-EXAqS6VSGTt1Ow7sBs4C6QA4BKz18jOMDPBkJ/AOKAXMHJAxPT4muoAf64DZ
-ENzDnDI9TiaagBs3QnbP4b3pcTLRBNyY0uDfHyBheqxM9AAvnmvwz8E2PVYm
-eoAXbUC7BlaK1g9lBWC7rFH1FUoCtQ3seAolifKKWG16PwUJGlfSdF/Ai83A
-dg3EJdui1XkM5JIntlsnapsOcH88QnlFXDe9nwIc6yo0roem+2P6/Mv+sX/s
-nzUCPF3AK/aP/dPhn2Rdh9k/9o/9Y/+i7h+UnBPrg2zY/kE5R/ShhYhvJeKV
-3zso64n4Uco/ZzsRORoFMbvQ8j2oflCVy66B+18oc6hexawG/6aJPvQT8VeJ
-+CdE/A6f20Ll3xci7qAgJo2Wd6L6r6pctvnnf+xffftXC+dfz79vwCUFzn3u
-Y5e+oPyDcgLlHSP6UEBtNwpybQHaFfSj+OMo7o5bN02sf1jkH5QrKO8IkWPK
-bXdP4t8blCutGk+N+TdDxO9H8XcD9O8yattNtH2A2m71e1xF8adRfC+q/+TW
-fSfimyX+jaP6fUSOD267nxL/MBtUudg/9o/9Y//Q8otW5ZpJxg8N/vlF5p9z
-Deu9Y46xf8vKP+r+AxNV/zpVfYgS7F+5Lo6OF/j+wJR/zn2c6hjsMYPiq/IP
-jksXgLwGhHOr2L9y3TZUN2lV5pnJwOsKy79NVRxHqvXvmabzr/A6lP1b5N99
-Ir6nxvyb0ODeL1v+/sPZ9t6zorylfvY1gNq2Cfyr6vkflBbBuvB5cFyw/BiK
-X9LzP2d/o7oCET8h8S/I53/nif3gcTIA//o0+PfC53foJhqDiKIkbknvPyx6
-/p+Ij5JcYb//wPQK4nW8//BY8v0HuNEAvA3RvXlgL/vH/ikcTAIFu/J78aC8
-+w28Bg747YdVuebKK2gn/PtMxAvnv0DpIOJECK8JrfDnv2AWbVuLnv+C6ZD0
-gZr/4pFDMcL5L//pYQxoBJp8Minwbshdpu03O9Y//17qWidjHnCsuMC9YRP9
-YP/qkwX+jZrqB/tXnyD/xkz2g/2rT1z/bpnuB/u3fPkLmaii+g==
-                "], 
-                "Byte", ColorSpace -> "RGB", Interleaving -> True], 
-               Style[
-               "This palette was developed to ease the uploading of \
+                    "Version" -> 123, 
+                    "Changes" -> {
+                    "Introduced new logo", 
+                    "Replaced \"Get\" with \"Import\" in the markdown code \
+that is created for uploading cells/notbooks", 
+                    "Linked the banner image to the repository home"}}, 
+                    RGBColor[
+                    0.8588235294117647, 0.00784313725490196, 
+                    0.00784313725490196], Black]], StandardForm],
+                    ImageSizeCache->{45., {3., 10.}}],
+                    Appearance->Automatic,
+                    ButtonFunction:>SETools`SEUploader`Private`updateButton[],
+                    
+                    Evaluator->Automatic,
+                    ImageSize->{140, Automatic},
+                    Method->"Preemptive"],
+                    "\"Check for newer versions of the uploader palette\"",
+                    TooltipDelay->Automatic,
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, 
+                    "Check for newer versions of the uploader palette", 
+                    "Tooltip"]& ]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    ButtonBox["\<\"About\"\>",
+                    Appearance->Automatic,
+                    ButtonFunction:>MessageDialog[
+                    Column[{
+                    Image[CompressedData["
+1:eJztm71u1EAQx1dAQXmPYN7gCj/AQUtzCjWSEwlKOAUklG4rKop7BNdU5g3c
+0KektMQLuKUyu7nxZTKenV1f7Ls9x5H+Ue72w7MzP89+2Hl19fni4zOl1JeX
+5tfF5bfX19eXN+9emA9vbr5+uHpu/kiMciP7ZdM0s2adXD/+/FsbVUbNQLJ9
+bU49riGUfvq5NSpByantGWA8OqbxAHtDcUelQ2wwPyvQMtRuW7dtN3K8bJwa
+0KjXOhJ/UY1n4LxHVQey14DKHvyVqN1ofowtXlMbz4js3WnmLy7FNp6Zv/OK
+1zyeYTXzd1zFNp73v/7qMTXzF5diG49hpBlTp+LP/KyNtNEGfbeE488SaWO0
+GCJepjwzytH5RquNkfMaqP0C+ihIe/t5HcjXAq6H227as5Y+4zE/mVFB/JX7
+7nfwu9Xa4Xf9BPjD5QujLfpMdetiMCReEPMC1eNUSfGGc0apfQO2SPfK0ujW
+0bYGtr3jAX8Vgr8azBDTfh9PiG9N2z8x/m4Z3joMHsIfxLx2sMJ938ljtl+G
+1TZ/UZ5ygT16vdrxnXM8kKswL3Wbsxi/bT38VRx7T5C/vb/aPOfIidkB/FUk
+titSTnNSTXMY4q90XEMThhKPnTXm3P7tyIs+v5V0XmDyWccWxu9161vge78m
+MoyUYyoi/jpsQb1Cur7EH8xnOJ7s8xuYnzGnmqnTiaPAObUjIXZw99GCYfBB
+PyQWNWUP1dOoXhHAXyc+sehI/DmfRavdPgX7iuYmiT+85ss9/OD1HTvXe9rn
+Lr7S3f5iP3cLfdD7gPKH5wN2boV6iRQz4k8tjevt99/lmIqEv0654C/KmMSf
+uJYidR+s8Q7gD8/BmpRhNp3c+MZzqM/6lDH8NWPqTPirDuTPO/e66gt18PmL
+ax9M+StdZT35Y/cKPk2IP+/7CiHMHMCfs24ofyE2S7wCd9x+uS9/2SP4682e
+jcOE+AuKI+Orx/I3ev6DtRfLa7rbn9LzFw1MrkB4jpX40x47QvnbqPv34iR1
+9ihnxt/CxxLTZukbY0/+8PVpXgrlT7yGtP4j18gd7aX1H94HHWX9F+rPAP70
+mAq0F+cf1v+kPt6nsXtJFb7/zSR/efjzcoPq4v1vKXDseg4j8YfLKsEG3/4X
+n0WJHA/FXwxS3XPglVB3SeqyjKvw8z9cr3OW5eEPn//ZtVsixB2v7TJSLs7j
+affsjvJHz/9C+uD4w/ei8/xvSP6IPYMr0N5EdfdeWqGzdaijSZ3K5SOGvwd9
+qvt/xRK5l/iDct/zjxVhr/L0UZCyJSln13hp9/nHitgQ+vyjIv7tsKx2a6YM
+8iXXx1nxx9x7Iao53zj4o2xXTH+5wz8+/ujeYT/HpvyzVy430edrtl7hYMbF
+H2dHzfSBP3Ps0PP41l8lkjj/9OQvdM8/Kn8oJ3F5i6qU2GP4W3v67fgwlD+U
+X2iO4ngMfc+LyjKD53rWXmDQFc879gnr7HjUbo3DvaPB5YDH5j967w0pNqcE
+cLhW3ff0rLbceAP4W6Eci99ny339Qdw1SOKnfe+Ovrtnz02yEJvT+3OWtq3d
+s6xR/60dznsv3a0Fc2LD3nbEoFXi8SH1Vyut4N0+RzutyLuXnnGHvHvWmz0p
+XmOL42/WdDRUrhtLM3/TVszsWc38TVsxs2c18zdtxcye1czftBUze1bq/v/f
+rE62D5o1a1ac+g+gcmvt
+                    "], "Byte", ColorSpace -> "RGB", 
+                    Interleaving -> True], 
+                    Style[
+                    "This palette was developed to ease the uploading of \
 Mathematica content to its dedicated stackexchange site. You can upload \
 images of graphics, expressions and cells. To share code, it is possible to \
 encode cells or whole notebooks into an image.", "Label", LineIndent -> 0, 
-                TextJustification -> 1.], 
-               Style[
-               "For more information, you can visit the following places:", 
-                "Label", LineIndent -> 0, TextJustification -> 1.], 
-               Hyperlink[
-                Style[
-                "\[FilledCircle] The official post at stackexchange", "Label",
-                  LineIndent -> 0, TextJustification -> 1.], 
-                "http://meta.mathematica.stackexchange.com/q/5/187"], 
-               Hyperlink[
-                Style[
-                "\[FilledCircle] The GitHub repository of this project", 
-                 "Label", LineIndent -> 0, TextJustification -> 1.], 
-                "https://github.com/halirutan/Mathematica-SE-Tools"], 
-               Style[
-               "\[Copyright] 2012\[Dash]2015 The StackExchange Community", 
-                "Label", LineIndent -> 0, TextJustification -> 1.]}, 
-              Dividers -> {False, {False, True}}, Spacings -> 1]], 
-            Sequence[ImageSize -> {140, Automatic}]], 
-           "Check for newer versions of the uploader palette", TooltipDelay -> 
-           Automatic]}, Center]}, True]}, Dividers -> {None, {False, True}}, 
-     Spacings -> {Automatic, {0, 2, 0, 0}}], StandardForm],
-   ImageSizeCache->{160., {145., 150.}}],
+                    TextJustification -> 1.], 
+                    Style[
+                    "For more information, you can visit the following \
+places:", "Label", LineIndent -> 0, TextJustification -> 1.], 
+                    Hyperlink[
+                    Style[
+                    "\[FilledCircle] The official post at stackexchange", 
+                    "Label", LineIndent -> 0, TextJustification -> 1.], 
+                    "http://meta.mathematica.stackexchange.com/q/5/187"], 
+                    Hyperlink[
+                    Style[
+                    "\[FilledCircle] The GitHub repository of this project", 
+                    "Label", LineIndent -> 0, TextJustification -> 1.], 
+                    "https://github.com/halirutan/Mathematica-SE-Tools"], 
+                    Style[
+                    "\[Copyright] 2012\[Dash]2015 The StackExchange \
+Community", "Label", LineIndent -> 0, TextJustification -> 1.]}, 
+                    Dividers -> {False, {False, True}}, Spacings -> 1]],
+                    Evaluator->Automatic,
+                    ImageSize->{140, Automatic},
+                    Method->"Preemptive"],
+                    "\"Check for newer versions of the uploader palette\"",
+                    TooltipDelay->Automatic,
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, 
+                    "Check for newer versions of the uploader palette", 
+                    "Tooltip"]& ]}
+                 },
+                 DefaultBaseStyle->"Column",
+                 GridBoxAlignment->{"Columns" -> {{Center}}},
+                 
+                 GridBoxItemSize->{
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                "Column"],
+               ImageMargins->0]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 1},
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxBackground->{"Columns" -> {{Automatic}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
+           Dynamic[Typeset`var$$],
+           Alignment->Automatic,
+           BaselinePosition->Baseline,
+           DefaultBaseStyle->"OpenerView",
+           ImageMargins->0,
+           ImageSize->Automatic],
+          Deployed->False,
+          StripOnInput->False],
+         OpenerView[{
+           Style["Miscellaneous", "Text"], 
+           Column[{
+             Tooltip[
+              Button["History", 
+               SETools`SEUploader`Private`historyButton[], 
+               ImageSize -> {140, Automatic}], 
+              "See previously uploaded images and copy their URLs", 
+              TooltipDelay -> Automatic], 
+             Tooltip[
+              Button[
+               Dynamic[
+                Style["Update", 
+                 If[
+                 CurrentValue[$FrontEnd, {
+                    TaggingRules, "SEUploaderVersion"}, {
+                    "Version" -> 123, 
+                    "Changes" -> {
+                    "Introduced new logo", 
+                    "Replaced \"Get\" with \"Import\" in the markdown code \
+that is created for uploading cells/notbooks", 
+                    "Linked the banner image to the repository home"}}] =!= {
+                   "Version" -> 123, 
+                    "Changes" -> {
+                    "Introduced new logo", 
+                    "Replaced \"Get\" with \"Import\" in the markdown code \
+that is created for uploading cells/notbooks", 
+                    "Linked the banner image to the repository home"}}, 
+                  RGBColor[
+                  0.8588235294117647, 0.00784313725490196, 
+                   0.00784313725490196], Black]]], 
+               SETools`SEUploader`Private`updateButton[], 
+               ImageSize -> {140, Automatic}], 
+              "Check for newer versions of the uploader palette", 
+              TooltipDelay -> Automatic], 
+             Tooltip[
+              Button["About", 
+               MessageDialog[
+                Column[{
+                  Image[CompressedData["
+1:eJztm71u1EAQx1dAQXmPYN7gCj/AQUtzCjWSEwlKOAUklG4rKop7BNdU5g3c
+0KektMQLuKUyu7nxZTKenV1f7Ls9x5H+Ue72w7MzP89+2Hl19fni4zOl1JeX
+5tfF5bfX19eXN+9emA9vbr5+uHpu/kiMciP7ZdM0s2adXD/+/FsbVUbNQLJ9
+bU49riGUfvq5NSpByantGWA8OqbxAHtDcUelQ2wwPyvQMtRuW7dtN3K8bJwa
+0KjXOhJ/UY1n4LxHVQey14DKHvyVqN1ofowtXlMbz4js3WnmLy7FNp6Zv/OK
+1zyeYTXzd1zFNp73v/7qMTXzF5diG49hpBlTp+LP/KyNtNEGfbeE488SaWO0
+GCJepjwzytH5RquNkfMaqP0C+ihIe/t5HcjXAq6H227as5Y+4zE/mVFB/JX7
+7nfwu9Xa4Xf9BPjD5QujLfpMdetiMCReEPMC1eNUSfGGc0apfQO2SPfK0ujW
+0bYGtr3jAX8Vgr8azBDTfh9PiG9N2z8x/m4Z3joMHsIfxLx2sMJ938ljtl+G
+1TZ/UZ5ygT16vdrxnXM8kKswL3Wbsxi/bT38VRx7T5C/vb/aPOfIidkB/FUk
+titSTnNSTXMY4q90XEMThhKPnTXm3P7tyIs+v5V0XmDyWccWxu9161vge78m
+MoyUYyoi/jpsQb1Cur7EH8xnOJ7s8xuYnzGnmqnTiaPAObUjIXZw99GCYfBB
+PyQWNWUP1dOoXhHAXyc+sehI/DmfRavdPgX7iuYmiT+85ss9/OD1HTvXe9rn
+Lr7S3f5iP3cLfdD7gPKH5wN2boV6iRQz4k8tjevt99/lmIqEv0654C/KmMSf
+uJYidR+s8Q7gD8/BmpRhNp3c+MZzqM/6lDH8NWPqTPirDuTPO/e66gt18PmL
+ax9M+StdZT35Y/cKPk2IP+/7CiHMHMCfs24ofyE2S7wCd9x+uS9/2SP4682e
+jcOE+AuKI+Orx/I3ev6DtRfLa7rbn9LzFw1MrkB4jpX40x47QvnbqPv34iR1
+9ihnxt/CxxLTZukbY0/+8PVpXgrlT7yGtP4j18gd7aX1H94HHWX9F+rPAP70
+mAq0F+cf1v+kPt6nsXtJFb7/zSR/efjzcoPq4v1vKXDseg4j8YfLKsEG3/4X
+n0WJHA/FXwxS3XPglVB3SeqyjKvw8z9cr3OW5eEPn//ZtVsixB2v7TJSLs7j
+affsjvJHz/9C+uD4w/ei8/xvSP6IPYMr0N5EdfdeWqGzdaijSZ3K5SOGvwd9
+qvt/xRK5l/iDct/zjxVhr/L0UZCyJSln13hp9/nHitgQ+vyjIv7tsKx2a6YM
+8iXXx1nxx9x7Iao53zj4o2xXTH+5wz8+/ujeYT/HpvyzVy430edrtl7hYMbF
+H2dHzfSBP3Ps0PP41l8lkjj/9OQvdM8/Kn8oJ3F5i6qU2GP4W3v67fgwlD+U
+X2iO4ngMfc+LyjKD53rWXmDQFc879gnr7HjUbo3DvaPB5YDH5j967w0pNqcE
+cLhW3ff0rLbceAP4W6Eci99ny339Qdw1SOKnfe+Ovrtnz02yEJvT+3OWtq3d
+s6xR/60dznsv3a0Fc2LD3nbEoFXi8SH1Vyut4N0+RzutyLuXnnGHvHvWmz0p
+XmOL42/WdDRUrhtLM3/TVszsWc38TVsxs2c18zdtxcye1czftBUze1bq/v/f
+rE62D5o1a1ac+g+gcmvt
+                   "], "Byte", ColorSpace -> "RGB", 
+                   Interleaving -> True], 
+                  Style[
+                  "This palette was developed to ease the uploading of \
+Mathematica content to its dedicated stackexchange site. You can upload \
+images of graphics, expressions and cells. To share code, it is possible to \
+encode cells or whole notebooks into an image.", "Label", LineIndent -> 0, 
+                   TextJustification -> 1.], 
+                  Style[
+                  "For more information, you can visit the following places:",
+                    "Label", LineIndent -> 0, TextJustification -> 1.], 
+                  Hyperlink[
+                   Style[
+                   "\[FilledCircle] The official post at stackexchange", 
+                    "Label", LineIndent -> 0, TextJustification -> 1.], 
+                   "http://meta.mathematica.stackexchange.com/q/5/187"], 
+                  Hyperlink[
+                   Style[
+                   "\[FilledCircle] The GitHub repository of this project", 
+                    "Label", LineIndent -> 0, TextJustification -> 1.], 
+                   "https://github.com/halirutan/Mathematica-SE-Tools"], 
+                  Style[
+                  "\[Copyright] 2012\[Dash]2015 The StackExchange Community", 
+                   "Label", LineIndent -> 0, TextJustification -> 1.]}, 
+                 Dividers -> {False, {False, True}}, Spacings -> 1]], 
+               ImageSize -> {140, Automatic}], 
+              "Check for newer versions of the uploader palette", 
+              TooltipDelay -> Automatic]}, Center]}, True]],
+        DynamicModuleValues:>{}],
+       Setting[#, {0}]& ]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxDividers->{"Columns" -> {{None}}, "Rows" -> {False, True}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+    GridBoxSpacings->{"Columns" -> {{Automatic}}, "Rows" -> {0, 2, 0, 0}}],
+   "Column"],
   DynamicModuleValues:>{},
   Initialization:>(Block[{$ContextPath}, 
      Map[Needs, {"JLink`", "SETools`SEImageExpressionEncode`"}]]; 
@@ -191,17 +574,19 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 122, 
+         "Version" -> 123, 
           "Changes" -> {
-           "Replaced \"Get\" with \"Import\" in the markdown code that is \
+           "Introduced new logo", 
+            "Replaced \"Get\" with \"Import\" in the markdown code that is \
 created for uploading cells/notbooks", 
             "Linked the banner image to the repository home"}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
        And[SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 122, 
+          "Version" -> 123, 
            "Changes" -> {
-            "Replaced \"Get\" with \"Import\" in the markdown code that is \
+            "Introduced new logo", 
+             "Replaced \"Get\" with \"Import\" in the markdown code that is \
 created for uploading cells/notbooks", 
              "Linked the banner image to the repository home"}}]; CreateDialog[
         Pane[
@@ -211,9 +596,10 @@ created for uploading cells/notbooks",
             StringTemplate["Installed version: ``"][
              ReplaceAll[
              "Version", {
-              "Version" -> 122, 
+              "Version" -> 123, 
                "Changes" -> {
-                "Replaced \"Get\" with \"Import\" in the markdown code that \
+                "Introduced new logo", 
+                 "Replaced \"Get\" with \"Import\" in the markdown code that \
 is created for uploading cells/notbooks", 
                  "Linked the banner image to the repository home"}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
@@ -242,6 +628,7 @@ is created for uploading cells/notbooks",
               "https://github.com/halirutan/Mathematica-SE-Tools"], " | ", 
              Hyperlink[
               SETools`SEUploader`Private`st$["History of changes"], 
+              
               "https://github.com/halirutan/Mathematica-SE-Tools/commits/\
 master"]}], 
            Pane[

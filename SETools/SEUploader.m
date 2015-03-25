@@ -40,8 +40,8 @@ With[
   },
 
   palette = PaletteNotebook[DynamicModule[{progress = False},
-    Dynamic@Column[{
-      Hyperlink[logo, "https://github.com/halirutan/Mathematica-SE-Tools"],
+    Column[{
+      Hyperlink[logo, "https://github.com/halirutan/Mathematica-SE-Tools", ActiveStyle -> None, BaseStyle -> None],
       OpenerView[{Style["Uploading", "Text"],
 
         Column[{
@@ -127,8 +127,8 @@ With[
             CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion" }] = onlineVersion
           ];
 
-        (* Check for updates on initialization if last check was > 3 days ago.
-        The check will time out after 6 seconds. *)
+         (*Check for updates on initialization if last check was > 3 days ago.*)
+        (*The check will time out after 6 seconds.*)
         If[AbsoluteTime[] > 3 * 3600 * 24 + CurrentValue[$FrontEnd, {TaggingRules, tagLastCheck }, 0],
           TimeConstrained[checkOnlineVersion[], 6]
         ];
@@ -387,9 +387,7 @@ With[
   ],
 
     TaggingRules -> {tagHistory -> {}},
-    WindowTitle -> "SE Uploader",
-  (* Position the opening palette directly at mouse position *)
-    WindowMargins -> Dynamic[Transpose[{CurrentValue[$FrontEnd, "MousePosition"], {Automatic, Automatic}}]]
+    WindowTitle -> "SE Uploader"
   ]
 
 ];
