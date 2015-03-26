@@ -115,7 +115,10 @@ StackExchange", "Tooltip"]& ]},
                     
                     ButtonFunction:>
                     SETools`SEUploader`Private`uploadPPButton[],
-                    Enabled->True,
+                    Enabled->Dynamic[
+                    Or[$OperatingSystem === "Windows", 
+                    And[$OperatingSystem === "MacOSX", $VersionNumber >= 9]], 
+                    TrackedSymbols :> {$OperatingSystem, $VersionNumber}],
                     Evaluator->Automatic,
                     ImageSize->{140, Automatic},
                     Method->"Preemptive"],
@@ -181,7 +184,7 @@ code", "Tooltip"]& ]},
                     Invisible[
                     ProgressIndicator[Appearance -> "Percolate"]]], 
                     StandardForm],
-                    ImageSizeCache->{50., {3., 9.}},
+                    ImageSizeCache->{33., {6., 9.}},
                     TrackedSymbols:>{SETools`SEUploader`Private`progress$$}]}
                  },
                  DefaultBaseStyle->"Column",
@@ -220,7 +223,10 @@ code", "Tooltip"]& ]},
              Tooltip[
               Button["Image (pp)", 
                SETools`SEUploader`Private`uploadPPButton[], 
-               ImageSize -> {140, Automatic}, Enabled -> True], 
+               ImageSize -> {140, Automatic}, Enabled -> Dynamic[
+                 Or[$OperatingSystem === "Windows", 
+                  And[$OperatingSystem === "MacOSX", $VersionNumber >= 9]], 
+                 TrackedSymbols :> {$OperatingSystem, $VersionNumber}]], 
               "Upload the selected expression as an image to StackExchange \
 (pixel-perfect rasterization)", TooltipDelay -> Automatic], 
              Tooltip[
@@ -326,7 +332,7 @@ that is created for uploading cells/notbooks",
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
-                    ImageSizeCache->{45., {3., 10.}}],
+                    ImageSizeCache->{30., {8., 8.}}],
                     Appearance->Automatic,
                     ButtonFunction:>SETools`SEUploader`Private`updateButton[],
                     
@@ -573,7 +579,8 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`newVersionInformation$, 
        SETools`SEUploader`Private`st$ = Style[
          SlotSequence[1], "Label", LineIndent -> 0, TextJustification -> 
-         1.]& }, SETools`SEUploader`Private`res$ = 
+         1.]& }, 
+      SETools`SEUploader`Private`res$ = 
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
@@ -751,15 +758,15 @@ master"]}],
            SETools`SEUploader`Private`closeButton[]}], Alignment -> Right]}], 
       WindowTitle -> "History"]; 
    SETools`SEUploader`Private`uploadButton[] := 
-    With[{SETools`SEUploader`Private`img = 
+    With[{
+      SETools`SEUploader`Private`img = 
        SETools`SEUploader`Private`rasterizeSelection1[]}, 
       If[SETools`SEUploader`Private`img === $Failed, 
        Beep[], 
        SETools`SEUploader`Private`uploadWithPreview[
        SETools`SEUploader`Private`img]]]; 
    SETools`SEUploader`Private`uploadPPButton[] := 
-    With[{
-      SETools`SEUploader`Private`img = 
+    With[{SETools`SEUploader`Private`img = 
        SETools`SEUploader`Private`rasterizeSelection2[]}, 
       If[SETools`SEUploader`Private`img === $Failed, 
        Beep[], 
@@ -843,9 +850,9 @@ copied to the clipboard.", Bold],
       Optional[
        Pattern[SETools`SEUploader`Private`maxWidth, 
         Blank[]], 650]] := 
-    Module[{SETools`SEUploader`Private`target, 
-       SETools`SEUploader`Private`selection, 
-       SETools`SEUploader`Private`image}, 
+    Module[{
+      SETools`SEUploader`Private`target, SETools`SEUploader`Private`selection,
+        SETools`SEUploader`Private`image}, 
       SETools`SEUploader`Private`selection = NotebookRead[
          SelectedNotebook[]]; If[
         MemberQ[

@@ -52,7 +52,7 @@ With[
             TooltipDelay -> Automatic],
 
 
-          Tooltip[Button["Image (pp)", uploadPPButton[], buttonOpts, Enabled -> ($OperatingSystem === "Windows" || ($OperatingSystem === "MacOSX" && $VersionNumber >= 9))],
+          Tooltip[Button["Image (pp)", uploadPPButton[], buttonOpts, Enabled -> Dynamic[$OperatingSystem === "Windows" || ($OperatingSystem === "MacOSX" && $VersionNumber >= 9), TrackedSymbols:>{$OperatingSystem,$VersionNumber}]],
             "Upload the selected expression as an image to StackExchange (pixel-perfect rasterization)", TooltipDelay -> Automatic],
 
 
