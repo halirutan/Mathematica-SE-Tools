@@ -42,7 +42,7 @@ With[
   palette = PaletteNotebook[DynamicModule[{progress = False},
     Column[{
       Hyperlink[logo, "https://github.com/halirutan/Mathematica-SE-Tools", ActiveStyle -> None, BaseStyle -> None],
-      OpenerView[{Style["Uploading", "Text"],
+      OpenerView[{Style["Uploading", "SmallText"],
 
         Column[{
 
@@ -67,13 +67,13 @@ With[
             TooltipDelay -> Automatic],
 
           Dynamic[If[progress,
-            ProgressIndicator[ Appearance -> "Percolate"],
-            Invisible[ProgressIndicator[ Appearance -> "Percolate"]]
+            ProgressIndicator[ Appearance -> "Percolate", ImageSize -> {64, 10}],
+            Invisible[ProgressIndicator[ Appearance -> "Percolate", ImageSize -> {64, 10}]]
           ], TrackedSymbols :> {progress}]
         }, Center]
       }, True],
 
-      OpenerView[{Style["Miscellaneous", "Text"],
+      OpenerView[{Style["Miscellaneous", "SmallText"],
         Column[{
 
           Tooltip[

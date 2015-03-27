@@ -65,7 +65,7 @@ rE62D5o1a1ac+g+gcmvt
                AutoAction->False,
                ContinuousAction->False,
                Enabled->Automatic], 
-              StyleBox["\<\"Uploading\"\>", "Text",
+              StyleBox["\<\"Uploading\"\>", "SmallText",
                StripOnInput->False]}
             },
             AutoDelete->False,
@@ -83,7 +83,7 @@ rE62D5o1a1ac+g+gcmvt
                AutoAction->False,
                ContinuousAction->False,
                Enabled->Automatic], 
-              StyleBox["\<\"Uploading\"\>", "Text",
+              StyleBox["\<\"Uploading\"\>", "SmallText",
                StripOnInput->False]},
              {"", 
               PaneBox[
@@ -180,11 +180,13 @@ code", "Tooltip"]& ]},
                   {
                    DynamicBox[ToBoxes[
                     If[SETools`SEUploader`Private`progress$$, 
-                    ProgressIndicator[Appearance -> "Percolate"], 
+                    ProgressIndicator[
+                    Appearance -> "Percolate", ImageSize -> {64, 10}], 
                     Invisible[
-                    ProgressIndicator[Appearance -> "Percolate"]]], 
+                    ProgressIndicator[
+                    Appearance -> "Percolate", ImageSize -> {64, 10}]]], 
                     StandardForm],
-                    ImageSizeCache->{50., {3., 9.}},
+                    ImageSizeCache->{33., {6., 9.}},
                     TrackedSymbols:>{SETools`SEUploader`Private`progress$$}]}
                  },
                  DefaultBaseStyle->"Column",
@@ -212,7 +214,7 @@ code", "Tooltip"]& ]},
           Deployed->False,
           StripOnInput->False],
          OpenerView[{
-           Style["Uploading", "Text"], 
+           Style["Uploading", "SmallText"], 
            Column[{
              Tooltip[
               Button["Image", 
@@ -250,9 +252,11 @@ code", "Tooltip"]& ]},
               TooltipDelay -> Automatic], 
              Dynamic[
               If[SETools`SEUploader`Private`progress$$, 
-               ProgressIndicator[Appearance -> "Percolate"], 
+               ProgressIndicator[
+               Appearance -> "Percolate", ImageSize -> {64, 10}], 
                Invisible[
-                ProgressIndicator[Appearance -> "Percolate"]]], 
+                ProgressIndicator[
+                Appearance -> "Percolate", ImageSize -> {64, 10}]]], 
               TrackedSymbols :> {SETools`SEUploader`Private`progress$$}]}, 
             Center]}, True]],
         DynamicModuleValues:>{}],
@@ -269,7 +273,7 @@ code", "Tooltip"]& ]},
                AutoAction->False,
                ContinuousAction->False,
                Enabled->Automatic], 
-              StyleBox["\<\"Miscellaneous\"\>", "Text",
+              StyleBox["\<\"Miscellaneous\"\>", "SmallText",
                StripOnInput->False]}
             },
             AutoDelete->False,
@@ -287,7 +291,7 @@ code", "Tooltip"]& ]},
                AutoAction->False,
                ContinuousAction->False,
                Enabled->Automatic], 
-              StyleBox["\<\"Miscellaneous\"\>", "Text",
+              StyleBox["\<\"Miscellaneous\"\>", "SmallText",
                StripOnInput->False]},
              {"", 
               PaneBox[
@@ -325,7 +329,7 @@ code", "Tooltip"]& ]},
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
-                    ImageSizeCache->{42., {2., 8.}}],
+                    ImageSizeCache->{30., {8., 8.}}],
                     Appearance->Automatic,
                     ButtonFunction:>SETools`SEUploader`Private`updateButton[],
                     
@@ -437,7 +441,7 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.]},
           Deployed->False,
           StripOnInput->False],
          OpenerView[{
-           Style["Miscellaneous", "Text"], 
+           Style["Miscellaneous", "SmallText"], 
            Column[{
              Tooltip[
               Button["History", 
@@ -749,8 +753,7 @@ qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"},
            SETools`SEUploader`Private`closeButton[]}], Alignment -> Right]}], 
       WindowTitle -> "History"]; 
    SETools`SEUploader`Private`uploadButton[] := 
-    With[{
-      SETools`SEUploader`Private`img = 
+    With[{SETools`SEUploader`Private`img = 
        SETools`SEUploader`Private`rasterizeSelection1[]}, 
       If[SETools`SEUploader`Private`img === $Failed, 
        Beep[], 
@@ -841,9 +844,9 @@ copied to the clipboard.", Bold],
       Optional[
        Pattern[SETools`SEUploader`Private`maxWidth, 
         Blank[]], 650]] := 
-    Module[{
-      SETools`SEUploader`Private`target, SETools`SEUploader`Private`selection,
-        SETools`SEUploader`Private`image}, 
+    Module[{SETools`SEUploader`Private`target, 
+       SETools`SEUploader`Private`selection, 
+       SETools`SEUploader`Private`image}, 
       SETools`SEUploader`Private`selection = NotebookRead[
          SelectedNotebook[]]; If[
         MemberQ[
