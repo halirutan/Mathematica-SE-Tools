@@ -321,11 +321,12 @@ code", "Tooltip"]& ]},
                     If[
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 124, 
+                    "Version" -> 125, 
                     "Changes" -> {
-                    "Decreased Java version to work with Mathematica 8"}}] =!= \
-{"Version" -> 124, "Changes" -> {
-                    "Decreased Java version to work with Mathematica 8"}}, 
+                    "Improved the tools for usage with Mathematica 8"}}] =!= {
+                    "Version" -> 125, 
+                    "Changes" -> {
+                    "Improved the tools for usage with Mathematica 8"}}, 
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
@@ -456,11 +457,12 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.]},
                  If[
                  CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 124, 
+                    "Version" -> 125, 
                     "Changes" -> {
-                    "Decreased Java version to work with Mathematica 8"}}] =!= \
-{"Version" -> 124, "Changes" -> {
-                    "Decreased Java version to work with Mathematica 8"}}, 
+                    "Improved the tools for usage with Mathematica 8"}}] =!= {
+                   "Version" -> 125, 
+                    "Changes" -> {
+                    "Improved the tools for usage with Mathematica 8"}}, 
                   RGBColor[
                   0.8588235294117647, 0.00784313725490196, 
                    0.00784313725490196], Black]]], 
@@ -573,15 +575,14 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 124, 
-          "Changes" -> {
-           "Decreased Java version to work with Mathematica 8"}}]; 
+         "Version" -> 125, 
+          "Changes" -> {"Improved the tools for usage with Mathematica 8"}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
-       And[SETools`SEUploader`Private`res$ =!= $Failed, 
+       And[
+        SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 124, 
-           "Changes" -> {
-            "Decreased Java version to work with Mathematica 8"}}]; 
+          "Version" -> 125, 
+           "Changes" -> {"Improved the tools for usage with Mathematica 8"}}]; 
       CreateDialog[
         Pane[
          Column[{
@@ -590,9 +591,9 @@ Tools/master/SETools/Version.m"],
             StringForm["Installed version: ``", 
              ReplaceAll[
              "Version", {
-              "Version" -> 124, 
+              "Version" -> 125, 
                "Changes" -> {
-                "Decreased Java version to work with Mathematica 8"}}]]], 
+                "Improved the tools for usage with Mathematica 8"}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
             SETools`SEUploader`Private`st$[
              StringForm["Online version: ``", 
