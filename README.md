@@ -53,7 +53,7 @@ You buttons for uploading an image either for usage in [a Stack Exchange Chat ro
 
 ![Mathematica graphics](http://i.stack.imgur.com/M4zAO.png)
 
-###Uploading Code-Cells or whole Notebooks
+###Uploading Code Cells and Notebooks
 
 For uploading code there are two buttons on the palette. The <kbd>Selected Cell</kbd> button lets you upload the code currently selected cell. When you have selected several cells, all of them are uploaded. So when you are working in a notebook, simply select the cell-brackets you want to share (note the blue selection at the right)
 
