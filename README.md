@@ -20,7 +20,7 @@ All upload buttons copy appropriate markdown-code, URL's or *Mathematica snippet
 - [Detailed Usage](#-detailed-usage)
 	- [Uploading Images](#uploading-images)
 	- [Uploading Code Cells and Notebooks](#uploading-code-cells-and-notebooks)
-		- [A Bit of Background](#a-bit-of-background)
+		- [Background Information](#background-information)
 		- [How Decoding works](#how-the-decoding-works)
 		- [Limitations and Security](#limitations-and-security)
 - [Installation and Update](#-installation-and-update)
@@ -69,7 +69,7 @@ Using the <kbd>Selected Notebook</kbd> button works similar. Just click in the n
 
 **Memory Limitation:** Note that there is a limit of 1MB for uploading cells or notebooks!
 
-####A bit of the background
+####Background Information
 This section is probably a bit confusing, so let me explain this in more detail. You have to understand, that we *always upload images*, because this is the only thing that Stack Exchange allows us to do. By the way, we do not really upload the images to a *Stack Exchange server*, as you might have guessed when looking at the URL. Stack Exchange has some agreement with [imgur.com](http://imgur.com/) which is a pretty famous image sharer and all the images you insert in a post are hosted there.
 
 The possibility to insert images is pretty nice, but what if you need to share a large expression, that is too large to include it as code-block in an answer? Or you want to share a cell with fancy formatting? Or you want to share a whole Notebook with titles, sections, text, code, etc? You *could* post a screenshot of this, but then no one can edit your code.
