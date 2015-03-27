@@ -52,7 +52,7 @@ With[
             TooltipDelay -> Automatic],
 
 
-          Tooltip[Button["Image (pp)", uploadPPButton[], buttonOpts, Enabled -> Dynamic[$OperatingSystem === "Windows" || ($OperatingSystem === "MacOSX" && $VersionNumber >= 9), TrackedSymbols:>{$OperatingSystem,$VersionNumber}]],
+          Tooltip[Button["Image (pp)", uploadPPButton[], buttonOpts, Enabled -> Dynamic[$OperatingSystem === "Windows" || ($OperatingSystem === "MacOSX" && $VersionNumber >= 9), TrackedSymbols :> {$OperatingSystem, $VersionNumber}]],
             "Upload the selected expression as an image to StackExchange (pixel-perfect rasterization)", TooltipDelay -> Automatic],
 
 
@@ -127,7 +127,7 @@ With[
             CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion" }] = onlineVersion
           ];
 
-         (*Check for updates on initialization if last check was > 3 days ago.*)
+        (*Check for updates on initialization if last check was > 3 days ago.*)
         (*The check will time out after 6 seconds.*)
         If[AbsoluteTime[] > 3 * 3600 * 24 + CurrentValue[$FrontEnd, {TaggingRules, tagLastCheck }, 0],
           TimeConstrained[checkOnlineVersion[], 6]
@@ -146,10 +146,10 @@ With[
             CreateDialog[
               Pane[Column[{
                 st["Update information", 14],
-                st@StringTemplate["Installed version: ``"]["Version" /. version],
+                st@StringForm["Installed version: ``", "Version" /. version],
 
                 If[res =!= $Failed,
-                  st@StringTemplate["Online version: ``"]["Version" /. newVersionInformation],
+                  st@StringForm["Online version: ``", "Version" /. newVersionInformation],
                   st@"Update check failed.  Please check your internet connection."
                 ],
 
@@ -166,22 +166,27 @@ With[
                   Hyperlink[st@"History of changes", "https://github.com/halirutan/Mathematica-SE-Tools/commits/master"]
                 }],
 
-                Pane[If[newVersionQ,
-                  ChoiceButtons[
-                    {"Go to update page"},
-                    { SystemOpen["https://github.com/halirutan/Mathematica-SE-Tools"]; DialogReturn[]}
-                  ],
-                  closeButton[]],
-                  ImageSize -> 400,
-                  Alignment -> Right
-                ]},
+
+                With[
+                  {
+                    updateNotebookEnc = "1:eJyNU0tvEzEQTml5ShWIExck0wup1OymEFUFiUNpAgRaHnUAAarAu5lNrHrtlT1LUm4gcYA7nPkB/AIu3PgLIC7cEBKIA0cu4NmkjwQh9eCZ+cYz45nP9qnIrCX7S6WSO+TFdYMQGbORTJBnyosV6XAHLYNSyT5C00N02Zo8qwsUyeRIyuTuFD7njdtZW6DUnbCpHQqlvMmwC4yjiDdYox93he4AaxmjHD/oEzjEKI0enEel1nIF7uiw5nIR3pIpOKCIrfXqw5d7pRPfl249f3uf9Mtn8UfSV368/kR6rLML3ripQDhgsTJeCr3JTAaaZUIBIjnaDB4LlQsPqOHEKGV61L6fATiVakEf99jnxLDPr09/F/0df3/64b99DSgnFi6afkFv4ThA1U3P+5Kp3XRz2mimmbHIKfABX/dypouYufNhaEUv6Ejs5lHuwMZGI2gMYpOGXaGkzVHocFX42VJ/Q7Go8EaluIYwFQ7BhrwxgMObAxukM8U565yeTlNn+V7H31rvrv0pxv71JnhE+ue3k59JXy2/KHRR6Ya/h7G6R7xxV+q26XH5BHY2iYUmUbg4Xy30uVp1LHV6O3VV2I7UbjR7FMmWt9xhj5ZyNAUvYwFnS/8P2KbgkvVkN3T7Dljn3zIPvG++GlT9I7JsReq8z/qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"
+
+                  },
+                  Pane[If[newVersionQ,
+                    ChoiceButtons[
+                      {"Update"},
+                      { CreateDocument[Uncompress[updateNotebookEnc]]; DialogReturn[]}
+                    ],
+                    closeButton[]],
+                    ImageSize -> 400,
+                    Alignment -> Right
+                  ]]},
                 Dividers -> {None, {False, True, False}},
                 Spacings -> {0, {Automatic, 2, Automatic, 1}
                 }], ImageSize -> 400],
 
               WindowTitle -> "Update information"]
           ];
-
 
 
         (* IMAGE UPLOAD CODE *)

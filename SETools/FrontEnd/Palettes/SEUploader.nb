@@ -184,7 +184,7 @@ code", "Tooltip"]& ]},
                     Invisible[
                     ProgressIndicator[Appearance -> "Percolate"]]], 
                     StandardForm],
-                    ImageSizeCache->{33., {6., 9.}},
+                    ImageSizeCache->{50., {3., 9.}},
                     TrackedSymbols:>{SETools`SEUploader`Private`progress$$}]}
                  },
                  DefaultBaseStyle->"Column",
@@ -317,22 +317,15 @@ code", "Tooltip"]& ]},
                     If[
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 123, 
+                    "Version" -> 124, 
                     "Changes" -> {
-                    "Introduced new logo", 
-                    "Replaced \"Get\" with \"Import\" in the markdown code \
-that is created for uploading cells/notbooks", 
-                    "Linked the banner image to the repository home"}}] =!= {
-                    "Version" -> 123, 
-                    "Changes" -> {
-                    "Introduced new logo", 
-                    "Replaced \"Get\" with \"Import\" in the markdown code \
-that is created for uploading cells/notbooks", 
-                    "Linked the banner image to the repository home"}}, 
+                    "Decreased Java version to work with Mathematica 8"}}] =!= \
+{"Version" -> 124, "Changes" -> {
+                    "Decreased Java version to work with Mathematica 8"}}, 
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
-                    ImageSizeCache->{30., {8., 8.}}],
+                    ImageSizeCache->{42., {2., 8.}}],
                     Appearance->Automatic,
                     ButtonFunction:>SETools`SEUploader`Private`updateButton[],
                     
@@ -459,18 +452,11 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.]},
                  If[
                  CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 123, 
+                    "Version" -> 124, 
                     "Changes" -> {
-                    "Introduced new logo", 
-                    "Replaced \"Get\" with \"Import\" in the markdown code \
-that is created for uploading cells/notbooks", 
-                    "Linked the banner image to the repository home"}}] =!= {
-                   "Version" -> 123, 
-                    "Changes" -> {
-                    "Introduced new logo", 
-                    "Replaced \"Get\" with \"Import\" in the markdown code \
-that is created for uploading cells/notbooks", 
-                    "Linked the banner image to the repository home"}}, 
+                    "Decreased Java version to work with Mathematica 8"}}] =!= \
+{"Version" -> 124, "Changes" -> {
+                    "Decreased Java version to work with Mathematica 8"}}, 
                   RGBColor[
                   0.8588235294117647, 0.00784313725490196, 
                    0.00784313725490196], Black]]], 
@@ -579,42 +565,33 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`newVersionInformation$, 
        SETools`SEUploader`Private`st$ = Style[
          SlotSequence[1], "Label", LineIndent -> 0, TextJustification -> 
-         1.]& }, 
-      SETools`SEUploader`Private`res$ = 
+         1.]& }, SETools`SEUploader`Private`res$ = 
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 123, 
+         "Version" -> 124, 
           "Changes" -> {
-           "Introduced new logo", 
-            "Replaced \"Get\" with \"Import\" in the markdown code that is \
-created for uploading cells/notbooks", 
-            "Linked the banner image to the repository home"}}]; 
+           "Decreased Java version to work with Mathematica 8"}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
        And[SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 123, 
+          "Version" -> 124, 
            "Changes" -> {
-            "Introduced new logo", 
-             "Replaced \"Get\" with \"Import\" in the markdown code that is \
-created for uploading cells/notbooks", 
-             "Linked the banner image to the repository home"}}]; CreateDialog[
+            "Decreased Java version to work with Mathematica 8"}}]; 
+      CreateDialog[
         Pane[
          Column[{
            SETools`SEUploader`Private`st$["Update information", 14], 
            SETools`SEUploader`Private`st$[
-            StringTemplate["Installed version: ``"][
+            StringForm["Installed version: ``", 
              ReplaceAll[
              "Version", {
-              "Version" -> 123, 
+              "Version" -> 124, 
                "Changes" -> {
-                "Introduced new logo", 
-                 "Replaced \"Get\" with \"Import\" in the markdown code that \
-is created for uploading cells/notbooks", 
-                 "Linked the banner image to the repository home"}}]]], 
+                "Decreased Java version to work with Mathematica 8"}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
             SETools`SEUploader`Private`st$[
-             StringTemplate["Online version: ``"][
+             StringForm["Online version: ``", 
               ReplaceAll[
               "Version", SETools`SEUploader`Private`newVersionInformation$]]], 
             SETools`SEUploader`Private`st$[
@@ -640,14 +617,28 @@ is created for uploading cells/notbooks",
               SETools`SEUploader`Private`st$["History of changes"], 
               "https://github.com/halirutan/Mathematica-SE-Tools/commits/\
 master"]}], 
-           Pane[
-            If[SETools`SEUploader`Private`newVersionQ$, 
-             
-             ChoiceButtons[{"Go to update page"}, {
-              SystemOpen["https://github.com/halirutan/Mathematica-SE-Tools"]; 
-               DialogReturn[]}], 
-             SETools`SEUploader`Private`closeButton[]], ImageSize -> 400, 
-            Alignment -> Right]}, Dividers -> {None, {False, True, False}}, 
+           
+           With[{SETools`SEUploader`Private`updateNotebookEnc$ = 
+             "1:eJyNU0tvEzEQTml5ShWIExck0wup1OymEFUFiUNpAgRaHnUAAarAu5lNrHrtlT\
+1LUm4gcYA7nPkB/AIu3PgLIC7cEBKIA0cu4NmkjwQh9eCZ+cYz45nP9qnIrCX7S6WSO+\
+TFdYMQGbORTJBnyosV6XAHLYNSyT5C00N02Zo8qwsUyeRIyuTuFD7njdtZW6DUnbCpHQqlvMmwC4yj\
+iDdYox93he4AaxmjHD/\
+oEzjEKI0enEel1nIF7uiw5nIR3pIpOKCIrfXqw5d7pRPfl249f3uf9Mtn8UfSV368/\
+kR6rLML3ripQDhgsTJeCr3JTAaaZUIBIjnaDB4LlQsPqOHEKGV61L6fATiVakEf99jnxLDPr09/F/\
+0df3/64b99DSgnFi6afkFv4ThA1U3P+5Kp3XRz2mimmbHIKfABX/\
+dypouYufNhaEUv6Ejs5lHuwMZGI2gMYpOGXaGkzVHocFX42VJ/\
+Q7Go8EaluIYwFQ7BhrwxgMObAxukM8U565yeTlNn+V7H31rvrv0pxv71JnhE+ue3k59JXy2/\
+KHRR6Ya/h7G6R7xxV+\
+q26XH5BHY2iYUmUbg4Xy30uVp1LHV6O3VV2I7UbjR7FMmWt9xhj5ZyNAUvYwFnS/\
+8P2KbgkvVkN3T7Dljn3zIPvG++GlT9I7JsReq8z/\
+qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"}, 
+            Pane[
+             If[SETools`SEUploader`Private`newVersionQ$, 
+              ChoiceButtons[{"Update"}, {CreateDocument[
+                  Uncompress[SETools`SEUploader`Private`updateNotebookEnc$]]; 
+                DialogReturn[]}], 
+              SETools`SEUploader`Private`closeButton[]], ImageSize -> 400, 
+             Alignment -> Right]]}, Dividers -> {None, {False, True, False}}, 
           Spacings -> {0, {Automatic, 2, Automatic, 1}}], ImageSize -> 400], 
         WindowTitle -> "Update information"]]; 
    MessageName[SETools`SEUploader`Private`stackImage, "httperr"] = 
