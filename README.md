@@ -12,22 +12,22 @@ On the right, you see how the palette looks under Ubuntu Linux. The buttons give
 - The `Selected Cell` button works when you have selected one or more *cell brackets*. It will encode the *code* as an image and upload it to Stack Exchange. This image can then easily be decoded again and you get the exact same code on your local machine
 - The `Selected Notebook` button works equivalently with the difference, that it will encode a whole notebook into an image
 
-All upload buttons copy appropriate markdown-code in your clipboard after uploading the data so that you can directly paste it into your post at Stack Exchange.
+All upload buttons copy appropriate markdown-code, URL's or *Mathematica snippets into your clipboard after uploading the data, so that you can directly paste it into your Stack Exchange post.
 
 ---
 **Navigation**
 
-- [Detailed Usage](#detailed-usage)
+- [Detailed Usage](#-detailed-usage)
 	- [Uploading Images](#uploading-images)
 	- [Uploading Code Cells and Notebooks](#uploading-code-cells-and-notebooks)
 		- [A Bit of Background](#a-bit-of-background)
 		- [How Decoding works](#how-the-decoding-works)
 		- [Limitations and Security](#limitations-and-security)
-- [Installation and Update](#installation-and-update)
+- [Installation and Update](#-installation-and-update)
 	- [Automatic Installation for *Mathematica* 9 and above](#automatic-installation-for-mathematica-9-and-above)
 	- [Manual Installation](#manual-installation)
-- [Troubleshooting](#troubleshooting)
-- [Contact](#contact)
+- [Troubleshooting](#-troubleshooting)
+- [Contact](#-contact)
 
 ---
 
