@@ -21,7 +21,7 @@ All upload buttons copy appropriate markdown-code, URL's or *Mathematica snippet
 	- [Uploading Images](#uploading-images)
 	- [Uploading Code Cells and Notebooks](#uploading-code-cells-and-notebooks)
 		- [Background Information](#background-information)
-		- [How Decoding works](#how-the-decoding-works)
+		- [How Decoding works](#how-decoding-works)
 		- [Limitations and Security](#limitations-and-security)
 - [Installation and Update](#-installation-and-update)
 	- [Automatic Installation for *Mathematica* 9 and above](#automatic-installation-for-mathematica-9-and-above)
