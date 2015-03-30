@@ -35,7 +35,12 @@ With[
     ];
 
     existingFiles = Select[Flatten[{zipFileName, extractedDir, FileNames[#, $Path]& /@ {"SETools", "SEUploader"}}], FileExistsQ];
-    deleteQDialog /@ existingFiles;
+    Do[
+      If[deleteQDialog[f] === $Aborted,
+        Print["Could not delete " <> f];
+        Abort[]
+      ], {f, existingFiles}
+    ];
 
     zipFile = fetchURL[repositoryURL, zipFileName];
     If[Not[FileExistsQ[zipFile]],
@@ -47,6 +52,7 @@ With[
       FileNameJoin[{$UserAddOnsDirectory, "Applications" , "SETools" }]];
     DeleteDirectory[FileNameJoin[{$TemporaryDirectory, repositoryDir }], DeleteContents -> True];
     DeleteFile[zipFile];
-    FrontEndExecute[FrontEnd`ResetMenusPacket[{Automatic, Automatic}]]
+    FrontEndExecute[FrontEnd`ResetMenusPacket[{Automatic, Automatic}]];
+
   ]
 ]
