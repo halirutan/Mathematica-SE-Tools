@@ -321,12 +321,14 @@ code", "Tooltip"]& ]},
                     If[
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 125, 
+                    "Version" -> 126, 
                     "Changes" -> {
-                    "Improved the tools for usage with Mathematica 8"}}] =!= {
-                    "Version" -> 125, 
+                    "Fixed the hashing algorithm to MD5 so that you can \
+decode images with that where encoded with a different version"}}] =!= {
+                    "Version" -> 126, 
                     "Changes" -> {
-                    "Improved the tools for usage with Mathematica 8"}}, 
+                    "Fixed the hashing algorithm to MD5 so that you can \
+decode images with that where encoded with a different version"}}, 
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
@@ -457,12 +459,14 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.]},
                  If[
                  CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 125, 
+                    "Version" -> 126, 
                     "Changes" -> {
-                    "Improved the tools for usage with Mathematica 8"}}] =!= {
-                   "Version" -> 125, 
+                    "Fixed the hashing algorithm to MD5 so that you can \
+decode images with that where encoded with a different version"}}] =!= {
+                   "Version" -> 126, 
                     "Changes" -> {
-                    "Improved the tools for usage with Mathematica 8"}}, 
+                    "Fixed the hashing algorithm to MD5 so that you can \
+decode images with that where encoded with a different version"}}, 
                   RGBColor[
                   0.8588235294117647, 0.00784313725490196, 
                    0.00784313725490196], Black]]], 
@@ -575,15 +579,17 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 125, 
-          "Changes" -> {"Improved the tools for usage with Mathematica 8"}}]; 
+         "Version" -> 126, 
+          "Changes" -> {
+           "Fixed the hashing algorithm to MD5 so that you can decode images \
+with that where encoded with a different version"}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
-       And[
-        SETools`SEUploader`Private`res$ =!= $Failed, 
+       And[SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 125, 
-           "Changes" -> {"Improved the tools for usage with Mathematica 8"}}]; 
-      CreateDialog[
+          "Version" -> 126, 
+           "Changes" -> {
+            "Fixed the hashing algorithm to MD5 so that you can decode images \
+with that where encoded with a different version"}}]; CreateDialog[
         Pane[
          Column[{
            SETools`SEUploader`Private`st$["Update information", 14], 
@@ -591,9 +597,10 @@ Tools/master/SETools/Version.m"],
             StringForm["Installed version: ``", 
              ReplaceAll[
              "Version", {
-              "Version" -> 125, 
+              "Version" -> 126, 
                "Changes" -> {
-                "Improved the tools for usage with Mathematica 8"}}]]], 
+                "Fixed the hashing algorithm to MD5 so that you can decode \
+images with that where encoded with a different version"}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
             SETools`SEUploader`Private`st$[
              StringForm["Online version: ``", 
@@ -655,8 +662,9 @@ qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"},
    SETools`SEUploader`Private`stackImage[
       Pattern[SETools`SEUploader`Private`g, 
        Blank[]]] := 
-    Module[{SETools`SEUploader`Private`url, SETools`SEUploader`Private`client,
-        SETools`SEUploader`Private`method, SETools`SEUploader`Private`data, 
+    Module[{
+      SETools`SEUploader`Private`url, SETools`SEUploader`Private`client, 
+       SETools`SEUploader`Private`method, SETools`SEUploader`Private`data, 
        SETools`SEUploader`Private`partSource, SETools`SEUploader`Private`part,
         SETools`SEUploader`Private`entity, SETools`SEUploader`Private`code, 
        SETools`SEUploader`Private`response, SETools`SEUploader`Private`error, 
