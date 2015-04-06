@@ -24,7 +24,7 @@ SEDecodeImageAndPrint[expr: HoldComplete[_Notebook]] := NotebookPut@@expr;
 SEDecodeImageAndPrint[expr: HoldComplete[__]] := expr;
 
 SEDecodeImage::imp = "Import of `` as png image failed.";
-SEDecodeImage::hash = "The security hash indicates that the data is corrupted.";
+SEDecodeImage::hash = "The security hash indicates that the data is corrupted. Use AbortProtect[SEDecodeImage[...]] to ignore the warning and to proceed at your own risk.";
 SEDecodeImage[url_String] := Module[{img},
   Check[
     img = Import[url, "PNG"],
