@@ -1,1 +1,1 @@
-{"Version" -> 126, "Changes" -> {"Fixed the hashing algorithm to MD5 so that you can decode images with that where encoded with a different version"}}
+{"Version" -> 127, "Changes" -> {"Made the invisible upload progress-indicator a static graphics. This should fix some dynamic issues."}}

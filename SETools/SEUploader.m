@@ -68,7 +68,7 @@ With[
 
           Dynamic[If[progress,
             ProgressIndicator[ Appearance -> "Percolate", ImageSize -> {64, 10}],
-            Invisible[ProgressIndicator[ Appearance -> "Percolate", ImageSize -> {64, 10}]]
+            Graphics[{}, ImageSize -> {64, 10}, ImageMargins -> 0]
           ], TrackedSymbols :> {progress}]
         }, Center]
       }, True],

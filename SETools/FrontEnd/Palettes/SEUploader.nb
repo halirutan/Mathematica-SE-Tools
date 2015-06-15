@@ -182,11 +182,9 @@ code", "Tooltip"]& ]},
                     If[SETools`SEUploader`Private`progress$$, 
                     ProgressIndicator[
                     Appearance -> "Percolate", ImageSize -> {64, 10}], 
-                    Invisible[
-                    ProgressIndicator[
-                    Appearance -> "Percolate", ImageSize -> {64, 10}]]], 
+                    Graphics[{}, ImageSize -> {64, 10}, ImageMargins -> 0]], 
                     StandardForm],
-                    ImageSizeCache->{33., {6., 9.}},
+                    ImageSizeCache->{64., {2., 8.}},
                     TrackedSymbols:>{SETools`SEUploader`Private`progress$$}]}
                  },
                  DefaultBaseStyle->"Column",
@@ -254,9 +252,7 @@ code", "Tooltip"]& ]},
               If[SETools`SEUploader`Private`progress$$, 
                ProgressIndicator[
                Appearance -> "Percolate", ImageSize -> {64, 10}], 
-               Invisible[
-                ProgressIndicator[
-                Appearance -> "Percolate", ImageSize -> {64, 10}]]], 
+               Graphics[{}, ImageSize -> {64, 10}, ImageMargins -> 0]], 
               TrackedSymbols :> {SETools`SEUploader`Private`progress$$}]}, 
             Center]}, True]],
         DynamicModuleValues:>{}],
@@ -321,18 +317,18 @@ code", "Tooltip"]& ]},
                     If[
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 126, 
+                    "Version" -> 127, 
                     "Changes" -> {
-                    "Fixed the hashing algorithm to MD5 so that you can \
-decode images with that where encoded with a different version"}}] =!= {
-                    "Version" -> 126, 
+                    "Made the invisible upload progress-indicator a static \
+graphics. This should fix some dynamic issues."}}] =!= {
+                    "Version" -> 127, 
                     "Changes" -> {
-                    "Fixed the hashing algorithm to MD5 so that you can \
-decode images with that where encoded with a different version"}}, 
+                    "Made the invisible upload progress-indicator a static \
+graphics. This should fix some dynamic issues."}}, 
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
-                    ImageSizeCache->{30., {8., 8.}}],
+                    ImageSizeCache->{42., {2., 8.}}],
                     Appearance->Automatic,
                     ButtonFunction:>SETools`SEUploader`Private`updateButton[],
                     
@@ -459,14 +455,14 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.]},
                  If[
                  CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 126, 
+                    "Version" -> 127, 
                     "Changes" -> {
-                    "Fixed the hashing algorithm to MD5 so that you can \
-decode images with that where encoded with a different version"}}] =!= {
-                   "Version" -> 126, 
+                    "Made the invisible upload progress-indicator a static \
+graphics. This should fix some dynamic issues."}}] =!= {
+                   "Version" -> 127, 
                     "Changes" -> {
-                    "Fixed the hashing algorithm to MD5 so that you can \
-decode images with that where encoded with a different version"}}, 
+                    "Made the invisible upload progress-indicator a static \
+graphics. This should fix some dynamic issues."}}, 
                   RGBColor[
                   0.8588235294117647, 0.00784313725490196, 
                    0.00784313725490196], Black]]], 
@@ -579,17 +575,17 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 126, 
+         "Version" -> 127, 
           "Changes" -> {
-           "Fixed the hashing algorithm to MD5 so that you can decode images \
-with that where encoded with a different version"}}]; 
+           "Made the invisible upload progress-indicator a static graphics. \
+This should fix some dynamic issues."}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
        And[SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 126, 
+          "Version" -> 127, 
            "Changes" -> {
-            "Fixed the hashing algorithm to MD5 so that you can decode images \
-with that where encoded with a different version"}}]; CreateDialog[
+            "Made the invisible upload progress-indicator a static graphics. \
+This should fix some dynamic issues."}}]; CreateDialog[
         Pane[
          Column[{
            SETools`SEUploader`Private`st$["Update information", 14], 
@@ -597,10 +593,10 @@ with that where encoded with a different version"}}]; CreateDialog[
             StringForm["Installed version: ``", 
              ReplaceAll[
              "Version", {
-              "Version" -> 126, 
+              "Version" -> 127, 
                "Changes" -> {
-                "Fixed the hashing algorithm to MD5 so that you can decode \
-images with that where encoded with a different version"}}]]], 
+                "Made the invisible upload progress-indicator a static \
+graphics. This should fix some dynamic issues."}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
             SETools`SEUploader`Private`st$[
              StringForm["Online version: ``", 
@@ -631,6 +627,7 @@ images with that where encoded with a different version"}}]]],
 master"]}], 
            
            With[{SETools`SEUploader`Private`updateNotebookEnc$ = 
+             
              "1:eJyNU0tvEzEQTml5ShWIExck0wup1OymEFUFiUNpAgRaHnUAAarAu5lNrHrtlT\
 1LUm4gcYA7nPkB/AIu3PgLIC7cEBKIA0cu4NmkjwQh9eCZ+cYz45nP9qnIrCX7S6WSO+\
 TFdYMQGbORTJBnyosV6XAHLYNSyT5C00N02Zo8qwsUyeRIyuTuFD7njdtZW6DUnbCpHQqlvMmwC4yj\
@@ -662,9 +659,8 @@ qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"},
    SETools`SEUploader`Private`stackImage[
       Pattern[SETools`SEUploader`Private`g, 
        Blank[]]] := 
-    Module[{
-      SETools`SEUploader`Private`url, SETools`SEUploader`Private`client, 
-       SETools`SEUploader`Private`method, SETools`SEUploader`Private`data, 
+    Module[{SETools`SEUploader`Private`url, SETools`SEUploader`Private`client,
+        SETools`SEUploader`Private`method, SETools`SEUploader`Private`data, 
        SETools`SEUploader`Private`partSource, SETools`SEUploader`Private`part,
         SETools`SEUploader`Private`entity, SETools`SEUploader`Private`code, 
        SETools`SEUploader`Private`response, SETools`SEUploader`Private`error, 
@@ -797,7 +793,8 @@ qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"},
        Blank[String]]] := 
     Module[{SETools`SEUploader`Private`url$, 
        SETools`SEUploader`Private`markdown$}, 
-      Check[SETools`SEUploader`Private`url$ = 
+      Check[
+       SETools`SEUploader`Private`url$ = 
         SETools`SEUploader`Private`stackImage[
          SETools`SEUploader`Private`img$], 
         Return[]]; 
