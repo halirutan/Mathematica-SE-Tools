@@ -1,1 +1,1 @@
-{"Version" -> 127, "Changes" -> {"Made the invisible upload progress-indicator a static graphics. This should fix some dynamic issues."}}
+{"Version" -> 128, "Changes" -> {"Replaced the shortened Decode.m URL with a real URL pointing to the GitHub repository. This fixes the issue with StackExchange no longer accepting shortened URLs."}}

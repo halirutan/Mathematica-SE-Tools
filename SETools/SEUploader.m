@@ -21,7 +21,7 @@ With[
     logo = Import["SETools/Resources/banner.png"],
     mathematicaSE = "http://mathematica.stackexchange.com/",
     versionURL = "https://raw.githubusercontent.com/halirutan/Mathematica-SE-Tools/master/SETools/Version.m",
-    decoderURL = "http://goo.gl/NaH6rM",
+    decoderURL = "http://halirutan.github.io/Mathematica-SE-Tools/decode.m",
 
     tagLastCheck = "SEUploaderLastUpdateCheck",
     tagHistory = "ImageUploadHistory",

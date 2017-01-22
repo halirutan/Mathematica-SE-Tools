@@ -8,40 +8,44 @@ Cell[BoxData[
         PaneSelectorBox[{False->
          GraphicsBox[
           TagBox[RasterBox[CompressedData["
-1:eJztm71u1EAQx1dAQXmPYN7gCj/AQUtzCjWSEwlKOAUklG4rKop7BNdU5g3c
-0KektMQLuKUyu7nxZTKenV1f7Ls9x5H+Ue72w7MzP89+2Hl19fni4zOl1JeX
-5tfF5bfX19eXN+9emA9vbr5+uHpu/kiMciP7ZdM0s2adXD/+/FsbVUbNQLJ9
-bU49riGUfvq5NSpByantGWA8OqbxAHtDcUelQ2wwPyvQMtRuW7dtN3K8bJwa
-0KjXOhJ/UY1n4LxHVQey14DKHvyVqN1ofowtXlMbz4js3WnmLy7FNp6Zv/OK
-1zyeYTXzd1zFNp73v/7qMTXzF5diG49hpBlTp+LP/KyNtNEGfbeE488SaWO0
-GCJepjwzytH5RquNkfMaqP0C+ihIe/t5HcjXAq6H227as5Y+4zE/mVFB/JX7
-7nfwu9Xa4Xf9BPjD5QujLfpMdetiMCReEPMC1eNUSfGGc0apfQO2SPfK0ujW
-0bYGtr3jAX8Vgr8azBDTfh9PiG9N2z8x/m4Z3joMHsIfxLx2sMJ938ljtl+G
-1TZ/UZ5ygT16vdrxnXM8kKswL3Wbsxi/bT38VRx7T5C/vb/aPOfIidkB/FUk
-titSTnNSTXMY4q90XEMThhKPnTXm3P7tyIs+v5V0XmDyWccWxu9161vge78m
-MoyUYyoi/jpsQb1Cur7EH8xnOJ7s8xuYnzGnmqnTiaPAObUjIXZw99GCYfBB
-PyQWNWUP1dOoXhHAXyc+sehI/DmfRavdPgX7iuYmiT+85ss9/OD1HTvXe9rn
-Lr7S3f5iP3cLfdD7gPKH5wN2boV6iRQz4k8tjevt99/lmIqEv0654C/KmMSf
-uJYidR+s8Q7gD8/BmpRhNp3c+MZzqM/6lDH8NWPqTPirDuTPO/e66gt18PmL
-ax9M+StdZT35Y/cKPk2IP+/7CiHMHMCfs24ofyE2S7wCd9x+uS9/2SP4682e
-jcOE+AuKI+Orx/I3ev6DtRfLa7rbn9LzFw1MrkB4jpX40x47QvnbqPv34iR1
-9ihnxt/CxxLTZukbY0/+8PVpXgrlT7yGtP4j18gd7aX1H94HHWX9F+rPAP70
-mAq0F+cf1v+kPt6nsXtJFb7/zSR/efjzcoPq4v1vKXDseg4j8YfLKsEG3/4X
-n0WJHA/FXwxS3XPglVB3SeqyjKvw8z9cr3OW5eEPn//ZtVsixB2v7TJSLs7j
-affsjvJHz/9C+uD4w/ei8/xvSP6IPYMr0N5EdfdeWqGzdaijSZ3K5SOGvwd9
-qvt/xRK5l/iDct/zjxVhr/L0UZCyJSln13hp9/nHitgQ+vyjIv7tsKx2a6YM
-8iXXx1nxx9x7Iao53zj4o2xXTH+5wz8+/ujeYT/HpvyzVy430edrtl7hYMbF
-H2dHzfSBP3Ps0PP41l8lkjj/9OQvdM8/Kn8oJ3F5i6qU2GP4W3v67fgwlD+U
-X2iO4ngMfc+LyjKD53rWXmDQFc879gnr7HjUbo3DvaPB5YDH5j967w0pNqcE
-cLhW3ff0rLbceAP4W6Eci99ny339Qdw1SOKnfe+Ovrtnz02yEJvT+3OWtq3d
-s6xR/60dznsv3a0Fc2LD3nbEoFXi8SH1Vyut4N0+RzutyLuXnnGHvHvWmz0p
-XmOL42/WdDRUrhtLM3/TVszsWc38TVsxs2c18zdtxcye1czftBUze1bq/v/f
-rE62D5o1a1ac+g+gcmvt
-            "], {{0, 32}, {160, 0}}, {0, 255},
+1:eJztm72O00AQx1dAQZlHCG+QwgVlKBFNdIgSKXfiONGE6A4J0W1FRZFHcE1l
+3sAN/ZWUlngBt1Rm9zJO5sazs+ucnWxyjvRHJPvh2ZmfZz/se3Hx+ezjE6XU
+zXPzz9n511fX1+ff3o7Ml3eLm09Xi8sPrxdfLq8ur19ePDU/jo1So2dGVVUN
+GnRw/fjzb2ZUGFUdyfa1PPS4ulCy+LkyykHjQ9vTwXh0TOMB9rrijkqH2GA+
+U9Ak1G5bt27Xc7xsnCpQr9faE39RjafjvEdVBrJXgfIW/OWoXW9+jC1epzae
+Htm708BfXIptPAN/xxWvYTzdauBvv4ptPO9//dV9auAvLsU2HsNI1acOxZ/5
+zIy00RL9NoHjzxxpaTTqIl6mfG6UovONWksj5zVQ+xH0kZH29vsskK8RXA+3
+XdZnLW3GYz5zo4z4K/Xd7+B3q5nD7/oR8IfL7Xn8Cn2nunUxGBIviHmG6nEq
+pHjDOaPUvgJbpHtlYnTraFsC297xgL8ywV8VZohpv4knxLek7R8Zf7cMbw0G
+d+EPYl46WOF+b+Qx2y/Dap2/KE+pwB69Xun4zTkeyFWYl7LOWYzfVh7+Co69
+R8jfxl91nnPkxPkO/BUktlNSTnNSSXMY4i93XEMThsYeO0vMuf2/Iy/6/JbT
+eYHJZw1bGL+XtW+B782ayDCS96mI+GuwBfUy6foSfzCf4Xiyz29gfsacaqZO
+I44C59SOMbGDu49GDIP3+iGxKCl7qJ5G9bIA/hrxiUV74s/5LFqt9ynYVzQ3
+SfzhNV/q4Qev79i53tM+dfGVrPcXm7lb6IPeB5Q/PB+wcyvUG0sxI/7U0rje
+fP+d96lI+GuUC/6ijEn8iWspUvfeGm8H/vAcrEkZZtPJjW88u/qsTRnDX9Wn
+joS/Ykf+vHOvq75QB5+/uPbBlL/cVdaSP3av4NMJ8ed9XyGEmR34c9YN5S/E
+ZolX4I7bL7flb/4A/lqzZ+NwQvwFxZHx1UP56z3/wdqL5TVZ70/p+YsGJqcg
+PMdK/GmPHaH8LdX2vThJjT3KkfE38rHEtJn4xtiSP3x9mpdC+ROvIa3/yDVS
+R3tp/Yf3QXtZ/4X6M4A/3acC7cX5h/U/qY/3aexeUoXvf+eSvzz8eblBdfH+
+Nxc4dj2HkfjDZYVgg2//i8+iRI674i8GqeY58FSoOyF1WcZV+Pkfrtc4y/Lw
+h8//7NptLMQdr+3mpFycx5Pm2R3lj57/hfTB8YfvRef5X5f8EXs6V6C9Y9Xc
+e2mFztahjiZ1CpePGP7u9am2f4olci/xB+W+5x9Twl7h6SMjZRNSzq7xkubz
+jymxIfT5R0H822BZrddMc8iXXB9HxR9z74Wo5Hzj4I+yXTD9pQ7/+Pije4fN
+HJvwz1653ESfr9l6mYMZF3+cHSXTB/7OsUPP42t/5Uji/NOSv9A9f6/8oZzE
+5S2qXGKP4W/m6bfhw1D+UH6hOYrjMfQ9LyrLDJ7rWXuBQVc879gnrLPjUes1
+DveOBpcDHpr/6L3XpdicEsDhTDXf07NaceMN4G+Kcix+ny319Qdx1yCJn/q9
+O/runj03mYfYnGzPWeq2ds8yQ/3XdjjvvWS9FkyJDRvbEYNWY48Pqb9qaQXv
+9jnaaUXevfSMO+Tds9bsSfHqWxx/g05HXeW6vjTwd9qKmT2rgb/TVszsWQ38
+nbZiZs9q4O+0FTN7Vmr7929WB9sHDRo0KE79B+5pcKg=
+            "], {{0, 32}, {160, 
+            0}}, {0, 255},
             ColorFunction->RGBColor],
-           BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+           BoxForm`ImageTag[
+           "Byte", ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
+            Association[
+             "Comments" -> Association["Software" -> "Adobe ImageReady"]]],
            Selectable->False],
-          BaseStyle->"ImageGraphics",
+          DefaultBaseStyle->"ImageGraphics",
           ImageSizeRaw->{160, 32},
           PlotRange->{{0, 160}, {0, 32}}]}, False,
          BaseStyle->{None},
@@ -184,7 +188,7 @@ code", "Tooltip"]& ]},
                     Appearance -> "Percolate", ImageSize -> {64, 10}], 
                     Graphics[{}, ImageSize -> {64, 10}, ImageMargins -> 0]], 
                     StandardForm],
-                    ImageSizeCache->{64., {2., 8.}},
+                    ImageSizeCache->{64., {3., 7.}},
                     TrackedSymbols:>{SETools`SEUploader`Private`progress$$}]}
                  },
                  DefaultBaseStyle->"Column",
@@ -317,14 +321,16 @@ code", "Tooltip"]& ]},
                     If[
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 127, 
+                    "Version" -> 128, 
                     "Changes" -> {
-                    "Made the invisible upload progress-indicator a static \
-graphics. This should fix some dynamic issues."}}] =!= {
-                    "Version" -> 127, 
+                    "Replaced the shortened Decode.m URL with a real URL \
+pointing to the GitHub repository. This fixes the issue with StackExchange no \
+longer accepting shortened URLs."}}] =!= {
+                    "Version" -> 128, 
                     "Changes" -> {
-                    "Made the invisible upload progress-indicator a static \
-graphics. This should fix some dynamic issues."}}, 
+                    "Replaced the shortened Decode.m URL with a real URL \
+pointing to the GitHub repository. This fixes the issue with StackExchange no \
+longer accepting shortened URLs."}}, 
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
@@ -350,37 +356,41 @@ graphics. This should fix some dynamic issues."}},
                     ButtonFunction:>MessageDialog[
                     Column[{
                     Image[CompressedData["
-1:eJztm71u1EAQx1dAQXmPYN7gCj/AQUtzCjWSEwlKOAUklG4rKop7BNdU5g3c
-0KektMQLuKUyu7nxZTKenV1f7Ls9x5H+Ue72w7MzP89+2Hl19fni4zOl1JeX
-5tfF5bfX19eXN+9emA9vbr5+uHpu/kiMciP7ZdM0s2adXD/+/FsbVUbNQLJ9
-bU49riGUfvq5NSpByantGWA8OqbxAHtDcUelQ2wwPyvQMtRuW7dtN3K8bJwa
-0KjXOhJ/UY1n4LxHVQey14DKHvyVqN1ofowtXlMbz4js3WnmLy7FNp6Zv/OK
-1zyeYTXzd1zFNp73v/7qMTXzF5diG49hpBlTp+LP/KyNtNEGfbeE488SaWO0
-GCJepjwzytH5RquNkfMaqP0C+ihIe/t5HcjXAq6H227as5Y+4zE/mVFB/JX7
-7nfwu9Xa4Xf9BPjD5QujLfpMdetiMCReEPMC1eNUSfGGc0apfQO2SPfK0ujW
-0bYGtr3jAX8Vgr8azBDTfh9PiG9N2z8x/m4Z3joMHsIfxLx2sMJ938ljtl+G
-1TZ/UZ5ygT16vdrxnXM8kKswL3Wbsxi/bT38VRx7T5C/vb/aPOfIidkB/FUk
-titSTnNSTXMY4q90XEMThhKPnTXm3P7tyIs+v5V0XmDyWccWxu9161vge78m
-MoyUYyoi/jpsQb1Cur7EH8xnOJ7s8xuYnzGnmqnTiaPAObUjIXZw99GCYfBB
-PyQWNWUP1dOoXhHAXyc+sehI/DmfRavdPgX7iuYmiT+85ss9/OD1HTvXe9rn
-Lr7S3f5iP3cLfdD7gPKH5wN2boV6iRQz4k8tjevt99/lmIqEv0654C/KmMSf
-uJYidR+s8Q7gD8/BmpRhNp3c+MZzqM/6lDH8NWPqTPirDuTPO/e66gt18PmL
-ax9M+StdZT35Y/cKPk2IP+/7CiHMHMCfs24ofyE2S7wCd9x+uS9/2SP4682e
-jcOE+AuKI+Orx/I3ev6DtRfLa7rbn9LzFw1MrkB4jpX40x47QvnbqPv34iR1
-9ihnxt/CxxLTZukbY0/+8PVpXgrlT7yGtP4j18gd7aX1H94HHWX9F+rPAP70
-mAq0F+cf1v+kPt6nsXtJFb7/zSR/efjzcoPq4v1vKXDseg4j8YfLKsEG3/4X
-n0WJHA/FXwxS3XPglVB3SeqyjKvw8z9cr3OW5eEPn//ZtVsixB2v7TJSLs7j
-affsjvJHz/9C+uD4w/ei8/xvSP6IPYMr0N5EdfdeWqGzdaijSZ3K5SOGvwd9
-qvt/xRK5l/iDct/zjxVhr/L0UZCyJSln13hp9/nHitgQ+vyjIv7tsKx2a6YM
-8iXXx1nxx9x7Iao53zj4o2xXTH+5wz8+/ujeYT/HpvyzVy430edrtl7hYMbF
-H2dHzfSBP3Ps0PP41l8lkjj/9OQvdM8/Kn8oJ3F5i6qU2GP4W3v67fgwlD+U
-X2iO4ngMfc+LyjKD53rWXmDQFc879gnr7HjUbo3DvaPB5YDH5j967w0pNqcE
-cLhW3ff0rLbceAP4W6Eci99ny339Qdw1SOKnfe+Ovrtnz02yEJvT+3OWtq3d
-s6xR/60dznsv3a0Fc2LD3nbEoFXi8SH1Vyut4N0+RzutyLuXnnGHvHvWmz0p
-XmOL42/WdDRUrhtLM3/TVszsWc38TVsxs2c18zdtxcye1czftBUze1bq/v/f
-rE62D5o1a1ac+g+gcmvt
-                    "], "Byte", ColorSpace -> "RGB", 
-                    Interleaving -> True], 
+1:eJztm72O00AQx1dAQZlHCG+QwgVlKBFNdIgSKXfiONGE6A4J0W1FRZFHcE1l
+3sAN/ZWUlngBt1Rm9zJO5sazs+ucnWxyjvRHJPvh2ZmfZz/se3Hx+ezjE6XU
+zXPzz9n511fX1+ff3o7Ml3eLm09Xi8sPrxdfLq8ur19ePDU/jo1So2dGVVUN
+GnRw/fjzb2ZUGFUdyfa1PPS4ulCy+LkyykHjQ9vTwXh0TOMB9rrijkqH2GA+
+U9Ak1G5bt27Xc7xsnCpQr9faE39RjafjvEdVBrJXgfIW/OWoXW9+jC1epzae
+Htm708BfXIptPAN/xxWvYTzdauBvv4ptPO9//dV9auAvLsU2HsNI1acOxZ/5
+zIy00RL9NoHjzxxpaTTqIl6mfG6UovONWksj5zVQ+xH0kZH29vsskK8RXA+3
+XdZnLW3GYz5zo4z4K/Xd7+B3q5nD7/oR8IfL7Xn8Cn2nunUxGBIviHmG6nEq
+pHjDOaPUvgJbpHtlYnTraFsC297xgL8ywV8VZohpv4knxLek7R8Zf7cMbw0G
+d+EPYl46WOF+b+Qx2y/Dap2/KE+pwB69Xun4zTkeyFWYl7LOWYzfVh7+Co69
+R8jfxl91nnPkxPkO/BUktlNSTnNSSXMY4i93XEMThsYeO0vMuf2/Iy/6/JbT
+eYHJZw1bGL+XtW+B782ayDCS96mI+GuwBfUy6foSfzCf4Xiyz29gfsacaqZO
+I44C59SOMbGDu49GDIP3+iGxKCl7qJ5G9bIA/hrxiUV74s/5LFqt9ynYVzQ3
+SfzhNV/q4Qev79i53tM+dfGVrPcXm7lb6IPeB5Q/PB+wcyvUG0sxI/7U0rje
+fP+d96lI+GuUC/6ijEn8iWspUvfeGm8H/vAcrEkZZtPJjW88u/qsTRnDX9Wn
+joS/Ykf+vHOvq75QB5+/uPbBlL/cVdaSP3av4NMJ8ed9XyGEmR34c9YN5S/E
+ZolX4I7bL7flb/4A/lqzZ+NwQvwFxZHx1UP56z3/wdqL5TVZ70/p+YsGJqcg
+PMdK/GmPHaH8LdX2vThJjT3KkfE38rHEtJn4xtiSP3x9mpdC+ROvIa3/yDVS
+R3tp/Yf3QXtZ/4X6M4A/3acC7cX5h/U/qY/3aexeUoXvf+eSvzz8eblBdfH+
+Nxc4dj2HkfjDZYVgg2//i8+iRI674i8GqeY58FSoOyF1WcZV+Pkfrtc4y/Lw
+h8//7NptLMQdr+3mpFycx5Pm2R3lj57/hfTB8YfvRef5X5f8EXs6V6C9Y9Xc
+e2mFztahjiZ1CpePGP7u9am2f4olci/xB+W+5x9Twl7h6SMjZRNSzq7xkubz
+jymxIfT5R0H822BZrddMc8iXXB9HxR9z74Wo5Hzj4I+yXTD9pQ7/+Pije4fN
+HJvwz1653ESfr9l6mYMZF3+cHSXTB/7OsUPP42t/5Uji/NOSv9A9f6/8oZzE
+5S2qXGKP4W/m6bfhw1D+UH6hOYrjMfQ9LyrLDJ7rWXuBQVc879gnrLPjUes1
+DveOBpcDHpr/6L3XpdicEsDhTDXf07NaceMN4G+Kcix+ny319Qdx1yCJn/q9
+O/runj03mYfYnGzPWeq2ds8yQ/3XdjjvvWS9FkyJDRvbEYNWY48Pqb9qaQXv
+9jnaaUXevfSMO+Tds9bsSfHqWxx/g05HXeW6vjTwd9qKmT2rgb/TVszsWQ38
+nbZiZs9q4O+0FTN7Vmr7929WB9sHDRo0KE79B+5pcKg=
+                    "], "Byte", 
+                    ColorSpace -> "RGB", Interleaving -> True, 
+                    MetaInformation -> 
+                    Association[
+                    "Comments" -> 
+                    Association["Software" -> "Adobe ImageReady"]]], 
                     Style[
                     "This palette was developed to ease the uploading of \
 Mathematica content to its dedicated stackexchange site. You can upload \
@@ -455,14 +465,16 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.]},
                  If[
                  CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 127, 
+                    "Version" -> 128, 
                     "Changes" -> {
-                    "Made the invisible upload progress-indicator a static \
-graphics. This should fix some dynamic issues."}}] =!= {
-                   "Version" -> 127, 
+                    "Replaced the shortened Decode.m URL with a real URL \
+pointing to the GitHub repository. This fixes the issue with StackExchange no \
+longer accepting shortened URLs."}}] =!= {
+                   "Version" -> 128, 
                     "Changes" -> {
-                    "Made the invisible upload progress-indicator a static \
-graphics. This should fix some dynamic issues."}}, 
+                    "Replaced the shortened Decode.m URL with a real URL \
+pointing to the GitHub repository. This fixes the issue with StackExchange no \
+longer accepting shortened URLs."}}, 
                   RGBColor[
                   0.8588235294117647, 0.00784313725490196, 
                    0.00784313725490196], Black]]], 
@@ -475,37 +487,40 @@ graphics. This should fix some dynamic issues."}},
                MessageDialog[
                 Column[{
                   Image[CompressedData["
-1:eJztm71u1EAQx1dAQXmPYN7gCj/AQUtzCjWSEwlKOAUklG4rKop7BNdU5g3c
-0KektMQLuKUyu7nxZTKenV1f7Ls9x5H+Ue72w7MzP89+2Hl19fni4zOl1JeX
-5tfF5bfX19eXN+9emA9vbr5+uHpu/kiMciP7ZdM0s2adXD/+/FsbVUbNQLJ9
-bU49riGUfvq5NSpByantGWA8OqbxAHtDcUelQ2wwPyvQMtRuW7dtN3K8bJwa
-0KjXOhJ/UY1n4LxHVQey14DKHvyVqN1ofowtXlMbz4js3WnmLy7FNp6Zv/OK
-1zyeYTXzd1zFNp73v/7qMTXzF5diG49hpBlTp+LP/KyNtNEGfbeE488SaWO0
-GCJepjwzytH5RquNkfMaqP0C+ihIe/t5HcjXAq6H227as5Y+4zE/mVFB/JX7
-7nfwu9Xa4Xf9BPjD5QujLfpMdetiMCReEPMC1eNUSfGGc0apfQO2SPfK0ujW
-0bYGtr3jAX8Vgr8azBDTfh9PiG9N2z8x/m4Z3joMHsIfxLx2sMJ938ljtl+G
-1TZ/UZ5ygT16vdrxnXM8kKswL3Wbsxi/bT38VRx7T5C/vb/aPOfIidkB/FUk
-titSTnNSTXMY4q90XEMThhKPnTXm3P7tyIs+v5V0XmDyWccWxu9161vge78m
-MoyUYyoi/jpsQb1Cur7EH8xnOJ7s8xuYnzGnmqnTiaPAObUjIXZw99GCYfBB
-PyQWNWUP1dOoXhHAXyc+sehI/DmfRavdPgX7iuYmiT+85ss9/OD1HTvXe9rn
-Lr7S3f5iP3cLfdD7gPKH5wN2boV6iRQz4k8tjevt99/lmIqEv0654C/KmMSf
-uJYidR+s8Q7gD8/BmpRhNp3c+MZzqM/6lDH8NWPqTPirDuTPO/e66gt18PmL
-ax9M+StdZT35Y/cKPk2IP+/7CiHMHMCfs24ofyE2S7wCd9x+uS9/2SP4682e
-jcOE+AuKI+Orx/I3ev6DtRfLa7rbn9LzFw1MrkB4jpX40x47QvnbqPv34iR1
-9ihnxt/CxxLTZukbY0/+8PVpXgrlT7yGtP4j18gd7aX1H94HHWX9F+rPAP70
-mAq0F+cf1v+kPt6nsXtJFb7/zSR/efjzcoPq4v1vKXDseg4j8YfLKsEG3/4X
-n0WJHA/FXwxS3XPglVB3SeqyjKvw8z9cr3OW5eEPn//ZtVsixB2v7TJSLs7j
-affsjvJHz/9C+uD4w/ei8/xvSP6IPYMr0N5EdfdeWqGzdaijSZ3K5SOGvwd9
-qvt/xRK5l/iDct/zjxVhr/L0UZCyJSln13hp9/nHitgQ+vyjIv7tsKx2a6YM
-8iXXx1nxx9x7Iao53zj4o2xXTH+5wz8+/ujeYT/HpvyzVy430edrtl7hYMbF
-H2dHzfSBP3Ps0PP41l8lkjj/9OQvdM8/Kn8oJ3F5i6qU2GP4W3v67fgwlD+U
-X2iO4ngMfc+LyjKD53rWXmDQFc879gnr7HjUbo3DvaPB5YDH5j967w0pNqcE
-cLhW3ff0rLbceAP4W6Eci99ny339Qdw1SOKnfe+Ovrtnz02yEJvT+3OWtq3d
-s6xR/60dznsv3a0Fc2LD3nbEoFXi8SH1Vyut4N0+RzutyLuXnnGHvHvWmz0p
-XmOL42/WdDRUrhtLM3/TVszsWc38TVsxs2c18zdtxcye1czftBUze1bq/v/f
-rE62D5o1a1ac+g+gcmvt
-                   "], "Byte", ColorSpace -> "RGB", 
-                   Interleaving -> True], 
+1:eJztm72O00AQx1dAQZlHCG+QwgVlKBFNdIgSKXfiONGE6A4J0W1FRZFHcE1l
+3sAN/ZWUlngBt1Rm9zJO5sazs+ucnWxyjvRHJPvh2ZmfZz/se3Hx+ezjE6XU
+zXPzz9n511fX1+ff3o7Ml3eLm09Xi8sPrxdfLq8ur19ePDU/jo1So2dGVVUN
+GnRw/fjzb2ZUGFUdyfa1PPS4ulCy+LkyykHjQ9vTwXh0TOMB9rrijkqH2GA+
+U9Ak1G5bt27Xc7xsnCpQr9faE39RjafjvEdVBrJXgfIW/OWoXW9+jC1epzae
+Htm708BfXIptPAN/xxWvYTzdauBvv4ptPO9//dV9auAvLsU2HsNI1acOxZ/5
+zIy00RL9NoHjzxxpaTTqIl6mfG6UovONWksj5zVQ+xH0kZH29vsskK8RXA+3
+XdZnLW3GYz5zo4z4K/Xd7+B3q5nD7/oR8IfL7Xn8Cn2nunUxGBIviHmG6nEq
+pHjDOaPUvgJbpHtlYnTraFsC297xgL8ywV8VZohpv4knxLek7R8Zf7cMbw0G
+d+EPYl46WOF+b+Qx2y/Dap2/KE+pwB69Xun4zTkeyFWYl7LOWYzfVh7+Co69
+R8jfxl91nnPkxPkO/BUktlNSTnNSSXMY4i93XEMThsYeO0vMuf2/Iy/6/JbT
+eYHJZw1bGL+XtW+B782ayDCS96mI+GuwBfUy6foSfzCf4Xiyz29gfsacaqZO
+I44C59SOMbGDu49GDIP3+iGxKCl7qJ5G9bIA/hrxiUV74s/5LFqt9ynYVzQ3
+SfzhNV/q4Qev79i53tM+dfGVrPcXm7lb6IPeB5Q/PB+wcyvUG0sxI/7U0rje
+fP+d96lI+GuUC/6ijEn8iWspUvfeGm8H/vAcrEkZZtPJjW88u/qsTRnDX9Wn
+joS/Ykf+vHOvq75QB5+/uPbBlL/cVdaSP3av4NMJ8ed9XyGEmR34c9YN5S/E
+ZolX4I7bL7flb/4A/lqzZ+NwQvwFxZHx1UP56z3/wdqL5TVZ70/p+YsGJqcg
+PMdK/GmPHaH8LdX2vThJjT3KkfE38rHEtJn4xtiSP3x9mpdC+ROvIa3/yDVS
+R3tp/Yf3QXtZ/4X6M4A/3acC7cX5h/U/qY/3aexeUoXvf+eSvzz8eblBdfH+
+Nxc4dj2HkfjDZYVgg2//i8+iRI674i8GqeY58FSoOyF1WcZV+Pkfrtc4y/Lw
+h8//7NptLMQdr+3mpFycx5Pm2R3lj57/hfTB8YfvRef5X5f8EXs6V6C9Y9Xc
+e2mFztahjiZ1CpePGP7u9am2f4olci/xB+W+5x9Twl7h6SMjZRNSzq7xkubz
+jymxIfT5R0H822BZrddMc8iXXB9HxR9z74Wo5Hzj4I+yXTD9pQ7/+Pije4fN
+HJvwz1653ESfr9l6mYMZF3+cHSXTB/7OsUPP42t/5Uji/NOSv9A9f6/8oZzE
+5S2qXGKP4W/m6bfhw1D+UH6hOYrjMfQ9LyrLDJ7rWXuBQVc879gnrLPjUes1
+DveOBpcDHpr/6L3XpdicEsDhTDXf07NaceMN4G+Kcix+ny319Qdx1yCJn/q9
+O/runj03mYfYnGzPWeq2ds8yQ/3XdjjvvWS9FkyJDRvbEYNWY48Pqb9qaQXv
+9jnaaUXevfSMO+Tds9bsSfHqWxx/g05HXeW6vjTwd9qKmT2rgb/TVszsWQ38
+nbZiZs9q4O+0FTN7Vmr7929WB9sHDRo0KE79B+5pcKg=
+                   "], "Byte", 
+                   ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
+                   Association[
+                    "Comments" -> 
+                    Association["Software" -> "Adobe ImageReady"]]], 
                   Style[
                   "This palette was developed to ease the uploading of \
 Mathematica content to its dedicated stackexchange site. You can upload \
@@ -575,17 +590,19 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 127, 
+         "Version" -> 128, 
           "Changes" -> {
-           "Made the invisible upload progress-indicator a static graphics. \
-This should fix some dynamic issues."}}]; 
+           "Replaced the shortened Decode.m URL with a real URL pointing to \
+the GitHub repository. This fixes the issue with StackExchange no longer \
+accepting shortened URLs."}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
        And[SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 127, 
+          "Version" -> 128, 
            "Changes" -> {
-            "Made the invisible upload progress-indicator a static graphics. \
-This should fix some dynamic issues."}}]; CreateDialog[
+            "Replaced the shortened Decode.m URL with a real URL pointing to \
+the GitHub repository. This fixes the issue with StackExchange no longer \
+accepting shortened URLs."}}]; CreateDialog[
         Pane[
          Column[{
            SETools`SEUploader`Private`st$["Update information", 14], 
@@ -593,10 +610,11 @@ This should fix some dynamic issues."}}]; CreateDialog[
             StringForm["Installed version: ``", 
              ReplaceAll[
              "Version", {
-              "Version" -> 127, 
+              "Version" -> 128, 
                "Changes" -> {
-                "Made the invisible upload progress-indicator a static \
-graphics. This should fix some dynamic issues."}}]]], 
+                "Replaced the shortened Decode.m URL with a real URL pointing \
+to the GitHub repository. This fixes the issue with StackExchange no longer \
+accepting shortened URLs."}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
             SETools`SEUploader`Private`st$[
              StringForm["Online version: ``", 
@@ -627,7 +645,6 @@ graphics. This should fix some dynamic issues."}}]]],
 master"]}], 
            
            With[{SETools`SEUploader`Private`updateNotebookEnc$ = 
-             
              "1:eJyNU0tvEzEQTml5ShWIExck0wup1OymEFUFiUNpAgRaHnUAAarAu5lNrHrtlT\
 1LUm4gcYA7nPkB/AIu3PgLIC7cEBKIA0cu4NmkjwQh9eCZ+cYz45nP9qnIrCX7S6WSO+\
 TFdYMQGbORTJBnyosV6XAHLYNSyT5C00N02Zo8qwsUyeRIyuTuFD7njdtZW6DUnbCpHQqlvMmwC4yj\
@@ -772,14 +789,17 @@ qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"},
        SETools`SEUploader`Private`uploadWithPreview[
        SETools`SEUploader`Private`img]]]; 
    SETools`SEUploader`Private`uploadExpression[
-      Pattern[SETools`SEUploader`Private`img, 
-       Blank[]]] := If[Head[SETools`SEUploader`Private`img] =!= Image, 
+      Pattern[SETools`SEUploader`Private`img$, 
+       Blank[]]] := If[Head[SETools`SEUploader`Private`img$] =!= Image, 
       MessageDialog["Invalid selection."], 
-      If[ByteCount[SETools`SEUploader`Private`img]/2.^20 > 1., 
+      If[ByteCount[SETools`SEUploader`Private`img$]/2.^20 > 1., 
        MessageDialog["Expressions bigger then 1 MB are not allowed."], 
        SETools`SEUploader`Private`uploadButtonAction[
-       SETools`SEUploader`Private`img, "Import[\"http://goo.gl/NaH6rM\"][\"", 
-        "\"]"]]]; SETools`SEUploader`Private`uploadButtonAction[
+       SETools`SEUploader`Private`img$, 
+        StringJoin[
+        "Import[\"", 
+         "http://halirutan.github.io/Mathematica-SE-Tools/decode.m", 
+         "\"][\""], "\"]"]]]; SETools`SEUploader`Private`uploadButtonAction[
       Pattern[SETools`SEUploader`Private`img, 
        Blank[]]] := 
     SETools`SEUploader`Private`uploadButtonAction[
@@ -793,8 +813,7 @@ qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"},
        Blank[String]]] := 
     Module[{SETools`SEUploader`Private`url$, 
        SETools`SEUploader`Private`markdown$}, 
-      Check[
-       SETools`SEUploader`Private`url$ = 
+      Check[SETools`SEUploader`Private`url$ = 
         SETools`SEUploader`Private`stackImage[
          SETools`SEUploader`Private`img$], 
         Return[]]; 
@@ -917,3 +936,5 @@ WindowTitle->"SE Uploader",
 TaggingRules->{"ImageUploadHistory" -> {}},
 StyleDefinitions->"Palette.nb"
 ]
+
+
