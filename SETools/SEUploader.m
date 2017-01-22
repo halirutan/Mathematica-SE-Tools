@@ -21,6 +21,7 @@ With[
     logo = Import["SETools/Resources/banner.png"],
     mathematicaSE = "http://mathematica.stackexchange.com/",
     versionURL = "https://raw.githubusercontent.com/halirutan/Mathematica-SE-Tools/master/SETools/Version.m",
+    decoderURL = "http://goo.gl/NaH6rM",
 
     tagLastCheck = "SEUploaderLastUpdateCheck",
     tagHistory = "ImageUploadHistory",
@@ -279,7 +280,7 @@ With[
           MessageDialog["Invalid selection."],
           If[ByteCount[img] / 2.0^20 > 1.0,
             MessageDialog["Expressions bigger then 1 MB are not allowed."],
-            uploadButtonAction[img, "Import[\"http://goo.gl/NaH6rM\"][\"", "\"]"]
+            uploadButtonAction[img, "Import[\"" <> decoderURL <> "\"][\"", "\"]"]
           ]
         ];
 
