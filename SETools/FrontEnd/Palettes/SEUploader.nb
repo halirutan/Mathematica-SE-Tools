@@ -324,7 +324,7 @@ code", "Tooltip"]& ]},
                     TaggingRules, "SEUploaderVersion"}, {
                     "Version" -> 129, 
                     "Changes" -> {
-                    "Fixed copy to clipboard for versions >= 10"}}]] >= 
+                    "Fixed copy to clipboard for versions >= 10"}}]] > 
                     ReplaceAll[
                     "Version", {
                     "Version" -> 129, 
@@ -419,13 +419,10 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.],
                     Evaluator->Automatic,
                     ImageSize->{140, Automatic},
                     Method->"Preemptive"],
-                    "\"Check for newer versions of the uploader palette\"",
+                    "\"About the SETools palette\"",
                     TooltipDelay->Automatic,
                     TooltipStyle->"TextStyling"],
-                    
-                    Annotation[#, 
-                    "Check for newer versions of the uploader palette", 
-                    "Tooltip"]& ]}
+                    Annotation[#, "About the SETools palette", "Tooltip"]& ]}
                  },
                  DefaultBaseStyle->"Column",
                  GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -470,7 +467,7 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.],
                     TaggingRules, "SEUploaderVersion"}, {
                     "Version" -> 129, 
                     "Changes" -> {
-                    "Fixed copy to clipboard for versions >= 10"}}]] >= 
+                    "Fixed copy to clipboard for versions >= 10"}}]] > 
                   ReplaceAll[
                    "Version", {
                     "Version" -> 129, 
@@ -547,8 +544,7 @@ encode cells or whole notebooks into an image.", "Label", LineIndent -> 0,
                   Style[
                   "Version: 129", "Label", LineIndent -> 0, TextJustification -> 
                    1.]}, Dividers -> {False, {False, True}}, Spacings -> 1]], 
-               ImageSize -> {140, Automatic}], 
-              "Check for newer versions of the uploader palette", 
+               ImageSize -> {140, Automatic}], "About the SETools palette", 
               TooltipDelay -> Automatic]}, Center]}, True]],
         DynamicModuleValues:>{}],
        Setting[#, {0}]& ]}
@@ -672,8 +668,9 @@ qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"},
    SETools`SEUploader`Private`stackImage[
       Pattern[SETools`SEUploader`Private`g, 
        Blank[]]] := 
-    Module[{SETools`SEUploader`Private`url, SETools`SEUploader`Private`client,
-        SETools`SEUploader`Private`method, SETools`SEUploader`Private`data, 
+    Module[{
+      SETools`SEUploader`Private`url, SETools`SEUploader`Private`client, 
+       SETools`SEUploader`Private`method, SETools`SEUploader`Private`data, 
        SETools`SEUploader`Private`partSource, SETools`SEUploader`Private`part,
         SETools`SEUploader`Private`entity, SETools`SEUploader`Private`code, 
        SETools`SEUploader`Private`response, SETools`SEUploader`Private`error, 
@@ -925,8 +922,8 @@ copied to the clipboard.", Bold],
          SelectedNotebook[]]}, 
       If[Head[SETools`SEUploader`Private`nb] =!= Notebook, $Failed, 
        SETools`SEImageExpressionEncode`SEEncodeExpression[
-       SETools`SEUploader`Private`nb]]]; Null)]],ExpressionUUID->"e9f06b3c-\
-95fe-4b60-a131-c1235962d19c"]
+       SETools`SEUploader`Private`nb]]]; Null)]],ExpressionUUID->"aad8028b-\
+69b4-43ab-870a-3eaae9de9307"]
 },
 WindowSize->All,
 WindowElements->{},

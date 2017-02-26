@@ -85,7 +85,7 @@ With[
 
                     Tooltip[
                         Button[Dynamic@Style["Update", If[
-                            ("Version" /. CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, version]) >= ("Version" /. version),
+                            ("Version" /. CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, version]) > ("Version" /. version),
                             RGBColor[0.8588235294117647, 0.00784313725490196, 0.00784313725490196] , Black]],
                             updateButton[], buttonOpts],
                         "Check for newer versions of the uploader palette",
@@ -93,7 +93,7 @@ With[
 
                     Tooltip[
                         Button["About", MessageDialog[$aboutDialog], buttonOpts],
-                        "Check for newer versions of the uploader palette",
+                        "About the SETools palette",
                         TooltipDelay -> Automatic]
 
                 }, Center]
