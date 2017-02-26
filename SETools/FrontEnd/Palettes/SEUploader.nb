@@ -318,23 +318,22 @@ code", "Tooltip"]& ]},
                     ButtonBox[
                     DynamicBox[ToBoxes[
                     Style["Update", 
-                    If[
+                    If[ReplaceAll["Version", 
+                    
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 128, 
+                    "Version" -> 129, 
                     "Changes" -> {
-                    "Replaced the shortened Decode.m URL with a real URL \
-pointing to the GitHub repository. This fixes the issue with StackExchange no \
-longer accepting shortened URLs."}}] =!= {
-                    "Version" -> 128, 
+                    "Fixed copy to clipboard for versions >= 10"}}]] >= 
+                    ReplaceAll[
+                    "Version", {
+                    "Version" -> 129, 
                     "Changes" -> {
-                    "Replaced the shortened Decode.m URL with a real URL \
-pointing to the GitHub repository. This fixes the issue with StackExchange no \
-longer accepting shortened URLs."}}, 
+                    "Fixed copy to clipboard for versions >= 10"}}], 
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
-                    ImageSizeCache->{42., {2., 8.}}],
+                    ImageSizeCache->{41., {2., 8.}}],
                     Appearance->Automatic,
                     ButtonFunction:>SETools`SEUploader`Private`updateButton[],
                     
@@ -411,8 +410,11 @@ places:", "Label", LineIndent -> 0, TextJustification -> 1.],
                     "Label", LineIndent -> 0, TextJustification -> 1.], 
                     "https://github.com/halirutan/Mathematica-SE-Tools"], 
                     Style[
-                    "\[Copyright] 2012\[Dash]2015 The StackExchange \
-Community", "Label", LineIndent -> 0, TextJustification -> 1.]}, 
+                    "\[Copyright] 2012\[Dash]2017 The StackExchange \
+Community", "Label", LineIndent -> 0, TextJustification -> 1.], 
+                    Style[
+                    "Version: 129", "Label", LineIndent -> 0, 
+                    TextJustification -> 1.]}, 
                     Dividers -> {False, {False, True}}, Spacings -> 1]],
                     Evaluator->Automatic,
                     ImageSize->{140, Automatic},
@@ -462,19 +464,18 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.]},
               Button[
                Dynamic[
                 Style["Update", 
-                 If[
-                 CurrentValue[$FrontEnd, {
+                 If[ReplaceAll["Version", 
+                    
+                    CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 128, 
+                    "Version" -> 129, 
                     "Changes" -> {
-                    "Replaced the shortened Decode.m URL with a real URL \
-pointing to the GitHub repository. This fixes the issue with StackExchange no \
-longer accepting shortened URLs."}}] =!= {
-                   "Version" -> 128, 
+                    "Fixed copy to clipboard for versions >= 10"}}]] >= 
+                  ReplaceAll[
+                   "Version", {
+                    "Version" -> 129, 
                     "Changes" -> {
-                    "Replaced the shortened Decode.m URL with a real URL \
-pointing to the GitHub repository. This fixes the issue with StackExchange no \
-longer accepting shortened URLs."}}, 
+                    "Fixed copy to clipboard for versions >= 10"}}], 
                   RGBColor[
                   0.8588235294117647, 0.00784313725490196, 
                    0.00784313725490196], Black]]], 
@@ -541,9 +542,11 @@ encode cells or whole notebooks into an image.", "Label", LineIndent -> 0,
                     "Label", LineIndent -> 0, TextJustification -> 1.], 
                    "https://github.com/halirutan/Mathematica-SE-Tools"], 
                   Style[
-                  "\[Copyright] 2012\[Dash]2015 The StackExchange Community", 
-                   "Label", LineIndent -> 0, TextJustification -> 1.]}, 
-                 Dividers -> {False, {False, True}}, Spacings -> 1]], 
+                  "\[Copyright] 2012\[Dash]2017 The StackExchange Community", 
+                   "Label", LineIndent -> 0, TextJustification -> 1.], 
+                  Style[
+                  "Version: 129", "Label", LineIndent -> 0, TextJustification -> 
+                   1.]}, Dividers -> {False, {False, True}}, Spacings -> 1]], 
                ImageSize -> {140, Automatic}], 
               "Check for newer versions of the uploader palette", 
               TooltipDelay -> Automatic]}, Center]}, True]],
@@ -590,19 +593,14 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 128, 
-          "Changes" -> {
-           "Replaced the shortened Decode.m URL with a real URL pointing to \
-the GitHub repository. This fixes the issue with StackExchange no longer \
-accepting shortened URLs."}}]; 
+         "Version" -> 129, 
+          "Changes" -> {"Fixed copy to clipboard for versions >= 10"}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
        And[SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 128, 
-           "Changes" -> {
-            "Replaced the shortened Decode.m URL with a real URL pointing to \
-the GitHub repository. This fixes the issue with StackExchange no longer \
-accepting shortened URLs."}}]; CreateDialog[
+          "Version" -> 129, 
+           "Changes" -> {"Fixed copy to clipboard for versions >= 10"}}]; 
+      CreateDialog[
         Pane[
          Column[{
            SETools`SEUploader`Private`st$["Update information", 14], 
@@ -610,11 +608,9 @@ accepting shortened URLs."}}]; CreateDialog[
             StringForm["Installed version: ``", 
              ReplaceAll[
              "Version", {
-              "Version" -> 128, 
+              "Version" -> 129, 
                "Changes" -> {
-                "Replaced the shortened Decode.m URL with a real URL pointing \
-to the GitHub repository. This fixes the issue with StackExchange no longer \
-accepting shortened URLs."}}]]], 
+                "Fixed copy to clipboard for versions >= 10"}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
             SETools`SEUploader`Private`st$[
              StringForm["Online version: ``", 
@@ -739,14 +735,15 @@ qLC6y8UKtEEmdZuQ4xpBFYVptjZ6rztdmxosfoY+CmgjokUkv6II4TKR6LXGGgo79fuQOw"},
           SETools`SEUploader`Private`stackImage, "parseErr"]]; $Failed]]; 
    SETools`SEUploader`Private`copyToClipboard[
       Pattern[SETools`SEUploader`Private`text, 
-       Blank[]]] := 
-    Module[{SETools`SEUploader`Private`nb}, 
-      SETools`SEUploader`Private`nb = NotebookCreate[Visible -> False]; 
-      NotebookWrite[SETools`SEUploader`Private`nb, 
-        Cell[SETools`SEUploader`Private`text, "Input"]]; 
-      SelectionMove[SETools`SEUploader`Private`nb, All, Notebook]; 
-      FrontEndTokenExecute[SETools`SEUploader`Private`nb, "Copy"]; 
-      NotebookClose[SETools`SEUploader`Private`nb]; Null]; 
+       Blank[]]] := If[$VersionNumber >= 10, 
+      CopyToClipboard[SETools`SEUploader`Private`text], 
+      Module[{SETools`SEUploader`Private`nb}, 
+       SETools`SEUploader`Private`nb = NotebookCreate[Visible -> False]; 
+       NotebookWrite[SETools`SEUploader`Private`nb, 
+         Cell[SETools`SEUploader`Private`text, "Input"]]; 
+       SelectionMove[SETools`SEUploader`Private`nb, All, Notebook]; 
+       FrontEndTokenExecute[SETools`SEUploader`Private`nb, "Copy"]; 
+       NotebookClose[SETools`SEUploader`Private`nb]; Null]]; 
    SETools`SEUploader`Private`historyButton[] := CreateDialog[
       Column[{
         Style["Click a thumbnail to copy its URL.", Bold], 
@@ -928,7 +925,8 @@ copied to the clipboard.", Bold],
          SelectedNotebook[]]}, 
       If[Head[SETools`SEUploader`Private`nb] =!= Notebook, $Failed, 
        SETools`SEImageExpressionEncode`SEEncodeExpression[
-       SETools`SEUploader`Private`nb]]]; Null)]]]
+       SETools`SEUploader`Private`nb]]]; Null)]],ExpressionUUID->"e9f06b3c-\
+95fe-4b60-a131-c1235962d19c"]
 },
 WindowSize->All,
 WindowElements->{},
@@ -936,5 +934,3 @@ WindowTitle->"SE Uploader",
 TaggingRules->{"ImageUploadHistory" -> {}},
 StyleDefinitions->"Palette.nb"
 ]
-
-
