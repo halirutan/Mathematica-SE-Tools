@@ -322,14 +322,12 @@ code", "Tooltip"]& ]},
                     
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 129, 
-                    "Changes" -> {
-                    "Fixed copy to clipboard for versions >= 10"}}]] > 
+                    "Version" -> 130, 
+                    "Changes" -> {"Fixed SE Uploader to use https"}}]] > 
                     ReplaceAll[
                     "Version", {
-                    "Version" -> 129, 
-                    "Changes" -> {
-                    "Fixed copy to clipboard for versions >= 10"}}], 
+                    "Version" -> 130, 
+                    "Changes" -> {"Fixed SE Uploader to use https"}}], 
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
@@ -413,7 +411,7 @@ places:", "Label", LineIndent -> 0, TextJustification -> 1.],
                     "\[Copyright] 2012\[Dash]2017 The StackExchange \
 Community", "Label", LineIndent -> 0, TextJustification -> 1.], 
                     Style[
-                    "Version: 129", "Label", LineIndent -> 0, 
+                    "Version: 130", "Label", LineIndent -> 0, 
                     TextJustification -> 1.]}, 
                     Dividers -> {False, {False, True}}, Spacings -> 1]],
                     Evaluator->Automatic,
@@ -465,14 +463,12 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.],
                     
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 129, 
-                    "Changes" -> {
-                    "Fixed copy to clipboard for versions >= 10"}}]] > 
+                    "Version" -> 130, 
+                    "Changes" -> {"Fixed SE Uploader to use https"}}]] > 
                   ReplaceAll[
                    "Version", {
-                    "Version" -> 129, 
-                    "Changes" -> {
-                    "Fixed copy to clipboard for versions >= 10"}}], 
+                    "Version" -> 130, 
+                    "Changes" -> {"Fixed SE Uploader to use https"}}], 
                   RGBColor[
                   0.8588235294117647, 0.00784313725490196, 
                    0.00784313725490196], Black]]], 
@@ -542,7 +538,7 @@ encode cells or whole notebooks into an image.", "Label", LineIndent -> 0,
                   "\[Copyright] 2012\[Dash]2017 The StackExchange Community", 
                    "Label", LineIndent -> 0, TextJustification -> 1.], 
                   Style[
-                  "Version: 129", "Label", LineIndent -> 0, TextJustification -> 
+                  "Version: 130", "Label", LineIndent -> 0, TextJustification -> 
                    1.]}, Dividers -> {False, {False, True}}, Spacings -> 1]], 
                ImageSize -> {140, Automatic}], "About the SETools palette", 
               TooltipDelay -> Automatic]}, Center]}, True]],
@@ -589,13 +585,11 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 129, 
-          "Changes" -> {"Fixed copy to clipboard for versions >= 10"}}]; 
+         "Version" -> 130, "Changes" -> {"Fixed SE Uploader to use https"}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
        And[SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 129, 
-           "Changes" -> {"Fixed copy to clipboard for versions >= 10"}}]; 
+          "Version" -> 130, "Changes" -> {"Fixed SE Uploader to use https"}}]; 
       CreateDialog[
         Pane[
          Column[{
@@ -604,9 +598,8 @@ Tools/master/SETools/Version.m"],
             StringForm["Installed version: ``", 
              ReplaceAll[
              "Version", {
-              "Version" -> 129, 
-               "Changes" -> {
-                "Fixed copy to clipboard for versions >= 10"}}]]], 
+              "Version" -> 130, 
+               "Changes" -> {"Fixed SE Uploader to use https"}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
             SETools`SEUploader`Private`st$[
              StringForm["Online version: ``", 
@@ -922,8 +915,8 @@ copied to the clipboard.", Bold],
          SelectedNotebook[]]}, 
       If[Head[SETools`SEUploader`Private`nb] =!= Notebook, $Failed, 
        SETools`SEImageExpressionEncode`SEEncodeExpression[
-       SETools`SEUploader`Private`nb]]]; Null)]],ExpressionUUID->"aad8028b-\
-69b4-43ab-870a-3eaae9de9307"]
+       SETools`SEUploader`Private`nb]]]; Null)]],ExpressionUUID->"21ff1a1d-\
+0890-4f5c-b1a2-576854f1ed60"]
 },
 WindowSize->All,
 WindowElements->{},

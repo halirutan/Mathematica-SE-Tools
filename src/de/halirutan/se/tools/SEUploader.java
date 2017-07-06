@@ -21,7 +21,7 @@ import java.io.InputStream;
 @SuppressWarnings("UnusedDeclaration")
 public class SEUploader {
 
-  public static final String URL = "http://stackoverflow.com/upload/image";
+  public static final String URL = "https://stackoverflow.com/upload/image";
 
   public static String sendImage(byte[] imgPngContent) throws SEUploaderException {
     try {

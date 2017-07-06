@@ -1,1 +1,1 @@
-{"Version" -> 129, "Changes" -> {"Fixed copy to clipboard for versions >= 10"}}
+{"Version" -> 130, "Changes" -> {"Fixed SE Uploader to use https"}}
