@@ -331,7 +331,7 @@ code", "Tooltip"]& ]},
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
-                    ImageSizeCache->{41., {2., 8.}}],
+                    ImageSizeCache->{45., {3., 10.}}],
                     Appearance->Automatic,
                     ButtonFunction:>SETools`SEUploader`Private`updateButton[],
                     
@@ -570,8 +570,7 @@ Tools/master/SETools/Version.m"],
        AbsoluteTime[]; 
       CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}] = 
        SETools`SEUploader`Private`onlineVersion$]; 
-   If[AbsoluteTime[] > 
-     3 3600 24 + 
+   If[AbsoluteTime[] > (3 3600) 24 + 
       CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderLastUpdateCheck"}, 0], 
      TimeConstrained[
       SETools`SEUploader`Private`checkOnlineVersion[], 6]]; 
@@ -915,12 +914,17 @@ copied to the clipboard.", Bold],
          SelectedNotebook[]]}, 
       If[Head[SETools`SEUploader`Private`nb] =!= Notebook, $Failed, 
        SETools`SEImageExpressionEncode`SEEncodeExpression[
-       SETools`SEUploader`Private`nb]]]; Null)]],ExpressionUUID->"21ff1a1d-\
-0890-4f5c-b1a2-576854f1ed60"]
+       SETools`SEUploader`Private`nb]]]; 
+   Null)]],ExpressionUUID->"d9641836-7d11-43e2-b00f-93636bf8e37d"]
 },
 WindowSize->All,
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 WindowElements->{},
 WindowTitle->"SE Uploader",
+PrivateNotebookOptions->{"FileContents"->{"NotebookData"},
+"FileOutlineCache"->None},
 TaggingRules->{"ImageUploadHistory" -> {}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Palette.nb"
 ]
