@@ -918,13 +918,10 @@ copied to the clipboard.", Bold],
    Null)]],ExpressionUUID->"d9641836-7d11-43e2-b00f-93636bf8e37d"]
 },
 WindowSize->All,
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 WindowElements->{},
 WindowTitle->"SE Uploader",
 PrivateNotebookOptions->{"FileContents"->{"NotebookData"},
 "FileOutlineCache"->None},
 TaggingRules->{"ImageUploadHistory" -> {}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
 StyleDefinitions->"Palette.nb"
 ]
