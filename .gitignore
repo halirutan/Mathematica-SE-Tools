@@ -9,3 +9,5 @@ out/
 hs_err_pid*
 
 
+#Mac Junk Files
+*.DS_Store
