@@ -46,7 +46,7 @@ decodeExpression[img_Image] := Module[
 
   {data, hash} = data /. {d__, 0, h__, 0 ..} :> {{d}, {h}};
   If[
-    hash =!= IntegerDigits[Hash[FromCharacterCode[data], "MD5"]],
+    hash =!= 1 + IntegerDigits[Hash[FromCharacterCode[data], "MD5"]],
     Message[SEDecodeImage::hash];
     Abort[]
   ];

@@ -32,7 +32,7 @@ With[{alpha = Image[Uncompress["1:eJzt2D0OwjAMBeAicREWZnoMJCaOwIDExNDeX3RFqOI5fk
   encodeExpression[expr_] :=
     Module[{pixel = Compress[Unevaluated[expr]], hash,
       l, nx, ny},
-      hash = Join[{0}, IntegerDigits[Hash[pixel, "MD5"]]];
+      hash = Join[{0}, 1 + IntegerDigits[Hash[pixel, "MD5"]]];
       pixel = Join[ToCharacterCode@pixel, hash];
       l = Length[pixel];
       nx = Max[64, Ceiling[Sqrt[l]]];
