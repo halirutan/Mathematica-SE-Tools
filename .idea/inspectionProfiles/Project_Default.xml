@@ -1,0 +1,10 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="UnsupportedVersion" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="languageLevel" value="Wolfram Language Version 10.4" />
+      <option name="useSDKLanguageLevelOrHighest" value="false" />
+      <option name="useModuleLanguageLevelOrHighest" value="false" />
+    </inspection_tool>
+  </profile>
+</component>

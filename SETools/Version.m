@@ -1,1 +1,1 @@
-{"Version" -> 130, "Changes" -> {"Fixed SE Uploader to use https"}}
+{"Version" -> 131, "Changes" -> {"Fix upload to account for new XSRF protection"}}

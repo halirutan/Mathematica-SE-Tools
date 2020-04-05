@@ -1,13 +1,12 @@
 package de.halirutan.se.tools;
 
-
-import org.junit.Assert;
-import org.junit.Test;
-
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.net.URI;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * @author patrick (11/25/13)
@@ -25,6 +24,13 @@ public class SEUploaderTest {
     dis.readFully(data);
     dis.close();
     return data;
+  }
+
+  @Test
+  public void testFKeyRetrieval() throws Exception {
+    String fkey = SEUploader.getFKey();
+    Assert.assertFalse(fkey.isEmpty());
+    System.out.println("FKey: " + fkey);
   }
 
   @Test

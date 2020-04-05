@@ -3,11 +3,10 @@ Cell[BoxData[
  DynamicModuleBox[{SETools`SEUploader`Private`progress$$ = False}, 
   TagBox[GridBox[{
      {
-      TagBox[
-       ButtonBox[
-        PaneSelectorBox[{False->
-         GraphicsBox[
-          TagBox[RasterBox[CompressedData["
+      TemplateBox[{
+        GraphicsBox[
+         TagBox[
+          RasterBox[CompressedData["
 1:eJztm72O00AQx1dAQZlHCG+QwgVlKBFNdIgSKXfiONGE6A4J0W1FRZFHcE1l
 3sAN/ZWUlngBt1Rm9zJO5sazs+ucnWxyjvRHJPvh2ZmfZz/se3Hx+ezjE6XU
 zXPzz9n511fX1+ff3o7Ml3eLm09Xi8sPrxdfLq8ur19ePDU/jo1So2dGVVUN
@@ -37,26 +36,18 @@ DveOBpcDHpr/6L3XpdicEsDhTDXf07NaceMN4G+Kcix+ny319Qdx1yCJn/q9
 O/runj03mYfYnGzPWeq2ds8yQ/3XdjjvvWS9FkyJDRvbEYNWY48Pqb9qaQXv
 9jnaaUXevfSMO+Tds9bsSfHqWxx/g05HXeW6vjTwd9qKmT2rgb/TVszsWQ38
 nbZiZs9q4O+0FTN7Vmr7929WB9sHDRo0KE79B+5pcKg=
-            "], {{0, 32}, {160, 
-            0}}, {0, 255},
-            ColorFunction->RGBColor],
-           BoxForm`ImageTag[
-           "Byte", ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
-            Association[
-             "Comments" -> Association["Software" -> "Adobe ImageReady"]]],
-           Selectable->False],
-          DefaultBaseStyle->"ImageGraphics",
-          ImageSizeRaw->{160, 32},
-          PlotRange->{{0, 160}, {0, 32}}]}, False,
-         BaseStyle->{None},
-         FrameMargins->0,
-         ImageSize->Automatic],
-        BaseStyle->"Hyperlink",
-        ButtonData->{
-          URL["https://github.com/halirutan/Mathematica-SE-Tools"], None},
-        ButtonNote->"https://github.com/halirutan/Mathematica-SE-Tools"],
-       Annotation[#, "https://github.com/halirutan/Mathematica-SE-Tools", 
-        "Hyperlink"]& ]},
+           
+           "], {{0, 32.}, {160., 0}}, {0, 255}, ColorFunction -> RGBColor], 
+          BoxForm`ImageTag[
+          "Byte", ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
+           Association[
+            "Comments" -> Association["Software" -> "Adobe ImageReady"]]], 
+          Selectable -> False], DefaultBaseStyle -> "ImageGraphics", 
+         ImageSizeRaw -> {160., 32.}, PlotRange -> {{0, 160.}, {0, 32.}}], {
+         URL["https://github.com/halirutan/Mathematica-SE-Tools"], None}, 
+        "https://github.com/halirutan/Mathematica-SE-Tools", "Hyperlink", 
+        BaseStyle -> {None}},
+       "HyperlinkStaticTemplate"]},
      {
       TagBox[
        DynamicModuleBox[{Typeset`var$$ = True}, 
@@ -140,7 +131,6 @@ StackExchange (pixel-perfect rasterization)", "Tooltip"]& ]},
                     TooltipBox[
                     ButtonBox["\<\"Selected Cell\"\>",
                     Appearance->Automatic,
-                    
                     ButtonFunction:>(
                     SETools`SEUploader`Private`progress$$ = True; 
                     SETools`SEUploader`Private`uploadExpression[
@@ -209,6 +199,7 @@ code", "Tooltip"]& ]},
             GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
            Dynamic[Typeset`var$$],
            Alignment->Automatic,
+           BaseStyle->{},
            BaselinePosition->Baseline,
            DefaultBaseStyle->"OpenerView",
            ImageMargins->0,
@@ -322,16 +313,18 @@ code", "Tooltip"]& ]},
                     
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 130, 
-                    "Changes" -> {"Fixed SE Uploader to use https"}}]] > 
+                    "Version" -> 131, 
+                    "Changes" -> {
+                    "Fix upload to account for new XSRF protection"}}]] > 
                     ReplaceAll[
                     "Version", {
-                    "Version" -> 130, 
-                    "Changes" -> {"Fixed SE Uploader to use https"}}], 
+                    "Version" -> 131, 
+                    "Changes" -> {
+                    "Fix upload to account for new XSRF protection"}}], 
                     RGBColor[
                     0.8588235294117647, 0.00784313725490196, 
                     0.00784313725490196], Black]], StandardForm],
-                    ImageSizeCache->{45., {3., 10.}}],
+                    ImageSizeCache->{33., {2., 7.}}],
                     Appearance->Automatic,
                     ButtonFunction:>SETools`SEUploader`Private`updateButton[],
                     
@@ -399,7 +392,7 @@ encode cells or whole notebooks into an image.", "Label", LineIndent -> 0,
 places:", "Label", LineIndent -> 0, TextJustification -> 1.], 
                     Hyperlink[
                     Style[
-                    "\[FilledCircle] The official post at stackexchange", 
+                    "\[FilledCircle] The official post on StackExchange", 
                     "Label", LineIndent -> 0, TextJustification -> 1.], 
                     "http://meta.mathematica.stackexchange.com/q/5/187"], 
                     Hyperlink[
@@ -408,10 +401,9 @@ places:", "Label", LineIndent -> 0, TextJustification -> 1.],
                     "Label", LineIndent -> 0, TextJustification -> 1.], 
                     "https://github.com/halirutan/Mathematica-SE-Tools"], 
                     Style[
-                    "\[Copyright] 2012\[Dash]2017 The StackExchange \
+                    "\[Copyright] 2012\[Dash]2020 The StackExchange \
 Community", "Label", LineIndent -> 0, TextJustification -> 1.], 
-                    Style[
-                    "Version: 130", "Label", LineIndent -> 0, 
+                    Style["Version: 131", "Label", LineIndent -> 0, 
                     TextJustification -> 1.]}, 
                     Dividers -> {False, {False, True}}, Spacings -> 1]],
                     Evaluator->Automatic,
@@ -440,6 +432,7 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.],
             GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
            Dynamic[Typeset`var$$],
            Alignment->Automatic,
+           BaseStyle->{},
            BaselinePosition->Baseline,
            DefaultBaseStyle->"OpenerView",
            ImageMargins->0,
@@ -463,12 +456,14 @@ Community", "Label", LineIndent -> 0, TextJustification -> 1.],
                     
                     CurrentValue[$FrontEnd, {
                     TaggingRules, "SEUploaderVersion"}, {
-                    "Version" -> 130, 
-                    "Changes" -> {"Fixed SE Uploader to use https"}}]] > 
+                    "Version" -> 131, 
+                    "Changes" -> {
+                    "Fix upload to account for new XSRF protection"}}]] > 
                   ReplaceAll[
                    "Version", {
-                    "Version" -> 130, 
-                    "Changes" -> {"Fixed SE Uploader to use https"}}], 
+                    "Version" -> 131, 
+                    "Changes" -> {
+                    "Fix upload to account for new XSRF protection"}}], 
                   RGBColor[
                   0.8588235294117647, 0.00784313725490196, 
                    0.00784313725490196], Black]]], 
@@ -526,7 +521,7 @@ encode cells or whole notebooks into an image.", "Label", LineIndent -> 0,
                     "Label", LineIndent -> 0, TextJustification -> 1.], 
                   Hyperlink[
                    Style[
-                   "\[FilledCircle] The official post at stackexchange", 
+                   "\[FilledCircle] The official post on StackExchange", 
                     "Label", LineIndent -> 0, TextJustification -> 1.], 
                    "http://meta.mathematica.stackexchange.com/q/5/187"], 
                   Hyperlink[
@@ -535,10 +530,10 @@ encode cells or whole notebooks into an image.", "Label", LineIndent -> 0,
                     "Label", LineIndent -> 0, TextJustification -> 1.], 
                    "https://github.com/halirutan/Mathematica-SE-Tools"], 
                   Style[
-                  "\[Copyright] 2012\[Dash]2017 The StackExchange Community", 
+                  "\[Copyright] 2012\[Dash]2020 The StackExchange Community", 
                    "Label", LineIndent -> 0, TextJustification -> 1.], 
                   Style[
-                  "Version: 130", "Label", LineIndent -> 0, TextJustification -> 
+                  "Version: 131", "Label", LineIndent -> 0, TextJustification -> 
                    1.]}, Dividers -> {False, {False, True}}, Spacings -> 1]], 
                ImageSize -> {140, Automatic}], "About the SETools palette", 
               TooltipDelay -> Automatic]}, Center]}, True]],
@@ -570,7 +565,8 @@ Tools/master/SETools/Version.m"],
        AbsoluteTime[]; 
       CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}] = 
        SETools`SEUploader`Private`onlineVersion$]; 
-   If[AbsoluteTime[] > (3 3600) 24 + 
+   If[AbsoluteTime[] > 
+     3 3600 24 + 
       CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderLastUpdateCheck"}, 0], 
      TimeConstrained[
       SETools`SEUploader`Private`checkOnlineVersion[], 6]]; 
@@ -584,11 +580,13 @@ Tools/master/SETools/Version.m"],
        SETools`SEUploader`Private`checkOnlineVersion[]; 
       SETools`SEUploader`Private`newVersionInformation$ = 
        CurrentValue[$FrontEnd, {TaggingRules, "SEUploaderVersion"}, {
-         "Version" -> 130, "Changes" -> {"Fixed SE Uploader to use https"}}]; 
+         "Version" -> 131, 
+          "Changes" -> {"Fix upload to account for new XSRF protection"}}]; 
       SETools`SEUploader`Private`newVersionQ$ = 
        And[SETools`SEUploader`Private`res$ =!= $Failed, 
          SETools`SEUploader`Private`newVersionInformation$ =!= {
-          "Version" -> 130, "Changes" -> {"Fixed SE Uploader to use https"}}]; 
+          "Version" -> 131, 
+           "Changes" -> {"Fix upload to account for new XSRF protection"}}]; 
       CreateDialog[
         Pane[
          Column[{
@@ -597,8 +595,9 @@ Tools/master/SETools/Version.m"],
             StringForm["Installed version: ``", 
              ReplaceAll[
              "Version", {
-              "Version" -> 130, 
-               "Changes" -> {"Fixed SE Uploader to use https"}}]]], 
+              "Version" -> 131, 
+               "Changes" -> {
+                "Fix upload to account for new XSRF protection"}}]]], 
            If[SETools`SEUploader`Private`res$ =!= $Failed, 
             SETools`SEUploader`Private`st$[
              StringForm["Online version: ``", 
@@ -914,14 +913,17 @@ copied to the clipboard.", Bold],
          SelectedNotebook[]]}, 
       If[Head[SETools`SEUploader`Private`nb] =!= Notebook, $Failed, 
        SETools`SEImageExpressionEncode`SEEncodeExpression[
-       SETools`SEUploader`Private`nb]]]; 
-   Null)]],ExpressionUUID->"d9641836-7d11-43e2-b00f-93636bf8e37d"]
+       SETools`SEUploader`Private`nb]]]; Null)]],ExpressionUUID->"a5669c02-\
+1dbf-431c-bb5d-834b20db10ea"]
 },
+ClosingAutoSave->False,
+Saveable->False,
 WindowSize->All,
 WindowElements->{},
 WindowTitle->"SE Uploader",
-PrivateNotebookOptions->{"FileContents"->{"NotebookData"},
-"FileOutlineCache"->None},
 TaggingRules->{"ImageUploadHistory" -> {}},
-StyleDefinitions->"Palette.nb"
+StyleDefinitions->"Palette.nb",
+ExpressionUUID->"15b54a8a-4323-44f5-abf3-928da20ecf27"
 ]
+
+

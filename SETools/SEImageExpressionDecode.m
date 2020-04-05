@@ -19,12 +19,15 @@ SEDecodeImage::usage = "SEDecodeImage[url] imports the expression encoded in the
 Begin["`Private`"];
 
 SEDecodeImageAndPrint[url_String] := SEDecodeImageAndPrint[SEDecodeImage[url]];
+SEDecodeImageAndPrint[img_Image] := SEDecodeImageAndPrint[SEDecodeImage[img]];
 SEDecodeImageAndPrint[expr : HoldComplete[_Cell | {_Cell..}]] := CellPrint @@ expr;
-SEDecodeImageAndPrint[expr: HoldComplete[_Notebook]] := NotebookPut@@expr;
-SEDecodeImageAndPrint[expr: HoldComplete[__]] := expr;
+SEDecodeImageAndPrint[expr : HoldComplete[_Notebook]] := NotebookPut @@ expr;
+SEDecodeImageAndPrint[expr : HoldComplete[__]] := expr;
 
 SEDecodeImage::imp = "Import of `` as png image failed.";
-SEDecodeImage::hash = "The security hash indicates that the data is corrupted. Wrap AbortProtect[..] around your call to ignore the warning and to proceed at your own risk.";
+SEDecodeImage::hash = "The consistency hash could not be verified. This indicates usually that either the expression " <>
+    "was encoded with a different version of Mathematica or that the data is corrupted. You can wrap " <>
+    "AbortProtect[..] around your call to ignore the warning and to proceed at your own risk.";
 SEDecodeImage[url_String] := Module[{img},
   Check[
     img = Import[url, "PNG"],
@@ -42,9 +45,8 @@ decodeExpression[img_Image] := Module[
   },
 
   {data, hash} = data /. {d__, 0, h__, 0 ..} :> {{d}, {h}};
-  hash = FromCharacterCode[hash];
   If[
-    hash =!= Compress[Hash[data, "MD5"]],
+    hash =!= IntegerDigits[Hash[FromCharacterCode[data], "MD5"]],
     Message[SEDecodeImage::hash];
     Abort[]
   ];
